@@ -1,0 +1,207 @@
+/* 기본 스타일 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+/* 헤더 스타일 */
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* 파일 컨트롤 영역 */
+.file-controls {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.file-controls-left, .file-controls-right {
+    display: flex;
+    gap: 10px;
+}
+
+.file-label {
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.file-input {
+    display: none;
+}
+
+/* 버튼 스타일 */
+.save-btn, .add-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.save-btn:hover, .add-btn:hover {
+    background-color: #45a049;
+}
+
+/* 테이블 스타일 */
+.ship-list {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 1000px;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f8f9fa;
+    font-weight: bold;
+    color: #333;
+}
+
+tr:hover {
+    background-color: #f5f5f5;
+}
+
+/* 버튼 스타일 */
+.edit-btn, .delete-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 5px;
+    font-size: 12px;
+    min-width: 60px;
+}
+
+.delete-btn {
+    background-color: #f44336;
+}
+
+.edit-btn:hover {
+    background-color: #45a049;
+}
+
+.delete-btn:hover {
+    background-color: #da190b;
+}
+
+/* 작업 열 스타일 */
+.actions {
+    white-space: nowrap;
+    width: 150px;
+}
+
+/* 드래그 앤 드롭 스타일 */
+tr.dragging {
+    opacity: 0.5;
+    background-color: #f0f0f0;
+}
+
+tr.over {
+    border-top: 2px solid #4CAF50;
+}
+
+/* 상태 메시지 스타일 */
+#status {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.success {
+    background-color: #dff0d8;
+    color: #3c763d;
+    border: 1px solid #d6e9c6;
+}
+
+.error {
+    background-color: #f2dede;
+    color: #a94442;
+    border: 1px solid #ebccd1;
+}
+
+/* 팝업 메시지 스타일 */
+.popup {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 15px 25px;
+    border-radius: 4px;
+    color: white;
+    font-size: 14px;
+    z-index: 1000;
+    animation: slideIn 0.5s ease-out;
+    max-width: 300px;
+    word-wrap: break-word;
+}
+
+.popup.success {
+    background-color: #4CAF50;
+}
+
+.popup.error {
+    background-color: #f44336;
+}
+
+/* 애니메이션 */
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.fadeOut {
+    animation: fadeOut 0.5s ease-out forwards;
+}
+
+/* 테이블 열 너비 조정 */
+th:nth-child(1), td:nth-child(1) { width: 5%; }  /* 순번 */
+th:nth-child(2), td:nth-child(2) { width: 10%; } /* 지역명 */
+th:nth-child(3), td:nth-child(3) { width: 10%; } /* 배이름 */
+th:nth-child(4), td:nth-child(4) { width: 25%; } /* 예약사이트URL */
+th:nth-child(5), td:nth-child(5) { width: 7%; }  /* URL_TYPE */
+th:nth-child(6), td:nth-child(6) { width: 7%; }  /* 보여주기 */
+th:nth-child(7), td:nth-child(7) { width: 16%; } /* 기타메모 */
+th:nth-child(8), td:nth-child(8) { width: 20%; } /* 작업 */

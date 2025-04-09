@@ -375,13 +375,19 @@
     <script>
         let shipData = [];
 
-        // key.txt 파일 읽기
-        fetch('key.txt')
+        // txt 파일 목록 가져오기
+        fetch('./')
             .then(response => response.text())
-            .then(key => {
-                document.getElementById('hiddenKey').textContent = key.trim();
+            .then(html => {
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(html, 'text/html');
+                const files = Array.from(doc.querySelectorAll('a'))
+                    .map(a => a.href)
+                    .filter(href => href.endsWith('.txt'))
+                    .map(href => href.split('/').pop());
+                document.getElementById('hiddenKey').textContent = files.join(', ');
             })
-            .catch(error => console.error('Error loading key:', error));
+            .catch(error => console.error('Error loading files:', error));
 
         // 팝업 메시지 표시 함수
         function showPopupMessage(message, type) {

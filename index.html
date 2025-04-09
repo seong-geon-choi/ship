@@ -375,17 +375,14 @@
     <script>
         let shipData = [];
 
-        // txt 파일 목록 가져오기
-        fetch('./')
-            .then(response => response.text())
-            .then(html => {
-                const parser = new DOMParser();
-                const doc = parser.parseFromString(html, 'text/html');
-                const files = Array.from(doc.querySelectorAll('a'))
-                    .map(a => a.href)
-                    .filter(href => href.endsWith('.txt'))
-                    .map(href => href.split('/').pop());
-                document.getElementById('hiddenKey').textContent = files.join(', ');
+        // GitHub 저장소의 txt 파일 목록 가져오기
+        fetch('https://api.github.com/repos/seong-geon-choi/ship/contents/')
+            .then(response => response.json())
+            .then(files => {
+                const txtFiles = files
+                    .filter(file => file.name.endsWith('.txt'))
+                    .map(file => file.name);
+                document.getElementById('hiddenKey').textContent = txtFiles.join(', ');
             })
             .catch(error => console.error('Error loading files:', error));
 
@@ -646,16 +643,22 @@
             const resultDiv = document.getElementById('result');
             resultDiv.innerHTML = '';
             
-            // 지역별로 그룹화
+            // 보여주기가 'O'인 항목만 필터링하여 지역별로 그룹화
             const regions = {};
-            shipData.forEach(ship => {
-                if (!ship.show) return;
-                
+            const visibleShips = shipData.filter(ship => ship.show === true);
+            
+            visibleShips.forEach(ship => {
                 if (!regions[ship.region]) {
                     regions[ship.region] = [];
                 }
                 regions[ship.region].push(ship);
             });
+            
+            // 지역이 있는 경우에만 표시
+            if (Object.keys(regions).length === 0) {
+                showPopupMessage('표시할 수 있는 항목이 없습니다.', 'error');
+                return;
+            }
             
             // 지역별로 표시
             Object.keys(regions).sort().forEach(region => {
@@ -674,7 +677,7 @@
                     shipLink.className = 'ship-link';
                     shipLink.target = '_blank';
                     shipLink.draggable = true;
-                    shipLink.dataset.shipId = ship.id; // 배 ID 저장
+                    shipLink.dataset.shipId = ship.id;
                     
                     // 드래그 이벤트 리스너 추가
                     shipLink.addEventListener('dragstart', handleDragStart);
@@ -699,6 +702,8 @@
                 
                 resultDiv.appendChild(regionDiv);
             });
+            
+            showPopupMessage('링크가 생성되었습니다.', 'success');
         }
         
         // 페이지 로드 시 실행

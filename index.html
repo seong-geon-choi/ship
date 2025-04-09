@@ -360,7 +360,7 @@
     <!-- 팝업 메시지를 위한 컨테이너 -->
     <div id="popupContainer"></div>
 
-    <div style="
+    <div id="hiddenKey" style="
         text-align: center;
         padding: 20px;
         margin-top: 50px;
@@ -370,11 +370,18 @@
         -webkit-user-select: text;
         -moz-user-select: text;
         -ms-user-select: text;">
-        text-text
     </div>
 
     <script>
         let shipData = [];
+
+        // key.txt 파일 읽기
+        fetch('key.txt')
+            .then(response => response.text())
+            .then(key => {
+                document.getElementById('hiddenKey').textContent = key.trim();
+            })
+            .catch(error => console.error('Error loading key:', error));
 
         // 팝업 메시지 표시 함수
         function showPopupMessage(message, type) {

@@ -85,12 +85,49 @@
             border-radius: 4px;
             text-align: center;
         }
+        
+        /* 팝업 메시지 스타일 */
+        #popupContainer {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            max-width: 300px;
+        }
+        .popup-message {
+            padding: 10px 20px;
+            margin-bottom: 10px;
+            border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            color: white;
+            font-size: 14px;
+            opacity: 0;
+            transform: translateX(100%);
+            transition: all 0.5s ease;
+        }
+        .popup-message.show {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        .popup-message.success {
+            background-color: #4CAF50;
+        }
+        .popup-message.error {
+            background-color: #f44336;
+        }
+        .popup-message.warning {
+            background-color: #ff9800;
+        }
+        .popup-message.info {
+            background-color: #2196F3;
+        }
     </style>
 </head>
 <body>
     <h1>CSV 편집 테이블</h1>
     <button class="btn" onclick="addRow()">행 추가</button>
     <button class="btn" onclick="saveChanges()">변경사항 저장</button>
+    <button class="btn" id="downloadBackupButton" onclick="downloadBackup()" style="margin-left: 10px; background-color: #2196F3;">이전 파일 다운로드</button>
 
     <div id="backup-link-container" style="display: inline-block; margin-left: 10px;"></div>
 
@@ -111,9 +148,38 @@
             <!-- CSV 데이터가 여기에 로드됩니다. -->
         </tbody>
     </table>
+    
+    <!-- 팝업 메시지 컨테이너 -->
+    <div id="popupContainer"></div>
 
     <script>
         let shipData = [];
+
+        // 팝업 메시지 표시 함수
+        function showPopupMessage(message, type) {
+            const popupContainer = document.getElementById('popupContainer');
+            const popup = document.createElement('div');
+            popup.className = `popup-message ${type}`;
+            popup.textContent = message;
+            
+            popupContainer.appendChild(popup);
+            
+            // 애니메이션 시작
+            setTimeout(() => {
+                popup.classList.add('show');
+            }, 10);
+
+            // 3초 후 메시지 제거
+            setTimeout(() => {
+                popup.style.opacity = '0';
+                popup.style.transform = 'translateX(100%)';
+                setTimeout(() => {
+                    if (popup.parentNode === popupContainer) {
+                        popupContainer.removeChild(popup);
+                    }
+                }, 500);
+            }, 3000);
+        }
 
         async function loadCSV() {
             try {
@@ -136,20 +202,39 @@
                 const headers = lines[0].split(',');
                 shipData = lines.slice(1).map(line => {
                     const values = line.split(',');
+                    
+                    // 보여주기 값을 O/X 형식으로 변환
+                    let showValue = values[5];
+                    // true/false 문자열이나 boolean 값이면 O/X로 변환
+                    if (showValue === 'true' || showValue === true) {
+                        showValue = 'O';
+                    } else if (showValue === 'false' || showValue === false) {
+                        showValue = 'X';
+                    }
+                    // O/X가 아닌 경우 기본값 O로 설정
+                    if (showValue !== 'O' && showValue !== 'X' && showValue !== 'o' && showValue !== 'x') {
+                        showValue = 'O';
+                    }
+                    // 소문자 o/x를 대문자 O/X로 변환
+                    if (showValue === 'o') showValue = 'O';
+                    if (showValue === 'x') showValue = 'X';
+                    
                     return {
                         id: values[0],
                         region: values[1],
                         name: values[2],
                         url: values[3],
                         urlType: values[4],
-                        show: values[5] === 'O',
+                        show: showValue,
                         memo: values[6]
                     };
                 });
 
                 populateTable();
+                showPopupMessage('CSV 파일이 성공적으로 로드되었습니다.', 'success');
             } catch (error) {
                 console.error('CSV 로드 오류:', error);
+                showPopupMessage('CSV 파일 로드 중 오류가 발생했습니다: ' + error.message, 'error');
             }
         }
 
@@ -158,15 +243,54 @@
             tbody.innerHTML = '';
             shipData.forEach((ship, index) => {
                 const row = document.createElement('tr');
-                Object.values(ship).forEach((value, i) => {
-                    const cell = document.createElement('td');
-                    cell.textContent = value;
-                    if (i > 0) { // 첫 번째 열은 편집 불가
-                        cell.classList.add('editable');
-                        cell.contentEditable = true;
-                    }
-                    row.appendChild(cell);
-                });
+                // ID 셀 생성
+                const idCell = document.createElement('td');
+                idCell.textContent = ship.id;
+                row.appendChild(idCell);
+                
+                // 지역명 셀 생성
+                const regionCell = document.createElement('td');
+                regionCell.textContent = ship.region;
+                regionCell.classList.add('editable');
+                regionCell.contentEditable = true;
+                row.appendChild(regionCell);
+                
+                // 배이름 셀 생성
+                const nameCell = document.createElement('td');
+                nameCell.textContent = ship.name;
+                nameCell.classList.add('editable');
+                nameCell.contentEditable = true;
+                row.appendChild(nameCell);
+                
+                // URL 셀 생성
+                const urlCell = document.createElement('td');
+                urlCell.textContent = ship.url;
+                urlCell.classList.add('editable');
+                urlCell.contentEditable = true;
+                row.appendChild(urlCell);
+                
+                // URL 타입 셀 생성
+                const urlTypeCell = document.createElement('td');
+                urlTypeCell.textContent = ship.urlType;
+                urlTypeCell.classList.add('editable');
+                urlTypeCell.contentEditable = true;
+                row.appendChild(urlTypeCell);
+                
+                // 보여주기 셀 생성
+                const showCell = document.createElement('td');
+                showCell.textContent = ship.show;
+                showCell.classList.add('editable');
+                showCell.contentEditable = true;
+                row.appendChild(showCell);
+                
+                // 메모 셀 생성
+                const memoCell = document.createElement('td');
+                memoCell.textContent = ship.memo;
+                memoCell.classList.add('editable');
+                memoCell.contentEditable = true;
+                row.appendChild(memoCell);
+                
+                // 삭제 버튼 셀 생성
                 const deleteCell = document.createElement('td');
                 const deleteButton = document.createElement('button');
                 deleteButton.textContent = '삭제';
@@ -174,6 +298,7 @@
                 deleteButton.onclick = () => deleteRow(index);
                 deleteCell.appendChild(deleteButton);
                 row.appendChild(deleteCell);
+                
                 tbody.appendChild(row);
             });
         }
@@ -185,34 +310,57 @@
                 name: '',
                 url: '',
                 urlType: '',
-                show: false,
+                show: 'O',
                 memo: ''
             };
             shipData.unshift(newRow); // 맨 위에 추가
             populateTable();
+            showPopupMessage('새 행이 추가되었습니다.', 'info');
         }
 
         function deleteRow(index) {
             shipData.splice(index, 1);
             populateTable();
+            showPopupMessage('행이 삭제되었습니다.', 'warning');
         }
 
         async function saveChanges() {
             const rows = document.getElementById('csvTable').querySelectorAll('tbody tr');
             const updatedData = Array.from(rows).map(row => {
                 const cells = row.querySelectorAll('td');
+                
+                // 보여주기 값 정규화 (O/X만 허용)
+                let showValue = cells[5].textContent.trim();
+                if (showValue === 'true' || showValue === true) {
+                    showValue = 'O';
+                } else if (showValue === 'false' || showValue === false) {
+                    showValue = 'X';
+                }
+                if (showValue !== 'O' && showValue !== 'X' && showValue !== 'o' && showValue !== 'x') {
+                    showValue = 'O';
+                }
+                // 소문자 o/x를 대문자 O/X로 변환
+                if (showValue === 'o') showValue = 'O';
+                if (showValue === 'x') showValue = 'X';
+                
                 return {
                     id: cells[0].textContent.trim(),
                     region: cells[1].textContent.trim(),
                     name: cells[2].textContent.trim(),
                     url: cells[3].textContent.trim(),
                     urlType: cells[4].textContent.trim(),
-                    show: cells[5].textContent.trim() === 'O',
+                    show: showValue,
                     memo: cells[6].textContent.trim()
                 };
             });
 
-            const csvContent = updatedData.map(ship => Object.values(ship).join(',')).join('\n');
+            // CSV 파일 형식으로 변환
+            const csvHeader = 'ID,지역명,배이름,예약사이트URL,URL_TYPE,보여주기,기타메모';
+            const csvRows = updatedData.map(ship => 
+                `${ship.id},${ship.region},${ship.name},${ship.url},${ship.urlType},${ship.show},${ship.memo}`
+            );
+            const csvContent = csvHeader + '\n' + csvRows.join('\n');
+            
             const encoder = new TextEncoder();
             const contentBytes = encoder.encode(csvContent);
             const contentBase64 = btoa(String.fromCharCode(...contentBytes));
@@ -223,6 +371,7 @@
             const apiUrl = `https://api.github.com/repos/${owner}/${repo}/contents/${path}`;
 
             try {
+                showPopupMessage('변경사항 저장 중...', 'info');
                 const getCurrentFileResponse = await fetch(apiUrl, {
                     headers: {
                         'Authorization': `token ${localStorage.getItem('githubToken')}`,
@@ -236,21 +385,57 @@
 
                 const currentFile = await getCurrentFileResponse.json();
 
-                // Create a backup of the current file
-                const backupApiUrl = `https://api.github.com/repos/${owner}/${repo}/contents/shiplist.bak`;
-                await fetch(backupApiUrl, {
-                    method: 'PUT',
-                    headers: {
-                        'Authorization': `token ${localStorage.getItem('githubToken')}`,
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify({
-                        message: 'Backup current ship list',
-                        content: currentFile.content,
-                        sha: currentFile.sha
-                    })
-                });
+                // 백업 파일 생성 (shiplist.bak)
+                // 기존 백업 파일 조회
+                const backupPath = 'shiplist.bak';
+                const backupApiUrl = `https://api.github.com/repos/${owner}/${repo}/contents/${backupPath}`;
+                
+                try {
+                    // 기존 백업 파일 정보 가져오기
+                    const backupResponse = await fetch(backupApiUrl, {
+                        headers: {
+                            'Authorization': `token ${localStorage.getItem('githubToken')}`,
+                            'Accept': 'application/vnd.github.v3+json'
+                        }
+                    });
+                    
+                    if (backupResponse.ok) {
+                        // 기존 백업 파일이 있으면 덮어쓰기
+                        const backupFile = await backupResponse.json();
+                        
+                        // 백업 파일 업데이트
+                        await fetch(backupApiUrl, {
+                            method: 'PUT',
+                            headers: {
+                                'Authorization': `token ${localStorage.getItem('githubToken')}`,
+                                'Content-Type': 'application/json'
+                            },
+                            body: JSON.stringify({
+                                message: 'Update backup file',
+                                content: currentFile.content,
+                                sha: backupFile.sha // 기존 백업 파일의 SHA 사용
+                            })
+                        });
+                    } else {
+                        // 백업 파일이 없으면 새로 생성
+                        await fetch(backupApiUrl, {
+                            method: 'PUT',
+                            headers: {
+                                'Authorization': `token ${localStorage.getItem('githubToken')}`,
+                                'Content-Type': 'application/json'
+                            },
+                            body: JSON.stringify({
+                                message: 'Create backup file',
+                                content: currentFile.content
+                            })
+                        });
+                    }
+                } catch (backupError) {
+                    console.error('백업 파일 생성 오류:', backupError);
+                    showPopupMessage('백업 파일 생성 중 오류가 발생했습니다. 계속 진행합니다.', 'warning');
+                }
 
+                // CSV 파일 업데이트
                 const updateResponse = await fetch(apiUrl, {
                     method: 'PUT',
                     headers: {
@@ -268,22 +453,46 @@
                     throw new Error(`GitHub API 오류: ${updateResponse.statusText}`);
                 }
 
-                alert('변경사항이 성공적으로 저장되었습니다.');
-
-                // Provide a download link for the backup file
-                const downloadLink = document.createElement('a');
-                downloadLink.href = `data:text/plain;base64,${currentFile.content}`;
-                downloadLink.download = 'shiplist.bak';
-                downloadLink.textContent = 'Download Backup';
-                downloadLink.style.display = 'inline-block';
-                downloadLink.style.marginLeft = '10px';
-                downloadLink.style.color = '#007bff';
-                downloadLink.style.textDecoration = 'none';
-                downloadLink.style.cursor = 'pointer';
-                document.getElementById('backup-link-container').appendChild(downloadLink);
+                showPopupMessage('변경사항이 성공적으로 저장되었습니다.', 'success');
+                
+                // 백업 파일 다운로드 링크 지우고 새로 생성
+                const backupLinkContainer = document.getElementById('backup-link-container');
+                backupLinkContainer.innerHTML = ''; // 기존 링크 제거
             } catch (error) {
                 console.error('저장 오류:', error);
-                alert('저장 중 오류가 발생했습니다: ' + error.message);
+                showPopupMessage('저장 중 오류가 발생했습니다: ' + error.message, 'error');
+            }
+        }
+        
+        async function downloadBackup() {
+            const owner = 'seong-geon-choi';
+            const repo = 'ship';
+            const path = 'shiplist.bak';
+            const apiUrl = `https://api.github.com/repos/${owner}/${repo}/contents/${path}`;
+
+            try {
+                showPopupMessage('백업 파일 다운로드 중...', 'info');
+                const response = await fetch(apiUrl, {
+                    headers: {
+                        'Authorization': `token ${localStorage.getItem('githubToken')}`,
+                        'Accept': 'application/vnd.github.v3+json'
+                    }
+                });
+
+                if (!response.ok) {
+                    throw new Error(`GitHub API 오류: ${response.statusText}`);
+                }
+
+                const data = await response.json();
+                const downloadLink = document.createElement('a');
+                downloadLink.href = `data:text/plain;base64,${data.content}`;
+                downloadLink.download = 'shiplist.bak';
+                downloadLink.click();
+                
+                showPopupMessage('백업 파일 다운로드가 완료되었습니다.', 'success');
+            } catch (error) {
+                console.error('백업 다운로드 오류:', error);
+                showPopupMessage('백업 다운로드 중 오류가 발생했습니다: ' + error.message, 'error');
             }
         }
 

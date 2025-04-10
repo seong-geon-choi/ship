@@ -1137,12 +1137,30 @@
                 showPopupMessage('GitHub에 성공적으로 저장되었습니다.', 'success');
 
                 // CSV 파일을 shiplist.bak으로 백업
+                const owner = 'seong-geon-choi';
+                const repo = 'ship';
+                const path = 'shiplist.csv';
                 const backupPath = 'shiplist.bak';
                 const backupUrl = `https://api.github.com/repos/${owner}/${repo}/contents/${backupPath}`;
 
                 const encoder = new TextEncoder();
                 const contentBytes = encoder.encode(csvContent);
                 const contentBase64 = btoa(String.fromCharCode(...contentBytes));
+
+                // shiplist.bak 파일의 현재 SHA 가져오기
+                const getBackupFileUrl = `https://api.github.com/repos/${owner}/${repo}/contents/${backupPath}`;
+                const getBackupFileResponse = await fetch(getBackupFileUrl, {
+                    headers: {
+                        'Authorization': `token ${token}`,
+                        'Accept': 'application/vnd.github.v3+json'
+                    }
+                });
+
+                let backupSha = '';
+                if (getBackupFileResponse.ok) {
+                    const backupFile = await getBackupFileResponse.json();
+                    backupSha = backupFile.sha;
+                }
 
                 const backupResponse = await fetch(backupUrl, {
                     method: 'PUT',
@@ -1153,7 +1171,7 @@
                     body: JSON.stringify({
                         message: 'Backup original CSV file',
                         content: contentBase64,
-                        sha: originalCSVSha // Use the current file's SHA for backup
+                        sha: backupSha // Use the current backup file's SHA
                     })
                 });
                 if (!backupResponse.ok) {

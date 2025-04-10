@@ -613,7 +613,7 @@
                     // URL_TYPE에 따라 다른 형식의 URL 생성
                     const url = ship.urlType === '1' ? 
                         `${baseUrl}${daystr}` : 
-                        `${baseUrl}${daystr2}`;
+                        `${baseUrl}${daystr2}#d${year}-${month}-${day}`;
                     
                     shipLink.href = url;
                     shipLink.className = 'ship-link';

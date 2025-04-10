@@ -570,6 +570,14 @@
             const regions = {};
             const visibleShips = shipData.filter(ship => ship.show === true);
             
+            // 배 이름 중복 체크를 위한 맵
+            const shipNameCount = new Map();
+            visibleShips.forEach(ship => {
+                if (ship.name) {
+                    shipNameCount.set(ship.name, (shipNameCount.get(ship.name) || 0) + 1);
+                }
+            });
+
             visibleShips.forEach(ship => {
                 if (!regions[ship.region]) {
                     regions[ship.region] = [];
@@ -623,7 +631,7 @@
                     
                     const shipName = document.createElement('div');
                     shipName.className = 'ship-name';
-                    if (ship.isDuplicate) {
+                    if (shipNameCount.get(ship.name) > 1) {
                         shipName.style.backgroundColor = 'pink';
                     }
                     shipName.textContent = ship.name;

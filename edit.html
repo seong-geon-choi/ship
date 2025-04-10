@@ -199,7 +199,7 @@
 
         /* 긴 메모에만 커서 스타일 적용 */
         td:nth-child(7) span.view-mode[data-tooltip] {
-            cursor: help;
+            cursor: default;
         }
 
         /* 입력 필드 스타일 */
@@ -451,7 +451,7 @@
 
         /* 긴 메모에만 커서와 밑줄 스타일 적용 */
         td:nth-child(7) span.view-mode[data-tooltip] {
-            cursor: help;
+            cursor: default;
             text-decoration: underline dotted #666;
             text-underline-offset: 2px; /* 밑줄과 텍스트 사이 간격 조정 */
             text-decoration-thickness: 1px; /* 밑줄 두께 조정 */
@@ -538,6 +538,7 @@
         let originalData = [];
         let draggedRow = null;
         let currentSort = { field: 'region', direction: 'asc' };
+        let originalCSVSha = '';
 
         async function loadCSV() {
             const token = localStorage.getItem('githubToken');
@@ -1134,6 +1135,30 @@
 
                 await updateFileInGitHub(csvContent);
                 showPopupMessage('GitHub에 성공적으로 저장되었습니다.', 'success');
+
+                // CSV 파일을 shiplist.bak으로 백업
+                const backupPath = 'shiplist.bak';
+                const backupUrl = `https://api.github.com/repos/${owner}/${repo}/contents/${backupPath}`;
+
+                const encoder = new TextEncoder();
+                const contentBytes = encoder.encode(csvContent);
+                const contentBase64 = btoa(String.fromCharCode(...contentBytes));
+
+                const backupResponse = await fetch(backupUrl, {
+                    method: 'PUT',
+                    headers: {
+                        'Authorization': `token ${token}`,
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        message: 'Backup original CSV file',
+                        content: contentBase64,
+                        sha: originalCSVSha // Use the current file's SHA for backup
+                    })
+                });
+                if (!backupResponse.ok) {
+                    throw new Error('백업 파일 저장 실패: ' + backupResponse.statusText);
+                }
             } catch (error) {
                 console.error('GitHub 저장 오류:', error);
                 showPopupMessage('GitHub 저장 중 오류가 발생했습니다: ' + error.message, 'error');
@@ -1181,6 +1206,7 @@
             }
 
             const currentFile = await getCurrentFileResponse.json();
+            originalCSVSha = currentFile.sha;
 
             const updateFileUrl = `https://api.github.com/repos/${owner}/${repo}/contents/${path}`;
             
@@ -1260,6 +1286,36 @@
             const fields = ['region', 'name', 'url', 'urlType', 'show', 'memo'];
             return fields[index];
         }
+
+        // 백업 파일 다운로드 함수
+        function downloadBackupFile() {
+            fetch('https://raw.githubusercontent.com/seong-geon-choi/ship/main/shiplist.bak')
+                .then(response => response.blob())
+                .then(blob => {
+                    const url = window.URL.createObjectURL(blob);
+                    const a = document.createElement('a');
+                    a.style.display = 'none';
+                    a.href = url;
+                    a.download = 'shiplist.bak';
+                    document.body.appendChild(a);
+                    a.click();
+                    window.URL.revokeObjectURL(url);
+                })
+                .catch(error => console.error('백업 파일 다운로드 오류:', error));
+        }
+
+        // 페이지 하단에 백업 파일 다운로드 링크 추가
+        const backupLink = document.createElement('a');
+        backupLink.href = '#';
+        backupLink.textContent = 'CSV 수정 작업 문제 발생 시 직전 파일 다운로드';
+        backupLink.style.display = 'block';
+        backupLink.style.marginTop = '20px';
+        backupLink.style.textAlign = 'center';
+        backupLink.style.color = '#4CAF50';
+        backupLink.style.textDecoration = 'none';
+        backupLink.style.fontWeight = 'bold';
+        backupLink.addEventListener('click', downloadBackupFile);
+        document.body.appendChild(backupLink);
     </script>
 </body>
 </html>

@@ -581,30 +581,42 @@
 
                 tr.innerHTML = `
                     <td>${index + 1}</td>
-                    <td><input type="text" value="${ship.region}" onchange="updateData(${index}, 'region', this.value)"></td>
-                    <td class="${nameClass}"><input type="text" value="${ship.name}" onchange="updateData(${index}, 'name', this.value)"></td>
-                    <td><input type="text" value="${ship.url}" onchange="updateData(${index}, 'url', this.value)"></td>
-                    <td><select onchange="updateData(${index}, 'urlType', this.value)">
-                        <option value="1" ${ship.urlType === '1' ? 'selected' : ''}>1</option>
-                        <option value="2" ${ship.urlType === '2' ? 'selected' : ''}>2</option>
-                    </select></td>
-                    <td><select onchange="updateData(${index}, 'show', this.value === 'O')">
-                        <option value="O" ${ship.show ? 'selected' : ''}>O</option>
-                        <option value="X" ${!ship.show ? 'selected' : ''}>X</option>
-                    </select></td>
-                    <td><input type="text" value="${ship.memo || ''}" onchange="updateData(${index}, 'memo', this.value)"></td>
+                    <td>
+                        <span class="view-mode">${ship.region}</span>
+                        <input type="text" class="edit-mode" value="${ship.region}" onchange="updateData(${index}, 'region', this.value)" style="display: none;">
+                    </td>
+                    <td class="${nameClass}">
+                        <span class="view-mode">${ship.name}</span>
+                        <input type="text" class="edit-mode" value="${ship.name}" onchange="updateData(${index}, 'name', this.value)" style="display: none;">
+                    </td>
+                    <td>
+                        <span class="view-mode">${ship.url}</span>
+                        <input type="text" class="edit-mode" value="${ship.url}" onchange="updateData(${index}, 'url', this.value)" style="display: none;">
+                    </td>
+                    <td>
+                        <span class="view-mode">${ship.urlType}</span>
+                        <select class="edit-mode" onchange="updateData(${index}, 'urlType', this.value)" style="display: none;">
+                            <option value="1" ${ship.urlType === '1' ? 'selected' : ''}>1</option>
+                            <option value="2" ${ship.urlType === '2' ? 'selected' : ''}>2</option>
+                        </select>
+                    </td>
+                    <td>
+                        <span class="view-mode">${ship.show ? 'O' : 'X'}</span>
+                        <select class="edit-mode" onchange="updateData(${index}, 'show', this.value === 'O')" style="display: none;">
+                            <option value="O" ${ship.show ? 'selected' : ''}>O</option>
+                            <option value="X" ${!ship.show ? 'selected' : ''}>X</option>
+                        </select>
+                    </td>
+                    <td>
+                        <span class="view-mode">${ship.memo || ''}</span>
+                        <input type="text" class="edit-mode" value="${ship.memo || ''}" onchange="updateData(${index}, 'memo', this.value)" style="display: none;">
+                    </td>
                     <td class="actions">
                         <button class="table-btn edit-btn" onclick="toggleEditMode(${index})">수정</button>
                         <button class="table-btn save-btn" onclick="saveRow(${index})" style="display: none;">저장</button>
                         <button class="table-btn delete-btn" onclick="deleteShip(${index})">삭제</button>
                     </td>
                 `;
-
-                // 초기에는 입력 필드를 숨김
-                const inputs = tr.querySelectorAll('input, select');
-                inputs.forEach(input => {
-                    input.style.display = 'none';
-                });
 
                 tbody.appendChild(tr);
             });
@@ -617,17 +629,20 @@
 
             const editBtn = row.querySelector('.edit-btn');
             const saveBtn = row.querySelector('.save-btn');
-            const inputs = row.querySelectorAll('input, select');
+            const viewModes = row.querySelectorAll('.view-mode');
+            const editModes = row.querySelectorAll('.edit-mode');
 
             // 다른 행의 편집 모드를 해제
             Array.from(tbody.children).forEach((otherRow, i) => {
                 if (i !== index) {
-                    const otherInputs = otherRow.querySelectorAll('input, select');
+                    const otherViewModes = otherRow.querySelectorAll('.view-mode');
+                    const otherEditModes = otherRow.querySelectorAll('.edit-mode');
                     const otherEditBtn = otherRow.querySelector('.edit-btn');
                     const otherSaveBtn = otherRow.querySelector('.save-btn');
 
                     if (otherEditBtn && otherSaveBtn) {
-                        otherInputs.forEach(el => el.style.display = 'none');
+                        otherViewModes.forEach(el => el.style.display = '');
+                        otherEditModes.forEach(el => el.style.display = 'none');
                         otherEditBtn.style.display = '';
                         otherSaveBtn.style.display = 'none';
                     }
@@ -636,7 +651,8 @@
 
             // 현재 행의 편집 모드 토글
             const isEditing = editBtn.style.display === 'none';
-            inputs.forEach(el => el.style.display = isEditing ? 'none' : '');
+            viewModes.forEach(el => el.style.display = isEditing ? '' : 'none');
+            editModes.forEach(el => el.style.display = isEditing ? 'none' : '');
             editBtn.style.display = isEditing ? '' : 'none';
             saveBtn.style.display = isEditing ? 'none' : '';
         }

@@ -765,15 +765,25 @@
             const viewModes = row.querySelectorAll('.view-mode');
             const editModes = row.querySelectorAll('.edit-mode');
 
-            // 다른 행의 편집 모드를 해제
+            // 다른 행의 편집 모드를 해제하기 전에 변경사항 저장
             Array.from(tbody.children).forEach((otherRow, i) => {
                 if (i !== index) {
-                    const otherViewModes = otherRow.querySelectorAll('.view-mode');
                     const otherEditModes = otherRow.querySelectorAll('.edit-mode');
+                    const otherViewModes = otherRow.querySelectorAll('.view-mode');
                     const otherEditBtn = otherRow.querySelector('.edit-btn');
                     const otherSaveBtn = otherRow.querySelector('.save-btn');
 
-                    if (otherEditBtn && otherSaveBtn) {
+                    if (otherEditBtn && otherSaveBtn && otherEditBtn.style.display === 'none') {
+                        // 각 입력 필드의 현재 값을 저장
+                        otherEditModes.forEach((editMode, fieldIndex) => {
+                            if (editMode.value !== undefined) {
+                                const field = getFieldNameByIndex(fieldIndex);
+                                if (field) {
+                                    updateData(i, field, editMode.value);
+                                }
+                            }
+                        });
+
                         otherViewModes.forEach(el => el.style.display = '');
                         otherEditModes.forEach(el => el.style.display = 'none');
                         otherEditBtn.style.display = '';
@@ -798,11 +808,35 @@
                 shipData[index][field] = value;
             }
             
-            // 배 이름이 변경된 경우 중복 체크를 위해 테이블 다시 그리기
+            // 배 이름이 변경된 경우 중복 체크
             if (field === 'name') {
-                createTable();
-                // 편집 모드 유지
-                toggleEditMode(index);
+                const tbody = document.getElementById('shipTableBody');
+                const rows = tbody.getElementsByTagName('tr');
+                
+                // 배 이름 중복 체크를 위한 맵
+                const shipNameCount = new Map();
+                shipData.forEach(ship => {
+                    if (ship.name) {
+                        shipNameCount.set(ship.name, (shipNameCount.get(ship.name) || 0) + 1);
+                    }
+                });
+                
+                // 모든 행의 중복 클래스 초기화
+                Array.from(rows).forEach((row, i) => {
+                    const nameCell = row.children[2];
+                    nameCell.classList.remove('duplicate-name');
+                    
+                    // 현재 행의 배 이름이 중복되는 경우 클래스 추가
+                    if (shipData[i].name && shipNameCount.get(shipData[i].name) > 1) {
+                        nameCell.classList.add('duplicate-name');
+                    }
+                    
+                    // 현재 행의 view-mode span 업데이트
+                    const viewMode = nameCell.querySelector('.view-mode');
+                    if (viewMode) {
+                        viewMode.textContent = shipData[i].name || '';
+                    }
+                });
             }
         }
 
@@ -1165,6 +1199,12 @@
             });
             
             createTable();
+        }
+
+        // 필드 인덱스를 필드 이름으로 변환하는 헬퍼 함수
+        function getFieldNameByIndex(index) {
+            const fields = ['region', 'name', 'url', 'urlType', 'show', 'memo'];
+            return fields[index];
         }
     </script>
 </body>

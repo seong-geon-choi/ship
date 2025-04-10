@@ -228,7 +228,7 @@
             width: 100%;
             text-align: center;
         }
-
+        
         /* 지역명과 배이름 입력 필드 스타일 */
         td:nth-child(2) input[type="text"], /* 지역명 */
         td:nth-child(3) input[type="text"] { /* 배이름 */
@@ -293,11 +293,11 @@
         .save-btn:hover {
             background-color: #1976D2 !important; /* 파란색 호버, 우선순위 높임 */
         }
-
+        
         .delete-btn {
             background-color: #f44336;
         }
-
+        
         .delete-btn:hover {
             background-color: #da190b;
         }
@@ -574,43 +574,43 @@
                 const contentBytes = Uint8Array.from(atob(data.content), c => c.charCodeAt(0));
                 const contents = decoder.decode(contentBytes);
 
-                if (!contents) {
-                    throw new Error('CSV 파일이 비어있습니다.');
-                }
+                                if (!contents) {
+                                    throw new Error('CSV 파일이 비어있습니다.');
+                                }
 
-                const lines = contents.split('\n').filter(line => line.trim() !== '');
-                if (lines.length < 2) {
-                    throw new Error('CSV 파일에 데이터가 없습니다.');
-                }
-
+                                const lines = contents.split('\n').filter(line => line.trim() !== '');
+                                if (lines.length < 2) {
+                                    throw new Error('CSV 파일에 데이터가 없습니다.');
+                                }
+                                
                 const headers = lines[0].split(',');
-                shipData = lines.slice(1).map(line => {
-                    const values = line.split(',');
-                    return {
-                        id: values[0],
-                        region: values[1],
-                        name: values[2],
-                        url: values[3],
-                        urlType: values[4],
-                        show: values[5] === 'O',
-                        memo: values[6]
-                    };
-                });
-                
-                originalData = JSON.parse(JSON.stringify(shipData));
+                                shipData = lines.slice(1).map(line => {
+                                    const values = line.split(',');
+                                    return {
+                                        id: values[0],
+                                        region: values[1],
+                                        name: values[2],
+                                        url: values[3],
+                                        urlType: values[4],
+                                        show: values[5] === 'O',
+                                        memo: values[6]
+                                    };
+                                });
+                                
+                                originalData = JSON.parse(JSON.stringify(shipData));
                 showPopupMessage('GitHub에서 파일을 성공적으로 로드했습니다.', 'success');
                 createTable();
-            } catch (error) {
-                console.error('CSV 로드 오류:', error);
+                            } catch (error) {
+                            console.error('CSV 로드 오류:', error);
                 showPopupMessage('GitHub에서 파일 로드 중 오류가 발생했습니다: ' + error.message, 'error');
-                document.getElementById('shipTableBody').innerHTML = `
-                    <tr>
-                        <td colspan="8" style="text-align: center; padding: 20px;">
+                            document.getElementById('shipTableBody').innerHTML = `
+                                <tr>
+                                    <td colspan="8" style="text-align: center; padding: 20px;">
                             <p>GitHub에서 CSV 파일을 불러오지 못했습니다.</p>
                             <p>GitHub 토큰을 확인해주세요.</p>
-                        </td>
-                    </tr>
-                `;
+                                    </td>
+                                </tr>
+                            `;
                 throw error;
             }
         }
@@ -696,7 +696,7 @@
                 tooltip.className = 'tooltip';
                 document.body.appendChild(tooltip);
             }
-
+            
             shipData.forEach((ship, index) => {
                 const tr = document.createElement('tr');
                 tr.draggable = false; // 기본적으로 드래그 불가능하게 설정
@@ -715,7 +715,7 @@
                 // 메모 내용이 긴 경우에만 툴팁 속성 추가
                 const memoContent = ship.memo || '';
                 const memoTooltip = memoContent.length > 20 ? `data-tooltip="${memoContent.replace(/"/g, '&quot;')}"` : '';
-
+                
                 tr.innerHTML = `
                     <td draggable="true" ondragstart="handleDragStart.call(this.parentNode, event)">${index + 1}</td>
                     <td>
@@ -1006,7 +1006,7 @@
             
             showStatus('파일이 성공적으로 저장되었습니다.', 'success');
         }
-        
+
         function addNewShip() {
             const newId = "1";
             // 기존 항목들의 ID 증가

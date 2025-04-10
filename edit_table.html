@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>CSV 편집 테이블</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        thead, tbody {
+            display: table;
+            width: 100%;
+            table-layout: fixed;
+        }
+        tbody {
+            max-height: 80vh; /* Increase height for better visibility */
+            overflow-y: auto;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+            width: 100%;
+        }
+        th {
+            background-color: #f8f9fa;
+        }
+        th:nth-child(1), td:nth-child(1), /* 순번 */
+        th:nth-child(5), td:nth-child(5), /* URL_TYPE */
+        th:nth-child(6), td:nth-child(6), /* 보여주기 */
+        th:nth-child(8), td:nth-child(8) { /* 삭제 */
+            text-align: center;
+        }
+        th:nth-child(1), td:nth-child(1) { width: 3%; }  /* 순번 */
+        th:nth-child(2), td:nth-child(2) { width: 10%; } /* 지역명 */
+        th:nth-child(3), td:nth-child(3) { width: 10%; } /* 배이름 */
+        th:nth-child(4), td:nth-child(4) { width: 25%; } /* 예약사이트URL */
+        th:nth-child(5), td:nth-child(5) { width: 7%; }  /* URL_TYPE */
+        th:nth-child(6), td:nth-child(6) { width: 7%; }  /* 보여주기 */
+        th:nth-child(7), td:nth-child(7) { width: 24%; } /* 기타메모 */
+        th:nth-child(8), td:nth-child(8) { width: 5%; }  /* 삭제 */
+        td.editable {
+            background-color: #fff;
+            cursor: pointer;
+        }
+        td.editable:hover {
+            background-color: #f0f0f0;
+        }
+        .btn {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 12px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            transition: background-color 0.3s;
+            white-space: nowrap; /* Prevent text wrapping */
+        }
+        .btn:hover {
+            background-color: #45a049;
+        }
+        thead {
+            position: sticky;
+            top: 0;
+            background-color: #f8f9fa;
+            z-index: 1;
+        }
+        #backup-link-container {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSV 편집 테이블</h1>
+    <button class="btn" onclick="addRow()">행 추가</button>
+    <button class="btn" onclick="saveChanges()">변경사항 저장</button>
+
+    <div id="backup-link-container" style="display: inline-block; margin-left: 10px;"></div>
+
+    <table id="csvTable">
+        <thead>
+            <tr>
+                <th>순번</th>
+                <th>지역명</th>
+                <th>배이름</th>
+                <th>예약사이트URL</th>
+                <th>URL_TYPE</th>
+                <th>보여주기</th>
+                <th>기타메모</th>
+                <th>삭제</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- CSV 데이터가 여기에 로드됩니다. -->
+        </tbody>
+    </table>
+
+    <script>
+        let shipData = [];
+
+        async function loadCSV() {
+            try {
+                const owner = 'seong-geon-choi';
+                const repo = 'ship';
+                const path = 'shiplist.csv';
+                const apiUrl = `https://api.github.com/repos/${owner}/${repo}/contents/${path}`;
+
+                const response = await fetch(apiUrl);
+                if (!response.ok) {
+                    throw new Error(`GitHub API 오류: ${response.statusText}`);
+                }
+
+                const data = await response.json();
+                const decoder = new TextDecoder('utf-8');
+                const contentBytes = Uint8Array.from(atob(data.content), c => c.charCodeAt(0));
+                const contents = decoder.decode(contentBytes);
+
+                const lines = contents.split('\n').filter(line => line.trim() !== '');
+                const headers = lines[0].split(',');
+                shipData = lines.slice(1).map(line => {
+                    const values = line.split(',');
+                    return {
+                        id: values[0],
+                        region: values[1],
+                        name: values[2],
+                        url: values[3],
+                        urlType: values[4],
+                        show: values[5] === 'O',
+                        memo: values[6]
+                    };
+                });
+
+                populateTable();
+            } catch (error) {
+                console.error('CSV 로드 오류:', error);
+            }
+        }
+
+        function populateTable() {
+            const tbody = document.getElementById('csvTable').querySelector('tbody');
+            tbody.innerHTML = '';
+            shipData.forEach((ship, index) => {
+                const row = document.createElement('tr');
+                Object.values(ship).forEach((value, i) => {
+                    const cell = document.createElement('td');
+                    cell.textContent = value;
+                    if (i > 0) { // 첫 번째 열은 편집 불가
+                        cell.classList.add('editable');
+                        cell.contentEditable = true;
+                    }
+                    row.appendChild(cell);
+                });
+                const deleteCell = document.createElement('td');
+                const deleteButton = document.createElement('button');
+                deleteButton.textContent = '삭제';
+                deleteButton.className = 'btn';
+                deleteButton.onclick = () => deleteRow(index);
+                deleteCell.appendChild(deleteButton);
+                row.appendChild(deleteCell);
+                tbody.appendChild(row);
+            });
+        }
+
+        function addRow() {
+            const newRow = {
+                id: '',
+                region: '',
+                name: '',
+                url: '',
+                urlType: '',
+                show: false,
+                memo: ''
+            };
+            shipData.unshift(newRow); // 맨 위에 추가
+            populateTable();
+        }
+
+        function deleteRow(index) {
+            shipData.splice(index, 1);
+            populateTable();
+        }
+
+        async function saveChanges() {
+            const rows = document.getElementById('csvTable').querySelectorAll('tbody tr');
+            const updatedData = Array.from(rows).map(row => {
+                const cells = row.querySelectorAll('td');
+                return {
+                    id: cells[0].textContent.trim(),
+                    region: cells[1].textContent.trim(),
+                    name: cells[2].textContent.trim(),
+                    url: cells[3].textContent.trim(),
+                    urlType: cells[4].textContent.trim(),
+                    show: cells[5].textContent.trim() === 'O',
+                    memo: cells[6].textContent.trim()
+                };
+            });
+
+            const csvContent = updatedData.map(ship => Object.values(ship).join(',')).join('\n');
+            const encoder = new TextEncoder();
+            const contentBytes = encoder.encode(csvContent);
+            const contentBase64 = btoa(String.fromCharCode(...contentBytes));
+
+            const owner = 'seong-geon-choi';
+            const repo = 'ship';
+            const path = 'shiplist.csv';
+            const apiUrl = `https://api.github.com/repos/${owner}/${repo}/contents/${path}`;
+
+            try {
+                const getCurrentFileResponse = await fetch(apiUrl, {
+                    headers: {
+                        'Authorization': `token ${localStorage.getItem('githubToken')}`,
+                        'Accept': 'application/vnd.github.v3+json'
+                    }
+                });
+
+                if (!getCurrentFileResponse.ok) {
+                    throw new Error(`GitHub API 오류: ${getCurrentFileResponse.statusText}`);
+                }
+
+                const currentFile = await getCurrentFileResponse.json();
+
+                // Create a backup of the current file
+                const backupApiUrl = `https://api.github.com/repos/${owner}/${repo}/contents/shiplist.bak`;
+                await fetch(backupApiUrl, {
+                    method: 'PUT',
+                    headers: {
+                        'Authorization': `token ${localStorage.getItem('githubToken')}`,
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        message: 'Backup current ship list',
+                        content: currentFile.content,
+                        sha: currentFile.sha
+                    })
+                });
+
+                const updateResponse = await fetch(apiUrl, {
+                    method: 'PUT',
+                    headers: {
+                        'Authorization': `token ${localStorage.getItem('githubToken')}`,
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        message: 'Update ship list',
+                        content: contentBase64,
+                        sha: currentFile.sha
+                    })
+                });
+
+                if (!updateResponse.ok) {
+                    throw new Error(`GitHub API 오류: ${updateResponse.statusText}`);
+                }
+
+                alert('변경사항이 성공적으로 저장되었습니다.');
+
+                // Provide a download link for the backup file
+                const downloadLink = document.createElement('a');
+                downloadLink.href = `data:text/plain;base64,${currentFile.content}`;
+                downloadLink.download = 'shiplist.bak';
+                downloadLink.textContent = 'Download Backup';
+                downloadLink.style.display = 'inline-block';
+                downloadLink.style.marginLeft = '10px';
+                downloadLink.style.color = '#007bff';
+                downloadLink.style.textDecoration = 'none';
+                downloadLink.style.cursor = 'pointer';
+                document.getElementById('backup-link-container').appendChild(downloadLink);
+            } catch (error) {
+                console.error('저장 오류:', error);
+                alert('저장 중 오류가 발생했습니다: ' + error.message);
+            }
+        }
+
+        window.onload = loadCSV;
+    </script>
+</body>
+</html>

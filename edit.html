@@ -148,32 +148,28 @@
             margin-top: 10px;
         }
         
+        /* 열 너비 조정 */
+        th:nth-child(1), td:nth-child(1) { width: 5%; } /* 순번 */
+        th:nth-child(2), td:nth-child(2) { width: 10%; } /* 지역명 */
+        th:nth-child(3), td:nth-child(3) { width: 10%; } /* 배이름 */
+        th:nth-child(4), td:nth-child(4) { width: 25%; } /* 예약사이트URL */
+        th:nth-child(5), td:nth-child(5) { width: 7%; } /* URL_TYPE */
+        th:nth-child(6), td:nth-child(6) { width: 7%; } /* 보여주기 */
+        th:nth-child(7), td:nth-child(7) { width: 16%; } /* 기타메모 */
+        th:nth-child(8), td:nth-child(8) { width: 20%; } /* 작업 */
+
+        /* 테이블 셀 스타일 */
         th, td {
             padding: 12px 15px;
             text-align: left;
             border-bottom: 1px solid #ddd;
-            vertical-align: middle; /* Align content vertically */
-        }
-        
-        th {
-            background-color: #f8f9fa;
-            font-weight: bold;
-            color: #333;
-        }
-        
-        tr:hover {
-            background-color: #f5f5f5;
-        }
-        
-        /* 중앙 정렬 필요한 열 */
-        th:nth-child(1), td:nth-child(1), /* 순번 */
-        th:nth-child(5), td:nth-child(5), /* URL_TYPE */
-        th:nth-child(6), td:nth-child(6), /* 보여주기 */
-        th:nth-child(8), td:nth-child(8)  /* 작업 */ {
-            text-align: center;
+            vertical-align: middle;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
         }
 
-        /* 테이블 입력 필드 스타일 */
+        /* 입력 필드 스타일 */
         .edit-mode input[type="text"], 
         .edit-mode select {
             width: 100%;
@@ -183,13 +179,23 @@
             font-size: 14px;
             background-color: #fff;
             box-shadow: 0 0 5px rgba(33, 150, 243, 0.2);
-            box-sizing: border-box; /* Include padding in width */
+            box-sizing: border-box;
+            min-width: 50px;
         }
 
-        /* 지역명과 배이름 입력창 너비 제한 */
-        td:nth-child(2) input[type="text"], /* 지역명 */
-        td:nth-child(3) input[type="text"] { /* 배이름 */
-            max-width: 120px;
+        /* URL과 메모 입력 필드 특별 스타일 */
+        td:nth-child(4) input[type="text"], /* URL */
+        td:nth-child(7) input[type="text"] { /* 메모 */
+            min-width: 200px;
+            white-space: normal;
+        }
+
+        /* 기본 보기 모드 스타일 */
+        td span.view-mode {
+            display: block;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
         }
 
         /* 중복된 배 이름 스타일 */
@@ -352,16 +358,6 @@
                 opacity: 1;
             }
         }
-
-        /* 테이블 열 너비 조정 (고정 비율) */
-        th:nth-child(1), td:nth-child(1) { width: 5%; }  /* 순번 */
-        th:nth-child(2), td:nth-child(2) { width: 12%; } /* 지역명 */
-        th:nth-child(3), td:nth-child(3) { width: 12%; } /* 배이름 */
-        th:nth-child(4), td:nth-child(4) { width: 28%; } /* 예약사이트URL */
-        th:nth-child(5), td:nth-child(5) { width: 8%; }  /* URL_TYPE */
-        th:nth-child(6), td:nth-child(6) { width: 8%; }  /* 보여주기 */
-        th:nth-child(7), td:nth-child(7) { width: 15%; } /* 기타메모 */
-        th:nth-child(8), td:nth-child(8) { width: 12%; } /* 작업 */
     </style>
     <link rel="stylesheet" href="./style.css">
 </head>
@@ -657,11 +653,35 @@
             saveBtn.style.display = isEditing ? 'none' : '';
         }
 
+        function updateData(index, field, value) {
+            // 데이터 업데이트
+            if (field === 'show') {
+                shipData[index][field] = value;
+            } else {
+                shipData[index][field] = value;
+            }
+            
+            // 배 이름이 변경된 경우 중복 체크를 위해 테이블 다시 그리기
+            if (field === 'name') {
+                createTable();
+                // 편집 모드 유지
+                toggleEditMode(index);
+            }
+        }
+
         async function saveRow(index) {
             try {
+                // 현재 데이터 백업
+                const currentData = JSON.parse(JSON.stringify(shipData));
+                
                 await saveToGitHub();
                 showPopupMessage('변경사항이 저장되었습니다.', 'success');
-                toggleEditMode(index); // 편집 모드 종료
+                
+                // 저장 성공 시 백업 데이터를 원본 데이터로 설정
+                originalData = JSON.parse(JSON.stringify(currentData));
+                
+                // 편집 모드 종료
+                toggleEditMode(index);
             } catch (error) {
                 console.error('저장 실패:', error);
                 showPopupMessage('저장에 실패했습니다: ' + error.message, 'error');
@@ -757,10 +777,13 @@
         
         function addNewShip() {
             const newId = "1";
+            // 기존 항목들의 ID 증가
             shipData.forEach(ship => {
                 ship.id = (parseInt(ship.id) + 1).toString();
             });
-            shipData.unshift({
+            
+            // 새 항목 추가
+            const newShip = {
                 id: newId,
                 region: '',
                 name: '',
@@ -768,9 +791,18 @@
                 urlType: '1',
                 show: true,
                 memo: ''
-            });
+            };
+            
+            // 배열 맨 앞에 새 항목 추가
+            shipData.unshift(newShip);
+            
+            // 테이블 다시 그리기
             createTable();
-            toggleEditMode(0);
+            
+            // 새로 추가된 항목의 편집 모드 활성화
+            setTimeout(() => {
+                toggleEditMode(0);
+            }, 100);
         }
         
         async function deleteShip(index) {
@@ -840,10 +872,6 @@
 
         function showStatus(message, type) {
             showPopupMessage(message, type);
-        }
-
-        function updateShip(index, field, value) {
-            shipData[index][field] = value;
         }
 
         async function saveToGitHub() {

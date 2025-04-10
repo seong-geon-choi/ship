@@ -295,6 +295,21 @@
             border-top: 2px solid #4CAF50;
         }
 
+        /* 순번 컬럼 드래그 핸들 스타일 */
+        td:first-child {
+            cursor: move;
+            user-select: none;
+            position: relative;
+        }
+
+        td:first-child::after {
+            content: '⋮⋮';
+            position: absolute;
+            right: 5px;
+            color: #999;
+            font-size: 12px;
+        }
+
         /* 상태 메시지 스타일 */
         #status {
             margin: 10px 0;
@@ -401,6 +416,32 @@
         th.sortable.desc::after {
             content: '↓';
             color: #333;
+        }
+
+        /* 메모 컬럼 툴팁 스타일 */
+        td:nth-child(7) span.view-mode {
+            position: relative;
+            cursor: help;
+        }
+
+        td:nth-child(7) span.view-mode[data-tooltip] {
+            border-bottom: 1px dotted #666;
+        }
+
+        .tooltip {
+            position: fixed;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 8px 12px;
+            border-radius: 4px;
+            font-size: 14px;
+            white-space: normal;
+            max-width: 300px;
+            word-wrap: break-word;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            z-index: 1000;
+            pointer-events: none;
+            display: none;
         }
     </style>
     <link rel="stylesheet" href="./style.css">
@@ -545,6 +586,12 @@
         }
 
         function handleDragStart(e) {
+            // 순번 컬럼이 아닌 경우 드래그 방지
+            if (!e.target.matches('td:first-child')) {
+                e.preventDefault();
+                return;
+            }
+
             draggedRow = this;
             this.classList.add('dragging');
             e.dataTransfer.effectAllowed = 'move';
@@ -612,46 +659,49 @@
                 }
             });
 
-            // 테이블 헤더에 정렬 기능 추가
-            const thead = document.querySelector('#shipTable thead tr');
-            thead.innerHTML = `
-                <th>순번</th>
-                <th class="sortable" onclick="sortTable('region')">지역명</th>
-                <th class="sortable" onclick="sortTable('name')">배이름</th>
-                <th>예약사이트URL</th>
-                <th title="1:더피싱, 2:선상24">URL_TYPE</th>
-                <th>보여주기</th>
-                <th>기타메모</th>
-                <th>작업</th>
-            `;
+            // 툴팁 요소 생성
+            let tooltip = document.querySelector('.tooltip');
+            if (!tooltip) {
+                tooltip = document.createElement('div');
+                tooltip.className = 'tooltip';
+                document.body.appendChild(tooltip);
+            }
 
             shipData.forEach((ship, index) => {
                 const tr = document.createElement('tr');
-                tr.draggable = true;
+                tr.draggable = false; // 기본적으로 드래그 불가능하게 설정
+                
+                // 드래그 이벤트 리스너 추가
                 tr.addEventListener('dragstart', handleDragStart);
                 tr.addEventListener('dragover', handleDragOver);
                 tr.addEventListener('drop', handleDrop);
                 tr.addEventListener('dragend', handleDragEnd);
+                tr.addEventListener('dragenter', handleDragEnter);
+                tr.addEventListener('dragleave', handleDragLeave);
 
                 const isDuplicate = shipNameCount.get(ship.name) > 1;
                 const nameClass = isDuplicate ? 'duplicate-name' : '';
+                
+                // 메모 내용이 긴 경우에만 툴팁 속성 추가
+                const memoContent = ship.memo || '';
+                const memoTooltip = memoContent.length > 20 ? `data-tooltip="${memoContent.replace(/"/g, '&quot;')}"` : '';
 
                 tr.innerHTML = `
-                    <td>${index + 1}</td>
+                    <td draggable="true" ondragstart="handleDragStart.call(this.parentNode, event)">${index + 1}</td>
                     <td>
-                        <span class="view-mode">${ship.region}</span>
-                        <input type="text" class="edit-mode" value="${ship.region}" onchange="updateData(${index}, 'region', this.value)" style="display: none;">
+                        <span class="view-mode">${ship.region || ''}</span>
+                        <input type="text" class="edit-mode" value="${ship.region || ''}" onchange="updateData(${index}, 'region', this.value)" style="display: none;">
                     </td>
                     <td class="${nameClass}">
-                        <span class="view-mode">${ship.name}</span>
-                        <input type="text" class="edit-mode" value="${ship.name}" onchange="updateData(${index}, 'name', this.value)" style="display: none;">
+                        <span class="view-mode">${ship.name || ''}</span>
+                        <input type="text" class="edit-mode" value="${ship.name || ''}" onchange="updateData(${index}, 'name', this.value)" style="display: none;">
                     </td>
                     <td>
-                        <span class="view-mode">${ship.url}</span>
-                        <input type="text" class="edit-mode" value="${ship.url}" onchange="updateData(${index}, 'url', this.value)" style="display: none;">
+                        <span class="view-mode">${ship.url || ''}</span>
+                        <input type="text" class="edit-mode" value="${ship.url || ''}" onchange="updateData(${index}, 'url', this.value)" style="display: none;">
                     </td>
                     <td>
-                        <span class="view-mode">${ship.urlType}</span>
+                        <span class="view-mode">${ship.urlType || ''}</span>
                         <select class="edit-mode" onchange="updateData(${index}, 'urlType', this.value)" style="display: none;">
                             <option value="1" ${ship.urlType === '1' ? 'selected' : ''}>1</option>
                             <option value="2" ${ship.urlType === '2' ? 'selected' : ''}>2</option>
@@ -665,8 +715,8 @@
                         </select>
                     </td>
                     <td>
-                        <span class="view-mode">${ship.memo || ''}</span>
-                        <input type="text" class="edit-mode" value="${ship.memo || ''}" onchange="updateData(${index}, 'memo', this.value)" style="display: none;">
+                        <span class="view-mode" ${memoTooltip}>${memoContent}</span>
+                        <input type="text" class="edit-mode" value="${memoContent}" onchange="updateData(${index}, 'memo', this.value)" style="display: none;">
                     </td>
                     <td class="actions">
                         <button class="table-btn edit-btn" onclick="toggleEditMode(${index})">수정</button>
@@ -676,6 +726,32 @@
                 `;
 
                 tbody.appendChild(tr);
+            });
+
+            // 메모 툴팁 이벤트 핸들러 추가
+            document.querySelectorAll('td:nth-child(7) span.view-mode[data-tooltip]').forEach(element => {
+                element.addEventListener('mousemove', (e) => {
+                    const tooltip = document.querySelector('.tooltip');
+                    tooltip.textContent = element.getAttribute('data-tooltip');
+                    tooltip.style.display = 'block';
+                    
+                    // 마우스 커서 위치에 따라 툴팁 위치 조정
+                    const x = e.clientX + 10;
+                    const y = e.clientY + 10;
+                    
+                    // 툴팁이 화면 밖으로 나가지 않도록 조정
+                    const tooltipRect = tooltip.getBoundingClientRect();
+                    const maxX = window.innerWidth - tooltipRect.width - 10;
+                    const maxY = window.innerHeight - tooltipRect.height - 10;
+                    
+                    tooltip.style.left = Math.min(x, maxX) + 'px';
+                    tooltip.style.top = Math.min(y, maxY) + 'px';
+                });
+
+                element.addEventListener('mouseleave', () => {
+                    const tooltip = document.querySelector('.tooltip');
+                    tooltip.style.display = 'none';
+                });
             });
         }
 

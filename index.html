@@ -447,7 +447,7 @@
                     // 보여주기가 'O'인 항목만 표시
                     .filter(ship => ship.show);
 
-                createTable();
+                createLinks();
                 showStatus('파일이 성공적으로 로드되었습니다.', 'success');
             } catch (error) {
                 console.error('CSV 로드 오류:', error);

@@ -420,52 +420,38 @@
         // CSV 파일 로드
         async function loadCSV() {
             try {
-                const response = await fetch('https://raw.githubusercontent.com/seong-geon-choi/ship/main/shiplist.csv');
-                if (!response.ok) throw new Error('GitHub에서 파일을 가져오는데 실패했습니다.');
+                const response = await fetch('shiplist.csv');
+                const contents = await response.text();
                 
-                const text = await response.text();
-                const rows = text.split('\n');
-                const headers = rows[0].split(',');
-                
-                // 배 이름 중복 체크를 위한 맵
-                const shipNameCount = new Map();
-                
-                // 먼저 각 배 이름의 출현 횟수를 계산
-                rows.slice(1).forEach(row => {
-                    const values = row.split(',');
-                    const name = values[2];
-                    if (name) {
-                        shipNameCount.set(name, (shipNameCount.get(name) || 0) + 1);
-                    }
-                });
-                
-                shipData = rows.slice(1).map(row => {
-                    const values = row.split(',');
-                    let url = values[3];
-                    
-                    // URL이 있고, http:// 또는 https://로 시작하지 않는 경우 http:// 추가
-                    if (url && !url.startsWith('http://') && !url.startsWith('https://')) {
-                        url = 'http://' + url;
-                    }
-                    
-                    const name = values[2];
-                    return {
-                        id: values[0],
-                        region: values[1],
-                        name: name,
-                        url: url,
-                        urlType: values[4],
-                        show: values[5] === 'O',
-                        memo: values[6] || '',
-                        isDuplicate: shipNameCount.get(name) > 1 // 중복 여부 표시
-                    };
-                }).filter(ship => ship.id); // 빈 행 제거
+                const lines = contents.split('\n').filter(line => line.trim() !== '');
+                if (lines.length < 2) {
+                    throw new Error('CSV 파일에 데이터가 없습니다.');
+                }
 
-                showPopupMessage('데이터를 성공적으로 불러왔습니다.', 'success');
-                createLinks();
+                const headers = lines[0].split(',');
+                shipData = lines.slice(1)
+                    .map(line => {
+                        const values = line.split(',');
+                        return {
+                            id: values[0],
+                            region: values[1],
+                            name: values[2],
+                            url: values[3],
+                            urlType: values[4],
+                            show: values[5] === 'O',
+                            memo: values[6]
+                        };
+                    })
+                    // 지역명과 배이름이 없는 항목 제외
+                    .filter(ship => ship.region && ship.name)
+                    // 보여주기가 'O'인 항목만 표시
+                    .filter(ship => ship.show);
+
+                createTable();
+                showStatus('파일이 성공적으로 로드되었습니다.', 'success');
             } catch (error) {
-                console.error('CSV 로드 중 오류:', error);
-                showPopupMessage('데이터를 불러오는 중 오류가 발생했습니다: ' + error.message, 'error');
+                console.error('CSV 로드 오류:', error);
+                showStatus('파일 로드 중 오류가 발생했습니다: ' + error.message, 'error');
             }
         }
 

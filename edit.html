@@ -186,6 +186,17 @@
             box-sizing: border-box; /* Include padding in width */
         }
 
+        /* 지역명과 배이름 입력창 너비 제한 */
+        td:nth-child(2) input[type="text"], /* 지역명 */
+        td:nth-child(3) input[type="text"] { /* 배이름 */
+            max-width: 120px;
+        }
+
+        /* 중복된 배 이름 스타일 */
+        .duplicate-name {
+            background-color: pink !important;
+        }
+
         .edit-mode select {
             cursor: pointer;
             text-align: center; /* Center align select text */
@@ -547,56 +558,54 @@
             const tbody = document.getElementById('shipTableBody');
             tbody.innerHTML = '';
             
+            // 배 이름 중복 체크를 위한 맵
+            const shipNameCount = new Map();
+            
+            // 먼저 각 배 이름의 출현 횟수를 계산
+            shipData.forEach(ship => {
+                if (ship.name) {
+                    shipNameCount.set(ship.name, (shipNameCount.get(ship.name) || 0) + 1);
+                }
+            });
+
             shipData.forEach((ship, index) => {
                 const tr = document.createElement('tr');
                 tr.draggable = true;
-                
                 tr.addEventListener('dragstart', handleDragStart);
-                tr.addEventListener('dragend', handleDragEnd);
                 tr.addEventListener('dragover', handleDragOver);
-                tr.addEventListener('dragenter', handleDragEnter);
-                tr.addEventListener('dragleave', handleDragLeave);
                 tr.addEventListener('drop', handleDrop);
-                
+                tr.addEventListener('dragend', handleDragEnd);
+
+                const isDuplicate = shipNameCount.get(ship.name) > 1;
+                const nameClass = isDuplicate ? 'duplicate-name' : '';
+
                 tr.innerHTML = `
-                    <td>${ship.id}</td>
-                    <td>
-                        <span class="view-mode">${ship.region}</span>
-                        <input type="text" class="edit-mode" value="${ship.region}" onchange="updateShip(${index}, 'region', this.value)" style="display: none;">
-                    </td>
-                    <td>
-                        <span class="view-mode">${ship.name}</span>
-                        <input type="text" class="edit-mode" value="${ship.name}" onchange="updateShip(${index}, 'name', this.value)" style="display: none;">
-                    </td>
-                    <td>
-                        <span class="view-mode">${ship.url}</span>
-                        <input type="text" class="edit-mode" value="${ship.url}" onchange="updateShip(${index}, 'url', this.value)" style="display: none;">
-                    </td>
-                    <td>
-                        <span class="view-mode">${ship.urlType}</span>
-                        <select class="edit-mode" onchange="updateShip(${index}, 'urlType', this.value)" style="display: none;">
-                            <option value="1" ${ship.urlType === '1' ? 'selected' : ''}>1</option>
-                            <option value="2" ${ship.urlType === '2' ? 'selected' : ''}>2</option>
-                            <option value="3" ${ship.urlType === '3' ? 'selected' : ''}>3</option>
-                        </select>
-                    </td>
-                    <td>
-                        <span class="view-mode">${ship.show ? 'O' : 'X'}</span>
-                        <select class="edit-mode" onchange="updateShip(${index}, 'show', this.value === 'O')" style="display: none;">
-                            <option value="O" ${ship.show ? 'selected' : ''}>O</option>
-                            <option value="X" ${!ship.show ? 'selected' : ''}>X</option>
-                        </select>
-                    </td>
-                    <td>
-                        <span class="view-mode">${ship.memo || ''}</span>
-                        <input type="text" class="edit-mode" value="${ship.memo || ''}" onchange="updateShip(${index}, 'memo', this.value)" style="display: none;">
-                    </td>
+                    <td>${index + 1}</td>
+                    <td><input type="text" value="${ship.region}" onchange="updateData(${index}, 'region', this.value)"></td>
+                    <td class="${nameClass}"><input type="text" value="${ship.name}" onchange="updateData(${index}, 'name', this.value)"></td>
+                    <td><input type="text" value="${ship.url}" onchange="updateData(${index}, 'url', this.value)"></td>
+                    <td><select onchange="updateData(${index}, 'urlType', this.value)">
+                        <option value="1" ${ship.urlType === '1' ? 'selected' : ''}>1</option>
+                        <option value="2" ${ship.urlType === '2' ? 'selected' : ''}>2</option>
+                    </select></td>
+                    <td><select onchange="updateData(${index}, 'show', this.value === 'O')">
+                        <option value="O" ${ship.show ? 'selected' : ''}>O</option>
+                        <option value="X" ${!ship.show ? 'selected' : ''}>X</option>
+                    </select></td>
+                    <td><input type="text" value="${ship.memo || ''}" onchange="updateData(${index}, 'memo', this.value)"></td>
                     <td class="actions">
-                        <button onclick="toggleEditMode(${index})" class="table-btn edit-btn" data-index="${index}">수정</button>
-                        <button onclick="saveRow(${index})" class="table-btn save-btn" style="display: none;" data-index="${index}">저장</button>
-                        <button onclick="deleteShip(${index})" class="table-btn delete-btn">삭제</button>
+                        <button class="table-btn edit-btn" onclick="toggleEditMode(${index})">수정</button>
+                        <button class="table-btn save-btn" onclick="saveRow(${index})" style="display: none;">저장</button>
+                        <button class="table-btn delete-btn" onclick="deleteShip(${index})">삭제</button>
                     </td>
                 `;
+
+                // 초기에는 입력 필드를 숨김
+                const inputs = tr.querySelectorAll('input, select');
+                inputs.forEach(input => {
+                    input.style.display = 'none';
+                });
+
                 tbody.appendChild(tr);
             });
         }
@@ -608,54 +617,42 @@
 
             const editBtn = row.querySelector('.edit-btn');
             const saveBtn = row.querySelector('.save-btn');
-            const viewModes = row.querySelectorAll('.view-mode');
-            const editModes = row.querySelectorAll('.edit-mode');
+            const inputs = row.querySelectorAll('input, select');
 
+            // 다른 행의 편집 모드를 해제
             Array.from(tbody.children).forEach((otherRow, i) => {
                 if (i !== index) {
-                    const otherViewModes = otherRow.querySelectorAll('.view-mode');
-                    const otherEditModes = otherRow.querySelectorAll('.edit-mode');
+                    const otherInputs = otherRow.querySelectorAll('input, select');
                     const otherEditBtn = otherRow.querySelector('.edit-btn');
                     const otherSaveBtn = otherRow.querySelector('.save-btn');
 
                     if (otherEditBtn && otherSaveBtn) {
-                        otherViewModes.forEach(el => el.style.display = '');
-                        otherEditModes.forEach(el => el.style.display = 'none');
+                        otherInputs.forEach(el => el.style.display = 'none');
                         otherEditBtn.style.display = '';
                         otherSaveBtn.style.display = 'none';
                     }
                 }
             });
 
-            viewModes.forEach(el => el.style.display = 'none');
-            editModes.forEach(el => el.style.display = '');
-            editBtn.style.display = 'none';
-            saveBtn.style.display = '';
+            // 현재 행의 편집 모드 토글
+            const isEditing = editBtn.style.display === 'none';
+            inputs.forEach(el => el.style.display = isEditing ? 'none' : '');
+            editBtn.style.display = isEditing ? '' : 'none';
+            saveBtn.style.display = isEditing ? 'none' : '';
         }
 
         async function saveRow(index) {
             try {
-                const headers = ['순번', '지역명', '배이름', '예약사이트URL', 'URL_TYPE', '보여주기', '기타메모'];
-                const csvContent = [
-                    headers.join(','),
-                    ...shipData.map(ship => [
-                        ship.id,
-                        ship.region,
-                        ship.name,
-                        ship.url,
-                        ship.urlType,
-                        ship.show ? 'O' : 'X',
-                        ship.memo || ''
-                    ].join(','))
-                ].join('\n');
-
-                await updateFileInGitHub(csvContent);
-                
-                createTable();
-                showPopupMessage('변경사항이 GitHub에 저장되었습니다.', 'success');
+                await saveToGitHub();
+                showPopupMessage('변경사항이 저장되었습니다.', 'success');
+                toggleEditMode(index); // 편집 모드 종료
             } catch (error) {
-                console.error('저장 오류:', error);
-                showPopupMessage('저장 중 오류가 발생했습니다: ' + error.message, 'error');
+                console.error('저장 실패:', error);
+                showPopupMessage('저장에 실패했습니다: ' + error.message, 'error');
+                
+                // 저장 실패 시 원래 데이터로 복원
+                shipData = JSON.parse(JSON.stringify(originalData));
+                createTable();
             }
         }
 

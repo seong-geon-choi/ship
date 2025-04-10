@@ -418,135 +418,56 @@
         }
 
         // CSV 파일 로드
-        function loadCSV() {
-            return new Promise((resolve, reject) => {
-                const xhr = new XMLHttpRequest();
-                xhr.open('GET', 'shiplist.csv', true);
-                xhr.onreadystatechange = function() {
-                    if (xhr.readyState === 4) {
-                        if (xhr.status === 200) {
-                            try {
-                                const contents = xhr.responseText;
-                                if (!contents) {
-                                    throw new Error('CSV 파일이 비어있습니다.');
-                                }
-                                const lines = contents.split('\n')
-                                    .filter(line => line.trim() !== '')  // 빈 줄 제거
-                                    .filter(line => !line.startsWith('순번,지역명')); // 헤더 줄 제거
-                                
-                                if (lines.length === 0) {
-                                    throw new Error('CSV 파일에 데이터가 없습니다.');
-                                }
-                                
-                                // 배 이름으로 중복 제거를 위한 Map 사용
-                                const shipMap = new Map();
-                                
-                                lines.forEach(line => {
-                                    const values = line.split(',');
-                                    const ship = {
-                                        id: values[0],
-                                        region: values[1],
-                                        name: values[2],
-                                        url: values[3],
-                                        urlType: values[4],
-                                        show: values[5] === 'O',
-                                        memo: values[6]
-                                    };
-                                    
-                                    // 배 이름이 있고 show가 true인 경우에만 처리
-                                    if (ship.name && ship.show) {
-                                        // 이미 존재하는 배 이름인 경우, 더 높은 ID 값을 가진 항목으로 업데이트
-                                        if (!shipMap.has(ship.name) || parseInt(ship.id) > parseInt(shipMap.get(ship.name).id)) {
-                                            shipMap.set(ship.name, ship);
-                                        }
-                                    }
-                                });
-                                
-                                // Map에서 배열로 변환
-                                shipData = Array.from(shipMap.values())
-                                    .filter(ship => ship.region && ship.name); // 지역명과 배이름이 있는 데이터만 필터링
-                                
-                                const removedCount = lines.length - shipData.length;
-                                showPopupMessage(`파일이 로드되었습니다. ${removedCount}개의 중복 항목이 제거되었습니다.`, 'success');
-                                createLinks();
-                                resolve();
-                            } catch (error) {
-                                console.error('CSV 파싱 오류:', error);
-                                showPopupMessage('CSV 파일 로드 중 오류가 발생했습니다: ' + error.message, 'error');
-                                reject(error);
-                            }
-                        } else {
-                            const error = new Error(`CSV 파일을 찾을 수 없습니다. (상태 코드: ${xhr.status})`);
-                            console.error('CSV 로드 오류:', error);
-                            showPopupMessage('CSV 파일 로드 중 오류가 발생했습니다: ' + error.message, 'error');
-                            reject(error);
-                        }
+        async function loadCSV() {
+            try {
+                const response = await fetch('https://raw.githubusercontent.com/seong-geon-choi/ship/main/shiplist.csv');
+                if (!response.ok) throw new Error('GitHub에서 파일을 가져오는데 실패했습니다.');
+                
+                const text = await response.text();
+                const rows = text.split('\n');
+                const headers = rows[0].split(',');
+                
+                // 배 이름 중복 체크를 위한 맵
+                const shipNameCount = new Map();
+                
+                // 먼저 각 배 이름의 출현 횟수를 계산
+                rows.slice(1).forEach(row => {
+                    const values = row.split(',');
+                    const name = values[2];
+                    if (name) {
+                        shipNameCount.set(name, (shipNameCount.get(name) || 0) + 1);
                     }
-                };
-                xhr.onerror = function() {
-                    const error = new Error('네트워크 오류가 발생했습니다.');
-                    console.error('Network error:', error);
-                    showPopupMessage('CSV 파일 로드 중 오류가 발생했습니다: ' + error.message, 'error');
-                    reject(error);
-                };
-                xhr.send();
-            });
-        }
+                });
+                
+                shipData = rows.slice(1).map(row => {
+                    const values = row.split(',');
+                    let url = values[3];
+                    
+                    // URL이 있고, http:// 또는 https://로 시작하지 않는 경우 http:// 추가
+                    if (url && !url.startsWith('http://') && !url.startsWith('https://')) {
+                        url = 'http://' + url;
+                    }
+                    
+                    const name = values[2];
+                    return {
+                        id: values[0],
+                        region: values[1],
+                        name: name,
+                        url: url,
+                        urlType: values[4],
+                        show: values[5] === 'O',
+                        memo: values[6] || '',
+                        isDuplicate: shipNameCount.get(name) > 1 // 중복 여부 표시
+                    };
+                }).filter(ship => ship.id); // 빈 행 제거
 
-        // 파일 불러오기
-        document.getElementById('csvFile').addEventListener('change', function(e) {
-            const file = e.target.files[0];
-            if (file) {
-                const reader = new FileReader();
-                reader.onload = function(e) {
-                    try {
-                        const contents = e.target.result;
-                        const lines = contents.split('\n')
-                            .filter(line => line.trim() !== '')  // 빈 줄 제거
-                            .filter(line => !line.startsWith('순번,지역명')); // 헤더 줄 제거
-                        
-                        if (lines.length === 0) {
-                            throw new Error('CSV 파일에 데이터가 없습니다.');
-                        }
-                        
-                        // 배 이름으로 중복 제거를 위한 Map 사용
-                        const shipMap = new Map();
-                        
-                        lines.forEach(line => {
-                            const values = line.split(',');
-                            const ship = {
-                                id: values[0],
-                                region: values[1],
-                                name: values[2],
-                                url: values[3],
-                                urlType: values[4],
-                                show: values[5] === 'O',
-                                memo: values[6]
-                            };
-                            
-                            // 배 이름이 있고 show가 true인 경우에만 처리
-                            if (ship.name && ship.show) {
-                                // 이미 존재하는 배 이름인 경우, 더 높은 ID 값을 가진 항목으로 업데이트
-                                if (!shipMap.has(ship.name) || parseInt(ship.id) > parseInt(shipMap.get(ship.name).id)) {
-                                    shipMap.set(ship.name, ship);
-                                }
-                            }
-                        });
-                        
-                        // Map에서 배열로 변환
-                        shipData = Array.from(shipMap.values())
-                            .filter(ship => ship.region && ship.name); // 지역명과 배이름이 있는 데이터만 필터링
-                        
-                        const removedCount = lines.length - shipData.length;
-                        showPopupMessage(`파일이 로드되었습니다. ${removedCount}개의 중복 항목이 제거되었습니다.`, 'success');
-                        createLinks(); // 자동으로 링크 생성
-                    } catch (error) {
-                        showPopupMessage('파일 로드 중 오류가 발생했습니다: ' + error.message, 'error');
-                    }
-                };
-                reader.readAsText(file);
+                showPopupMessage('데이터를 성공적으로 불러왔습니다.', 'success');
+                createLinks();
+            } catch (error) {
+                console.error('CSV 로드 중 오류:', error);
+                showPopupMessage('데이터를 불러오는 중 오류가 발생했습니다: ' + error.message, 'error');
             }
-        });
+        }
 
         // 드래그 앤 드롭 관련 함수들
         let draggedItem = null;
@@ -672,7 +593,18 @@
                 // 배별로 표시
                 regions[region].forEach(ship => {
                     const shipLink = document.createElement('a');
-                    const url = ship.urlType === '1' ? `${ship.url}${daystr}` : `${ship.url}${daystr2}`;
+                    
+                    // URL 처리: http:// 또는 https://가 없는 경우 추가
+                    let baseUrl = ship.url;
+                    if (!baseUrl.startsWith('http://') && !baseUrl.startsWith('https://')) {
+                        baseUrl = 'http://' + baseUrl;
+                    }
+                    
+                    // URL_TYPE에 따라 다른 형식의 URL 생성
+                    const url = ship.urlType === '1' ? 
+                        `${baseUrl}${daystr}` : 
+                        `${baseUrl}${daystr2}`;
+                    
                     shipLink.href = url;
                     shipLink.className = 'ship-link';
                     shipLink.target = '_blank';
@@ -689,6 +621,9 @@
                     
                     const shipName = document.createElement('div');
                     shipName.className = 'ship-name';
+                    if (ship.isDuplicate) {
+                        shipName.style.backgroundColor = 'pink';
+                    }
                     shipName.textContent = ship.name;
                     shipLink.appendChild(shipName);
 

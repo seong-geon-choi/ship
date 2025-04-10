@@ -420,9 +420,25 @@
         // CSV 파일 로드
         async function loadCSV() {
             try {
-                const response = await fetch('shiplist.csv');
-                const contents = await response.text();
+                const owner = 'seong-geon-choi';
+                const repo = 'ship';
+                const path = 'shiplist.csv';
+                const apiUrl = `https://api.github.com/repos/${owner}/${repo}/contents/${path}`;
+
+                const response = await fetch(apiUrl);
+                if (!response.ok) {
+                    throw new Error(`GitHub API 오류: ${response.statusText}`);
+                }
+
+                const data = await response.json();
+                const decoder = new TextDecoder('utf-8');
+                const contentBytes = Uint8Array.from(atob(data.content), c => c.charCodeAt(0));
+                const contents = decoder.decode(contentBytes);
                 
+                if (!contents) {
+                    throw new Error('CSV 파일이 비어있습니다.');
+                }
+
                 const lines = contents.split('\n').filter(line => line.trim() !== '');
                 if (lines.length < 2) {
                     throw new Error('CSV 파일에 데이터가 없습니다.');
@@ -448,10 +464,10 @@
                     .filter(ship => ship.show);
 
                 createLinks();
-                showStatus('파일이 성공적으로 로드되었습니다.', 'success');
+                showStatus('GitHub에서 파일이 성공적으로 로드되었습니다.', 'success');
             } catch (error) {
                 console.error('CSV 로드 오류:', error);
-                showStatus('파일 로드 중 오류가 발생했습니다: ' + error.message, 'error');
+                showStatus('GitHub에서 파일 로드 중 오류가 발생했습니다: ' + error.message, 'error');
             }
         }
 

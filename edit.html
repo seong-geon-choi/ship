@@ -166,6 +166,11 @@
             text-align: center;
         }
 
+        /* 테이블 행 호버 효과 */
+        tr:hover td {
+            background-color: #f5f5f5;
+        }
+
         /* 테이블 셀 스타일 */
         th, td {
             padding: 8px 10px;
@@ -175,6 +180,26 @@
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
+            background-clip: padding-box;
+        }
+
+        /* 메모 컬럼 스타일 */
+        td:nth-child(7) {
+            position: relative;
+        }
+
+        td:nth-child(7) span.view-mode {
+            position: relative;
+            cursor: default;
+            display: block;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        /* 긴 메모에만 커서 스타일 적용 */
+        td:nth-child(7) span.view-mode[data-tooltip] {
+            cursor: help;
         }
 
         /* 입력 필드 스타일 */
@@ -421,11 +446,15 @@
         /* 메모 컬럼 툴팁 스타일 */
         td:nth-child(7) span.view-mode {
             position: relative;
-            cursor: help;
+            cursor: default;
         }
 
+        /* 긴 메모에만 커서와 밑줄 스타일 적용 */
         td:nth-child(7) span.view-mode[data-tooltip] {
-            border-bottom: 1px dotted #666;
+            cursor: help;
+            text-decoration: underline dotted #666;
+            text-underline-offset: 2px; /* 밑줄과 텍스트 사이 간격 조정 */
+            text-decoration-thickness: 1px; /* 밑줄 두께 조정 */
         }
 
         .tooltip {
@@ -859,6 +888,31 @@
                 
                 // 편집 모드 종료
                 toggleEditMode(index);
+                
+                // 화면 갱신
+                const row = document.getElementById('shipTableBody').children[index];
+                if (row) {
+                    // 각 셀의 view-mode span 업데이트
+                    const viewModes = row.querySelectorAll('.view-mode');
+                    const ship = shipData[index];
+                    
+                    viewModes[0].textContent = ship.region || '';
+                    viewModes[1].textContent = ship.name || '';
+                    viewModes[2].textContent = ship.url || '';
+                    viewModes[3].textContent = ship.urlType || '';
+                    viewModes[4].textContent = ship.show ? 'O' : 'X';
+                    viewModes[5].textContent = ship.memo || '';
+                    
+                    // 메모 필드의 툴팁 업데이트
+                    const memoSpan = viewModes[5];
+                    if (ship.memo && ship.memo.length > 20) {
+                        memoSpan.setAttribute('data-tooltip', ship.memo);
+                        memoSpan.style.cursor = 'help';
+                    } else {
+                        memoSpan.removeAttribute('data-tooltip');
+                        memoSpan.style.cursor = 'default';
+                    }
+                }
             } catch (error) {
                 console.error('저장 실패:', error);
                 showPopupMessage('저장에 실패했습니다: ' + error.message, 'error');

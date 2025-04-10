@@ -160,7 +160,7 @@
 
         /* 테이블 셀 스타일 */
         th, td {
-            padding: 12px 15px;
+            padding: 8px 10px;
             text-align: left;
             border-bottom: 1px solid #ddd;
             vertical-align: middle;
@@ -173,21 +173,33 @@
         .edit-mode input[type="text"], 
         .edit-mode select {
             width: 100%;
-            padding: 8px;
-            border: 2px solid #2196F3;
+            padding: 6px;
+            border: 1px solid #2196F3;
             border-radius: 4px;
             font-size: 14px;
             background-color: #fff;
-            box-shadow: 0 0 5px rgba(33, 150, 243, 0.2);
+            box-shadow: 0 0 3px rgba(33, 150, 243, 0.2);
             box-sizing: border-box;
-            min-width: 50px;
         }
 
         /* URL과 메모 입력 필드 특별 스타일 */
         td:nth-child(4) input[type="text"], /* URL */
         td:nth-child(7) input[type="text"] { /* 메모 */
-            min-width: 200px;
+            width: 100%;
             white-space: normal;
+        }
+
+        /* URL_TYPE과 보여주기 select 박스 스타일 */
+        td:nth-child(5) select, /* URL_TYPE */
+        td:nth-child(6) select { /* 보여주기 */
+            width: 100%;
+            text-align: center;
+        }
+
+        /* 지역명과 배이름 입력 필드 스타일 */
+        td:nth-child(2) input[type="text"], /* 지역명 */
+        td:nth-child(3) input[type="text"] { /* 배이름 */
+            width: 100%;
         }
 
         /* 기본 보기 모드 스타일 */

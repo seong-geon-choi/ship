@@ -112,7 +112,7 @@
         }
         
         .region {
-            flex: 1 1 300px;
+            flex: 0 1 300px;
             margin-bottom: 20px;
             background-color: white;
             border-radius: 8px;
@@ -261,6 +261,13 @@
         }
         
         /* 반응형 디자인 */
+        @media (max-width: 1200px) {
+            .region {
+                flex: 0 1 calc(50% - 20px);
+                max-width: calc(50% - 20px);
+            }
+        }
+
         @media (max-width: 768px) {
             .top-controls {
                 flex-direction: column;
@@ -289,7 +296,8 @@
             }
             
             .region {
-                flex: 1 1 100%;
+                flex: 0 1 100%;
+                max-width: 100%;
             }
         }
     </style>

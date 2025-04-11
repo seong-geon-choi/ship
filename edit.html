@@ -473,7 +473,7 @@
             display: none;
         }
     </style>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
     <a href="index.html" class="pencil-btn">메인</a>
@@ -1136,46 +1136,50 @@
                 await updateFileInGitHub(csvContent);
                 showPopupMessage('GitHub에 성공적으로 저장되었습니다.', 'success');
 
-                // CSV 파일을 shiplist.bak으로 백업
-                const owner = 'seong-geon-choi';
-                const repo = 'ship';
-                const path = 'shiplist.csv';
-                const backupPath = 'shiplist.bak';
-                const backupUrl = `https://api.github.com/repos/${owner}/${repo}/contents/${backupPath}`;
-
-                const encoder = new TextEncoder();
-                const contentBytes = encoder.encode(csvContent);
-                const contentBase64 = btoa(String.fromCharCode(...contentBytes));
-
-                // shiplist.bak 파일의 현재 SHA 가져오기
-                const getBackupFileUrl = `https://api.github.com/repos/${owner}/${repo}/contents/${backupPath}`;
-                const getBackupFileResponse = await fetch(getBackupFileUrl, {
-                    headers: {
-                        'Authorization': `token ${token}`,
-                        'Accept': 'application/vnd.github.v3+json'
+                // 기존 파일 내용 백업
+                try {
+                    // CSV 파일을 shiplist_before.csv로 백업
+                    const backupContent = await response.text();
+                    const backupEncoder = new TextEncoder();
+                    const backupBytes = backupEncoder.encode(backupContent);
+                    const backupBase64 = btoa(String.fromCharCode(...backupBytes));
+                    
+                    const backupPath = 'shiplist_before.csv';
+                    const backupApiUrl = `https://api.github.com/repos/${owner}/${repo}/contents/${backupPath}`;
+                    
+                    // shiplist_before.csv 파일의 현재 SHA 가져오기
+                    const backupResponse = await fetch(backupApiUrl, {
+                        headers: {
+                            'Authorization': `token ${token}`,
+                            'Accept': 'application/vnd.github.v3+json'
+                        }
+                    });
+                    
+                    let backupSha = '';
+                    if (backupResponse.ok) {
+                        const backupFile = await backupResponse.json();
+                        backupSha = backupFile.sha;
                     }
-                });
 
-                let backupSha = '';
-                if (getBackupFileResponse.ok) {
-                    const backupFile = await getBackupFileResponse.json();
-                    backupSha = backupFile.sha;
-                }
-
-                const backupResponse = await fetch(backupUrl, {
-                    method: 'PUT',
-                    headers: {
-                        'Authorization': `token ${token}`,
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify({
-                        message: 'Backup original CSV file',
-                        content: contentBase64,
-                        sha: backupSha // Use the current backup file's SHA
-                    })
-                });
-                if (!backupResponse.ok) {
-                    throw new Error('백업 파일 저장 실패: ' + backupResponse.statusText);
+                    const backupUpdateResponse = await fetch(backupApiUrl, {
+                        method: 'PUT',
+                        headers: {
+                            'Authorization': `token ${token}`,
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({
+                            message: 'Backup original CSV file',
+                            content: backupBase64,
+                            sha: backupSha // 현재 백업 파일 SHA 사용
+                        })
+                    });
+                    
+                    if (!backupUpdateResponse.ok) {
+                        throw new Error('백업 파일 저장 실패: ' + backupUpdateResponse.statusText);
+                    }
+                } catch (backupError) {
+                    console.error('백업 파일 생성 오류:', backupError);
+                    showPopupMessage('백업 파일 생성 중 오류가 발생했습니다.', 'warning');
                 }
             } catch (error) {
                 console.error('GitHub 저장 오류:', error);
@@ -1305,21 +1309,27 @@
             return fields[index];
         }
 
-        // 백업 파일 다운로드 함수
-        function downloadBackupFile() {
-            fetch('https://raw.githubusercontent.com/seong-geon-choi/ship/main/shiplist.bak')
-                .then(response => response.blob())
-                .then(blob => {
-                    const url = window.URL.createObjectURL(blob);
-                    const a = document.createElement('a');
-                    a.style.display = 'none';
-                    a.href = url;
-                    a.download = 'shiplist.bak';
-                    document.body.appendChild(a);
-                    a.click();
-                    window.URL.revokeObjectURL(url);
-                })
-                .catch(error => console.error('백업 파일 다운로드 오류:', error));
+        function handleDownloadBackup() {
+            try {
+                showPopupMessage('백업 파일 다운로드 중...', 'info');
+                fetch('https://raw.githubusercontent.com/seong-geon-choi/ship/main/shiplist_before.csv')
+                    .then(response => response.text())
+                    .then(data => {
+                        const blob = new Blob([data], { type: 'text/csv' });
+                        const url = window.URL.createObjectURL(blob);
+                        const a = document.createElement('a');
+                        a.style.display = 'none';
+                        a.href = url;
+                        a.download = 'shiplist_before.csv';
+                        document.body.appendChild(a);
+                        a.click();
+                        window.URL.revokeObjectURL(url);
+                        showPopupMessage('백업 파일 다운로드가 완료되었습니다.', 'success');
+                    });
+            } catch (error) {
+                showPopupMessage('백업 파일 다운로드 중 오류가 발생했습니다.', 'error');
+                console.error('Error downloading backup:', error);
+            }
         }
 
         // 페이지 하단에 백업 파일 다운로드 링크 추가
@@ -1332,7 +1342,7 @@
         backupLink.style.color = '#4CAF50';
         backupLink.style.textDecoration = 'none';
         backupLink.style.fontWeight = 'bold';
-        backupLink.addEventListener('click', downloadBackupFile);
+        backupLink.addEventListener('click', handleDownloadBackup);
         document.body.appendChild(backupLink);
     </script>
 </body>

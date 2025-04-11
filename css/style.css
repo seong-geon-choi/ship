@@ -1,0 +1,438 @@
+/* 공통 기본 스타일 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f5f5f5;
+    position: relative; /* For absolute positioning of pencil button */
+}
+
+/* 메인 페이지로 버튼 (연필 모양) */
+.pencil-btn {
+    position: absolute;
+    top: 25px;
+    left: 20px;
+    background-color: #f39c12; /* Pencil yellow */
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px 8px 30px; /* Increased left padding for shape */
+    border-radius: 0 5px 5px 0; /* Rounded right side */
+    font-size: 14px;
+    transition: background-color 0.3s;
+    z-index: 10; /* Ensure it's above other elements */
+    clip-path: polygon(0% 50%, 15% 0%, 100% 0%, 100% 100%, 15% 100%); /* Pointed shape */
+}
+
+.pencil-btn:hover {
+    background-color: #e67e22; /* Darker yellow */
+}
+
+/* 메인 타이틀 스타일 */
+.main-title {
+    text-align: center;
+    color: #333;
+    font-size: 24px;
+    margin: 20px 0;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* 상단 컨트롤 영역 */
+.top-controls {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* 파일 컨트롤 영역 */
+.file-controls {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+/* 설명 텍스트 스타일 */
+.description {
+    color: #666;
+    font-size: 14px;
+    margin: 10px 0;
+    text-align: center;
+}
+
+/* 버튼 공통 스타일 */
+.btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    min-width: 120px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s;
+    margin: 0 5px;
+}
+
+.btn:hover {
+    background-color: #45a049;
+}
+
+.btn.secondary {
+    background-color: #2196F3;
+}
+
+.btn.secondary:hover {
+    background-color: #1976D2;
+}
+
+/* 테이블 컨테이너 */
+.ship-list {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+    padding: 20px;
+    margin-top: 20px;
+    position: relative; /* For absolute positioning of add button */
+}
+
+/* 새 항목 추가 아이콘 버튼 */
+.add-icon-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    font-size: 20px;
+    line-height: 32px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+    z-index: 100; /* 더 높은 z-index 값으로 모든 레이어 위에 표시 */
+}
+
+.add-icon-btn:hover {
+    background-color: #2980b9;
+}
+
+/* 정렬 가능한 헤더 스타일 */
+th.sortable {
+    cursor: pointer;
+    position: relative;
+    padding-right: 20px;
+}
+
+th.sortable::after {
+    content: '⇅';
+    position: absolute;
+    right: 5px;
+    color: #999;
+}
+
+th.sortable.asc::after {
+    content: '↑';
+    color: #333;
+}
+
+th.sortable.desc::after {
+    content: '↓';
+    color: #333;
+}
+
+/* 테이블 스타일 */
+table {
+    table-layout: fixed; /* Prevent content from changing column widths */
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 1000px;
+    margin-top: 10px;
+}
+
+thead {
+    display: table;
+    width: calc(100% - 17px); /* 스크롤바 너비만큼 조정 */
+    table-layout: fixed;
+}
+
+tbody {
+    display: block;
+    max-height: 65vh;
+    overflow-y: auto;
+    width: 100%;
+}
+
+tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+/* 테이블 행 호버 효과 */
+tr:hover td {
+    background-color: #f5f5f5;
+}
+
+/* 테이블 셀 스타일 */
+th, td {
+    padding: 8px 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    vertical-align: middle;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    background-clip: padding-box;
+}
+
+th {
+    background-color: #f8f9fa;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    font-weight: bold;
+}
+
+/* 편집 가능한 셀 스타일 */
+td.editable {
+    background-color: #fff;
+    cursor: pointer;
+}
+
+td.editable:hover {
+    background-color: #f0f0f0;
+}
+
+/* 중복된 배 이름 스타일 */
+.duplicate-name {
+    background-color: pink !important;
+}
+
+/* 삭제 버튼 스타일 */
+.delete-btn {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s;
+    white-space: nowrap;
+}
+
+.delete-btn:hover {
+    background-color: #d32f2f;
+}
+
+/* 테이블 버튼 스타일 */
+.table-btn {
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    width: 60px;
+    height: 28px;
+    color: white;
+    margin-right: 5px;
+    transition: background-color 0.3s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    font-weight: normal;
+}
+
+.edit-btn {
+    background-color: #4CAF50;
+}
+
+.edit-btn:hover {
+    background-color: #45a049;
+}
+
+/* 저장 버튼은 파란색 유지 */
+.save-btn {
+    background-color: #2196F3 !important; /* 파란색, 우선순위 높임 */
+}
+
+.save-btn:hover {
+    background-color: #1976D2 !important; /* 파란색 호버, 우선순위 높임 */
+}
+
+/* 팝업 메시지 스타일 */
+#popupContainer {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    max-width: 300px;
+}
+
+.popup-message {
+    padding: 12px 20px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    color: white;
+    font-size: 14px;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: all 0.5s ease;
+}
+
+.popup-message.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.popup-message.success {
+    background-color: #4CAF50;
+}
+
+.popup-message.error {
+    background-color: #f44336;
+}
+
+.popup-message.warning {
+    background-color: #ff9800;
+}
+
+.popup-message.info {
+    background-color: #2196F3;
+}
+
+/* 백업 링크 컨테이너 */
+#backup-link-container {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: none;
+}
+
+/* 모달 스타일 */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1000; 
+    left: 0; 
+    top: 0; 
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+    background-color: #fefefe; 
+    margin: 15% auto; 
+    padding: 20px; 
+    border: 1px solid #888; 
+    width: 80%; 
+    max-width: 500px; 
+    border-radius: 5px;
+}
+
+/* 애니메이션 */
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* 드래그 앤 드롭 스타일 */
+tr.dragging {
+    opacity: 0.5;
+    background-color: #f0f0f0;
+}
+
+tr.over {
+    border-top: 2px solid #4CAF50;
+}
+
+/* 지역별 목록 스타일 */
+.region {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.region h2 {
+    color: #333;
+    margin: 0 0 15px 0;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #4CAF50;
+    font-size: 20px;
+}
+
+/* 배 링크 스타일 */
+.ship-link {
+    display: block;
+    padding: 15px;
+    margin: 10px 0;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #333;
+    transition: all 0.3s ease;
+    border: 1px solid #ddd;
+}
+
+.ship-link:hover {
+    background-color: #e9ecef;
+    transform: translateX(5px);
+    border-color: #4CAF50;
+}
+
+.ship-name {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #2c3e50;
+}
+
+.ship-description {
+    font-size: 14px;
+    color: #666;
+    margin-top: 5px;
+}
+
+/* 결과 영역 레이아웃 */
+#result {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    #result {
+        grid-template-columns: 1fr;
+    }
+}

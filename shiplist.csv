@@ -1,7 +1,6 @@
 ID,REGION,NAME,RESERVATION_URL,URL_TYPE,SHOW,MEMO
-1,충남 태안 신진도항,루디호/솔티가호,http://www.rudyfishing.com,1,O,
 6,00.예약,안흥2호/안흥,http://www.2ho.or.kr,1,O,11/14 문갑-4인방-입금완료
-7,00.예약,여명호/안흥,http://xn--v42bv0rcoar53c6lb.kr,1,O,10/11-쭈갑-4인방
+7,00.예약,여명호/안흥,http://xn--v42bv0rcoar53c6lb.kr,1,O,10/11-쭈갑-4인방(입금완)
 8,00.예약,씨헌터호/격포,http://xn--jj0bu2czvmlihdwc.com/,1,O,7/2-문어탐사-4인방
 9,00.예약,Team 지오디/영흥도,https://www.teamgod.kr,1,O,9/28-갑-하이젠3인방-예약금5만완료 | 11/2 갑 4인방 예약금5만완료
 10,00.예약,영석호/영흥도,http://www.xn--3i4bl3g39q.com,1,O,9/3 쭈 4인방 | 10/17 갑 4인방 예약금4만완료
@@ -83,6 +82,7 @@ ID,REGION,NAME,RESERVATION_URL,URL_TYPE,SHOW,MEMO
 16,충남 태안 대야도,아일랜드호,http://www.fishingi.net,1,O,
 4,충남 태안 마검포,뉴정원호,https://www.jungwonho.com,1,O,(신)(자리 선택)
 20,충남 태안 마검포,하와이호,http://newhawaii.co.kr,1,O,(자리 선택)
+1,충남 태안 신진도항,루디호/솔티가호,http://www.rudyfishing.com,1,O,
 2,충남 태안 신진도항,은양호,https://www.manaru.com/,1,O,
 3,충남 태안 신진도항,킹스타호,http://xn--hq1b35zdfj5xqljiby66e.com/,1,O,
 95,충남 태안 신진도항,퀸블레스호/블레스호,http://blessho.com/,1,O,

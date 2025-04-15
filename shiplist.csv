@@ -1,26 +1,20 @@
 ID,REGION,NAME,RESERVATION_URL,URL_TYPE,SHOW,MEMO
-92,충남 태안 신진도항,퀸블레스호/블레스호,http://blessho.com/index.php?mid=pre,1,O,
 3,00.예약,안흥2호/안흥,http://www.2ho.or.kr,1,O,11/14 문갑-4인방-입금완료
 4,00.예약,여명호/안흥,http://xn--v42bv0rcoar53c6lb.kr,1,O,10/11-쭈갑-4인방
 5,00.예약,씨헌터호/격포,http://xn--jj0bu2czvmlihdwc.com/,1,O,7/2-문어탐사-4인방
 6,00.예약,Team 지오디/영흥도,https://www.teamgod.kr,1,O,9/28-갑-하이젠3인방-예약금5만완료 | 11/2 갑 4인방 예약금5만완료
 7,00.예약,영석호/영흥도,http://www.xn--3i4bl3g39q.com,1,O,9/3 쭈 4인방 | 10/17 갑 4인방 예약금4만완료
-8,전북 부안 격포항,씨헌터호,http://xn--jj0bu2czvmlihdwc.com,1,O,
-14,충남 보령 대천항,까칠이호,https://xn--hl0b209b41esvi.com,1,O,
-15,충남 보령 대천항,아인스호,https://www.einsho.com,1,O,
-16,충남 보령 대천항,팀루피호,https://masterfishing.kr,1,O,
-18,충남 보령 무창포,글로리호,http://www.gloryho.kr,1,O,
-19,충남 보령 무창포,바다용사호,https://xn--vf4bo5bt3ep1t.com,1,O,
-20,충남 보령 무창포,배짱호,https://winner.thefishing.kr,1,O,
-21,충남 보령 무창포,스텔스호,https://www.muchangpo.kr,1,O,
-22,충남 보령 무창포,히트호,http://www.hitho.kr,1,O,
-23,충남 서산 삼길포,뉴항구호,https://daebak.sunsang24.com,2,O,(자리 선택)
-24,충남 서산 삼길포,만석호,https://www.mscufishing.com,1,O,(자리 선택)-대기안받음
-25,충남 서산 삼길포,헌터호,https://www.mscufishing.com,1,O,(자리 선택)-대기안받음
-26,충남 태안 안면도,무야호,https://marineho.sunsang24.com,2,O,(자리 선택)
-27,충남 태안 안흥항,안흥2호,http://www.2ho.or.kr,1,O,
-28,충남 태안 안흥항,여명호,http://xn--v42bv0rcoar53c6lb.kr,1,O,(신)
-29,충남 태안 안흥항,탑피싱호,http://www.topfishingho.com,1,O,
+61,경기 시흥 오이도,전투호,http://www.jaebul1ho.com,1,O,(신)(시간배)(자리 선택)
+62,경기 시흥 오이도,한바다호,http://xn--2j1b67owufgpurea.com,1,O,(신)(시간배)(자리 선택)
+79,경기 화성 전곡항,골드피싱호,http://www.golddragonho.com,1,O,
+80,경기 화성 전곡항,뉴신명호/신명 스카이호,http://www.shinmyungho.com,1,O,(자리 선택)
+81,경기 화성 전곡항,스타호/레인보우호,https://jstar.thefishing.kr,1,O,(자리 선택)
+82,경기 화성 전곡항,양철호,http://xn--og5b42kssi.com,1,O,(자리 선택)
+83,경기 화성 전곡항,옐로우피싱,https://yellow.sunsang24.com/,1,O,(자리 선택)
+84,경기 화성 전곡항,왕선장호,http://king.sunsang24.com,2,O,(자리 선택)
+85,경기 화성 전곡항,제비호,https://jebi.sunsang24.com,2,O,(자리 선택)
+86,경기 화성 전곡항,빅보스호,https://bigbossho.sunsang24.com/,2,O,(신)(자리 선택)
+2,인천 남항,슈퍼노바호,https://supernova.sunsang24.com,2,O,
 30,인천 연안부두,루키나2호/루키나호,http://lukina.sunsang24.com,2,O,(자리 선택)
 31,인천 연안부두,시크릿호,https://khanfishing.com,1,O,(자리 선택)
 32,인천 연안부두,팀에프원,https://kazmi.kr,1,O,
@@ -52,8 +46,15 @@ ID,REGION,NAME,RESERVATION_URL,URL_TYPE,SHOW,MEMO
 58,인천 영흥도.,카리스마호,https://charisma.sunsang24.com,2,O,(자리 선택)
 59,인천 영흥도.,크루즈호,http://www.cruiseho.com,1,O,(자리 선택)
 60,인천 영흥도.,페라리호,http://www.xn--oi2bn5b095b4mc.com,1,O,(자리 선택)
-61,경기 시흥 오이도,전투호,http://www.jaebul1ho.com,1,O,(신)(시간배)(자리 선택)
-62,경기 시흥 오이도,한바다호,http://xn--2j1b67owufgpurea.com,1,O,(신)(시간배)(자리 선택)
+8,전북 부안 격포항,씨헌터호,http://xn--jj0bu2czvmlihdwc.com,1,O,
+14,충남 보령 대천항,까칠이호,https://xn--hl0b209b41esvi.com,1,O,
+15,충남 보령 대천항,아인스호,https://www.einsho.com,1,O,
+16,충남 보령 대천항,팀루피호,https://masterfishing.kr,1,O,
+18,충남 보령 무창포,글로리호,http://www.gloryho.kr,1,O,
+19,충남 보령 무창포,바다용사호,https://xn--vf4bo5bt3ep1t.com,1,O,
+20,충남 보령 무창포,배짱호,https://winner.thefishing.kr,1,O,
+21,충남 보령 무창포,스텔스호,https://www.muchangpo.kr,1,O,
+22,충남 보령 무창포,히트호,http://www.hitho.kr,1,O,
 63,충남 보령 오천항,가즈아호,https://ocpro.sunsang24.com,2,O,
 64,충남 보령 오천항,꽃돼지호,https://pigho.sunsang24.com,2,O,점심 제공 x
 65,충남 보령 오천항,나폴리호,https://www.napoliho.net,1,O,(신)
@@ -70,24 +71,23 @@ ID,REGION,NAME,RESERVATION_URL,URL_TYPE,SHOW,MEMO
 76,충남 보령 오천항,팀프랜드호,http://www.friendho.com,1,O,(신)
 77,충남 보령 오천항,프린스호,https://princeho.sunsang24.com,2,O,
 78,충남 보령 오천항,호랭이호,https://horeng2.sunsang24.com,2,O,
-2,인천 남항,슈퍼노바호,https://supernova.sunsang24.com,2,O,
-79,경기 화성 전곡항,골드피싱호,http://www.golddragonho.com,1,O,
-80,경기 화성 전곡항,뉴신명호/신명 스카이호,http://www.shinmyungho.com,1,O,(자리 선택)
-81,경기 화성 전곡항,스타호/레인보우호,https://jstar.thefishing.kr,1,O,(자리 선택)
-82,경기 화성 전곡항,양철호,http://xn--og5b42kssi.com,1,O,(자리 선택)
-83,경기 화성 전곡항,옐로우피싱,https://yellow.sunsang24.com/,1,O,(자리 선택)
-84,경기 화성 전곡항,왕선장호,http://king.sunsang24.com,2,O,(자리 선택)
-85,경기 화성 전곡항,제비호,https://jebi.sunsang24.com,2,O,(자리 선택)
-86,경기 화성 전곡항,빅보스호,https://bigbossho.sunsang24.com/,2,O,(신)(자리 선택)
-13,충남 태안 대야도,아일랜드호,http://www.fishingi.net,1,O,
-1,충남 태안 마검포,뉴정원호,https://www.jungwonho.com,1,O,(신)(자리 선택)
-17,충남 태안 마검포,하와이호,http://newhawaii.co.kr,1,O,(자리 선택)
-9,충남 홍성 남당항,뉴정환호,https://jh.sunsang24.com,2,O,(자리 선택)
-10,충남 홍성 남당항,동백호/피크닉호,https://picnic.sunsang24.com,2,O,(자리 선택)
-11,충남 홍성 남당항,은가비호,https://www.eungabiho.com,1,O,(자리 선택)
-12,충남 홍성 남당항,장현호,http://namdangfishing.com,1,O,
+91,충남 보령 회변항,오성스타호,https://starfishing.thefishing.kr,1,O,
+23,충남 서산 삼길포,뉴항구호,https://daebak.sunsang24.com,2,O,(자리 선택)
+24,충남 서산 삼길포,만석호,https://www.mscufishing.com,1,O,(자리 선택)-대기안받음
+25,충남 서산 삼길포,헌터호,https://www.mscufishing.com,1,O,(자리 선택)-대기안받음
 87,충남 서천 홍원항,가이아호-영진민박,http://www.yjfishing.kr,1,O,
 88,충남 서천 홍원항,도깨비호,https://www.doggaebi.kr,1,O,
 89,충남 서천 홍원항,샤크호,https://sharkfishing.sunsang24.com,2,O,(자리 선택)
 90,충남 서천 홍원항,조커호-해변펜션,http://www.seasidefishing.kr,1,O,(신)
-91,충남 보령 회변항,오성스타호,https://starfishing.thefishing.kr,1,O,
+13,충남 태안 대야도,아일랜드호,http://www.fishingi.net,1,O,
+1,충남 태안 마검포,뉴정원호,https://www.jungwonho.com,1,O,(신)(자리 선택)
+17,충남 태안 마검포,하와이호,http://newhawaii.co.kr,1,O,(자리 선택)
+92,충남 태안 신진도항,퀸블레스호/블레스호,http://blessho.com/,1,O,
+26,충남 태안 안면도,무야호,https://marineho.sunsang24.com,2,O,(자리 선택)
+27,충남 태안 안흥항,안흥2호,http://www.2ho.or.kr,1,O,
+28,충남 태안 안흥항,여명호,http://xn--v42bv0rcoar53c6lb.kr,1,O,(신)
+29,충남 태안 안흥항,탑피싱호,http://www.topfishingho.com,1,O,
+9,충남 홍성 남당항,뉴정환호,https://jh.sunsang24.com,2,O,(자리 선택)
+10,충남 홍성 남당항,동백호/피크닉호,https://picnic.sunsang24.com,2,O,(자리 선택)
+11,충남 홍성 남당항,은가비호,https://www.eungabiho.com,1,O,(자리 선택)
+12,충남 홍성 남당항,장현호,http://namdangfishing.com,1,O,

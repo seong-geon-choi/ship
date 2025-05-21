@@ -210,6 +210,28 @@ function decodeGitHubContent(base64Content) {
     return decoder.decode(contentBytes);
 }
 
+/**
+ * 백업 파일을 GitHub에 저장 (sha 자동 조회)
+ * @param {string} owner - GitHub 소유자
+ * @param {string} repo - GitHub 저장소
+ * @param {string} path - 백업 파일 경로 (예: shiplist_before.csv)
+ * @param {string} content - 저장할 내용 (UTF-8 텍스트)
+ * @returns {Promise<Object>} 응답 객체
+ */
+async function backupFileToGitHub(owner, repo, path, content) {
+    let sha = null;
+    try {
+        const fileInfo = await fetchFileFromGitHub(owner, repo, path);
+        if (fileInfo && fileInfo.sha) {
+            sha = fileInfo.sha;
+        }
+    } catch (e) {
+        // 파일이 없으면 sha는 null (신규 생성)
+        sha = null;
+    }
+    return await saveFileToGitHub(owner, repo, path, content, sha, '백업 파일 저장');
+}
+
 // 4. 이벤트 리스너 ------------------------------------------------------
 document.addEventListener('DOMContentLoaded', function() {
     // ESC 키를 눌렀을 때 모달 닫기

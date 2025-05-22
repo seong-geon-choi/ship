@@ -316,6 +316,10 @@
                 <label for="dateInput">날짜 선택:</label>
                 <input type="date" id="dateInput" onchange="createLinks()">
                 <input type="text" id="searchInput" placeholder="배 이름 검색" style="margin-left:10px; padding:8px; border-radius:4px; border:1px solid #ddd; font-size:14px; width:160px;">
+                <label style="margin-left:10px; font-size:14px;">
+                    <input type="checkbox" id="sortMemoCheckbox" style="vertical-align:middle; margin-right:4px;">
+                    메모로 정렬
+                </label>
             </div>
             
             <div class="edit-buttons">
@@ -599,6 +603,15 @@
                 const regionTitle = document.createElement('h2');
                 regionTitle.textContent = region;
                 regionDiv.appendChild(regionTitle);
+                // 정렬 기준 적용
+                const sortMemo = document.getElementById('sortMemoCheckbox')?.checked;
+                regions[region].sort((a, b) => {
+                    if (sortMemo) {
+                        return (a.memo || '').localeCompare(b.memo || '', 'ko') || a.name.localeCompare(b.name, 'ko');
+                    } else {
+                        return a.name.localeCompare(b.name, 'ko');
+                    }
+                });
                 regions[region].forEach(ship => {
                     const shipLink = document.createElement('a');
                     let baseUrl = ship.url;
@@ -667,11 +680,15 @@
             loadCSV();
         };
 
-        // 검색창 입력 시마다 createLinks 호출
+        // 검색창/체크박스 입력 시마다 createLinks 호출
         setTimeout(function() {
             var searchInput = document.getElementById('searchInput');
             if (searchInput) {
                 searchInput.addEventListener('input', function() { createLinks(true); });
+            }
+            var sortMemoCheckbox = document.getElementById('sortMemoCheckbox');
+            if (sortMemoCheckbox) {
+                sortMemoCheckbox.addEventListener('change', function() { createLinks(true); });
             }
         }, 0);
     </script>

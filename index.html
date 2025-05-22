@@ -569,7 +569,10 @@
             resultDiv.innerHTML = '';
             let visibleShips = shipData.filter(ship => ship.show === true);
             if (searchValue) {
-                visibleShips = visibleShips.filter(ship => ship.name && ship.name.toLowerCase().includes(searchValue));
+                visibleShips = visibleShips.filter(ship =>
+                    (ship.name && ship.name.toLowerCase().includes(searchValue)) ||
+                    (ship.region && ship.region.toLowerCase().includes(searchValue))
+                );
             }
             const regions = {};
             const shipNameCount = new Map();

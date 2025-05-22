@@ -232,6 +232,65 @@ async function backupFileToGitHub(owner, repo, path, content) {
     return await saveFileToGitHub(owner, repo, path, content, sha, '백업 파일 저장');
 }
 
+/**
+ * shiplist.csv를 GitHub에 저장(백업 포함)
+ * @param {Array} shipData - 저장할 데이터 배열
+ * @param {Function} showPopupMessage - 팝업 메시지 함수(각 페이지에서 전달)
+ * @returns {Promise<boolean>} 성공 여부
+ */
+async function saveShiplistWithBackup(shipData, showPopupMessage) {
+    try {
+        if (!shipData || shipData.length === 0) {
+            showPopupMessage('저장할 데이터가 없습니다.', 'error');
+            return false;
+        }
+        showPopupMessage('GitHub에 저장 중...', 'info');
+        // 보여주기 필드 정규화
+        shipData.forEach(ship => {
+            ship.show = ship.show === true || ship.show === 'O' ? 'O' : 'X';
+        });
+        // CSV 변환
+        const csvHeader = "ID,REGION,NAME,RESERVATION_URL,URL_TYPE,SHOW,MEMO";
+        const csvContent = [
+            csvHeader,
+            ...shipData.map(ship =>
+                `${ship.id},${ship.region},${ship.name},${ship.url},${ship.urlType},${ship.show},${ship.memo || ''}`)
+        ].join('\n');
+        const owner = 'seong-geon-choi';
+        const repo = 'ship';
+        const path = 'shiplist.csv';
+        // 날짜 문자열
+        function getTodayString() {
+            const now = new Date();
+            const yyyy = now.getFullYear();
+            const mm = String(now.getMonth() + 1).padStart(2, '0');
+            const dd = String(now.getDate()).padStart(2, '0');
+            return `${yyyy}${mm}${dd}`;
+        }
+        // 기존 파일 정보
+        const fileData = await fetchFileFromGitHub(owner, repo, path);
+        if (!fileData) return false;
+        // 백업
+        const backupDir = 'csvbak';
+        const backupPath = `${backupDir}/shiplist_${getTodayString()}.csv`;
+        await backupFileToGitHub(owner, repo, backupPath, decodeGitHubContent(fileData.content));
+        // 저장
+        await saveFileToGitHub(
+            owner,
+            repo,
+            path,
+            csvContent,
+            fileData.sha,
+            '배 목록 업데이트'
+        );
+        showPopupMessage('GitHub에 성공적으로 저장되었습니다.', 'success');
+        return true;
+    } catch (error) {
+        handleGitHubError(error, 'GitHub 저장');
+        return false;
+    }
+}
+
 // 4. 이벤트 리스너 ------------------------------------------------------
 document.addEventListener('DOMContentLoaded', function() {
     // ESC 키를 눌렀을 때 모달 닫기

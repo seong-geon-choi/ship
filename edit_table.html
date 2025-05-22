@@ -629,65 +629,7 @@
         }
 
         async function saveChanges() {
-            try {
-                showPopupMessage('변경사항 저장 중...', 'info');
-                
-                // 값 정규화 (보여주기 필드를 O/X로 표준화)
-                shipData.forEach(ship => {
-                    ship.show = ship.show === 'O' || ship.show === true ? 'O' : 'X';
-                });
-                
-                // CSV 파일 헤더와 행 생성
-                const csvHeader = "ID,REGION,NAME,RESERVATION_URL,URL_TYPE,SHOW,MEMO";
-                const csvRows = shipData.map(ship => {
-                    return `${ship.id},${ship.region},${ship.name},${ship.url},${ship.urlType},${ship.show},${ship.memo}`;
-                });
-                
-                const csvContent = [csvHeader, ...csvRows].join('\n');
-                
-                // GitHub API 설정
-                const owner = 'seong-geon-choi';
-                const repo = 'ship';
-                const path = 'shiplist.csv';
-                
-                // 기존 파일 정보 가져오기
-                const fileData = await fetchFileFromGitHub(owner, repo, path);
-                if (!fileData) return;
-                
-                // 백업 파일 생성/업데이트
-                try {
-                    const backupPath = 'shiplist.bak';
-                    
-                    // 백업 파일 저장
-                    await saveFileToGitHub(
-                        owner,
-                        repo,
-                        backupPath,
-                        decodeGitHubContent(fileData.content),
-                        null, // 백업 파일의 현재 SHA는 별도로 확인해야 함
-                        '배 목록 백업 파일 업데이트'
-                    );
-                    
-                    showPopupMessage('백업 파일이 생성되었습니다', 'success');
-                } catch (backupError) {
-                    console.error('백업 파일 생성 오류:', backupError);
-                    showPopupMessage('백업 생성 중 오류가 발생했습니다. 하지만 저장은 계속됩니다.', 'warning');
-                }
-                
-                // 파일 업로드
-                await saveFileToGitHub(
-                    owner,
-                    repo,
-                    path,
-                    csvContent,
-                    fileData.sha,
-                    '배 목록 업데이트'
-                );
-                
-                showPopupMessage('변경사항이 성공적으로 저장되었습니다.', 'success');
-            } catch (error) {
-                handleGitHubError(error, '저장');
-            }
+            await saveShiplistWithBackup(shipData, showPopupMessage);
         }
 
         async function downloadBackup() {

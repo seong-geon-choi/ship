@@ -1087,55 +1087,11 @@
         }
 
         async function saveToGitHub() {
-            try {
-                // 저장 전 검증
-                if (shipData.length === 0) {
-                    showPopupMessage('저장할 데이터가 없습니다.', 'error');
-                    return;
-                }
-                
-                showPopupMessage('GitHub에 저장 중...', 'info');
-                
-                // 보여주기 필드 정규화 (O/X)
-                shipData.forEach(ship => {
-                    ship.show = ship.show === true || ship.show === 'O' ? 'O' : 'X';
-                });
-                
-                // CSV 형식으로 변환
-                const csvHeader = "ID,REGION,NAME,RESERVATION_URL,URL_TYPE,SHOW,MEMO";
-                const csvContent = [
-                    csvHeader,
-                    ...shipData.map(ship => 
-                        `${ship.id},${ship.region},${ship.name},${ship.url},${ship.urlType},${ship.show},${ship.memo || ''}`)
-                ].join('\n');
-                
-                const owner = 'seong-geon-choi';
-                const repo = 'ship';
-                const path = 'shiplist.csv';
-                
-                // 기존 파일 정보 가져오기
-                const fileData = await fetchFileFromGitHub(owner, repo, path);
-                if (!fileData) return;
-                
-                // 파일 저장
-                await saveFileToGitHub(
-                    owner, 
-                    repo, 
-                    path, 
-                    csvContent, 
-                    fileData.sha, 
-                    '배 목록 업데이트'
-                );
-                
-                // 원본 데이터 업데이트
+            const result = await saveShiplistWithBackup(shipData, showPopupMessage);
+            if (result) {
                 originalData = JSON.parse(JSON.stringify(shipData));
-                showPopupMessage('GitHub에 성공적으로 저장되었습니다.', 'success');
-                
-                return true;
-            } catch (error) {
-                handleGitHubError(error, 'GitHub 저장');
-                return false;
             }
+            return result;
         }
 
         function saveToken() {
@@ -1147,86 +1103,6 @@
                 loadCSV();
             } else {
                 showPopupMessage('유효한 GitHub 토큰을 입력해주세요.', 'error');
-            }
-        }
-
-        async function updateFileInGitHub(content) {
-            try {
-                const token = localStorage.getItem('github_token');
-                if (!token) {
-                    showPopupMessage('GitHub 토큰이 필요합니다. 먼저 토큰을 설정해주세요.', 'error');
-                    document.getElementById('githubTokenModal').style.display = 'block';
-                    return null;
-                }
-
-                const owner = 'seong-geon-choi';
-                const repo = 'ship';
-                const path = 'shiplist.csv';
-                const apiUrl = `https://api.github.com/repos/${owner}/${repo}/contents/${path}`;
-
-                // 기존 파일 가져오기
-                const getCurrentFileResponse = await fetch(apiUrl, {
-                    headers: {
-                        'Authorization': `token ${token}`,
-                        'Accept': 'application/vnd.github.v3+json'
-                    }
-                });
-
-                if (!getCurrentFileResponse.ok) {
-                    if (getCurrentFileResponse.status === 401) {
-                        showPopupMessage('GitHub 토큰이 유효하지 않습니다. 새로운 토큰을 입력해주세요.', 'error');
-                        localStorage.removeItem('github_token');
-                        document.getElementById('githubTokenModal').style.display = 'block';
-                        return null;
-                    }
-                    throw new Error(`GitHub API 오류: ${getCurrentFileResponse.statusText}`);
-                }
-
-                const currentFile = await getCurrentFileResponse.json();
-                originalCSVSha = currentFile.sha;
-
-                const updateFileUrl = `https://api.github.com/repos/${owner}/${repo}/contents/${path}`;
-                
-                const encoder = new TextEncoder();
-                const contentBytes = encoder.encode(content);
-                const contentBase64 = btoa(String.fromCharCode(...contentBytes));
-                
-                const updateFileResponse = await fetch(updateFileUrl, {
-                    method: 'PUT',
-                    headers: {
-                        'Authorization': `token ${token}`,
-                        'Accept': 'application/vnd.github.v3+json',
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify({
-                        message: 'Update ship list',
-                        content: contentBase64,
-                        sha: currentFile.sha
-                    })
-                });
-
-                if (!updateFileResponse.ok) {
-                    const errorText = await updateFileResponse.text();
-                    console.error('GitHub API Error Response:', errorText);
-                    throw new Error(`GitHub API 오류: ${updateFileResponse.statusText}`);
-                }
-
-                return await updateFileResponse.json();
-            } catch (error) {
-                console.error('GitHub 저장 오류:', error);
-                showPopupMessage('GitHub 저장 중 오류가 발생했습니다: ' + error.message, 'error');
-                
-                // 토큰 관련 오류인지 확인하고 토큰 모달 표시
-                if (error.message.includes('토큰') || 
-                    error.message.includes('token') || 
-                    error.message.includes('인증') || 
-                    error.message.includes('auth') ||
-                    error.message.includes('401') ||
-                    error.message.includes('403')) {
-                    document.getElementById('githubTokenModal').style.display = 'block';
-                }
-                
-                return null;
             }
         }
 

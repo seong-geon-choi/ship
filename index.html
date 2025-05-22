@@ -315,6 +315,7 @@
             <div class="date-selection">
                 <label for="dateInput">날짜 선택:</label>
                 <input type="date" id="dateInput" onchange="createLinks()">
+                <input type="text" id="searchInput" placeholder="배 이름 검색" style="margin-left:10px; padding:8px; border-radius:4px; border:1px solid #ddd; font-size:14px; width:160px;">
             </div>
             
             <div class="edit-buttons">
@@ -546,93 +547,75 @@
         }
         
         // 링크 생성
-        function createLinks() {
+        function createLinks(isSearch = false) {
             if (shipData.length === 0) {
                 showPopupMessage('먼저 CSV 파일을 불러와주세요.', 'error');
                 return;
             }
-
             const dateInput = document.getElementById('dateInput');
+            const searchInput = document.getElementById('searchInput');
+            const searchValue = searchInput ? searchInput.value.trim().toLowerCase() : "";
             const date = new Date(dateInput.value);
-            
             if (isNaN(date.getTime())) {
                 showPopupMessage('유효한 날짜를 선택해주세요.', 'error');
                 return;
             }
-            
             const year = date.getFullYear();
             const month = String(date.getMonth() + 1).padStart(2, '0');
             const day = String(date.getDate()).padStart(2, '0');
-            
             const daystr = `/index.php?mid=bk&year=${year}&month=${month}&day=${day}#list`;
             const daystr2 = `/ship/schedule_fleet/${year}${month}`;
-            
             const resultDiv = document.getElementById('result');
             resultDiv.innerHTML = '';
-            
-            // 보여주기가 'O'인 항목만 필터링하여 지역별로 그룹화
+            let visibleShips = shipData.filter(ship => ship.show === true);
+            if (searchValue) {
+                visibleShips = visibleShips.filter(ship => ship.name && ship.name.toLowerCase().includes(searchValue));
+            }
             const regions = {};
-            const visibleShips = shipData.filter(ship => ship.show === true);
-            
-            // 배 이름 중복 체크를 위한 맵
             const shipNameCount = new Map();
             visibleShips.forEach(ship => {
                 if (ship.name) {
                     shipNameCount.set(ship.name, (shipNameCount.get(ship.name) || 0) + 1);
                 }
             });
-
             visibleShips.forEach(ship => {
                 if (!regions[ship.region]) {
                     regions[ship.region] = [];
                 }
                 regions[ship.region].push(ship);
             });
-            
-            // 지역이 있는 경우에만 표시
             if (Object.keys(regions).length === 0) {
-                showPopupMessage('표시할 수 있는 항목이 없습니다.', 'error');
+                if (!isSearch) {
+                    showPopupMessage('표시할 수 있는 항목이 없습니다.', 'error');
+                }
                 return;
             }
-            
-            // 지역별로 표시
             Object.keys(regions).sort().forEach(region => {
                 const regionDiv = document.createElement('div');
                 regionDiv.className = 'region';
-                
                 const regionTitle = document.createElement('h2');
                 regionTitle.textContent = region;
                 regionDiv.appendChild(regionTitle);
-                
-                // 배별로 표시
                 regions[region].forEach(ship => {
                     const shipLink = document.createElement('a');
-                    
-                    // URL 처리: http:// 또는 https://가 없는 경우 추가
                     let baseUrl = ship.url;
                     if (!baseUrl.startsWith('http://') && !baseUrl.startsWith('https://')) {
                         baseUrl = 'http://' + baseUrl;
                     }
-                    
-                    // URL_TYPE에 따라 다른 형식의 URL 생성
                     const url = ship.urlType === '1' ? 
                         `${baseUrl}${daystr}` : 
                         `${baseUrl}${daystr2}#d${year}-${month}-${day}`;
-                    
                     shipLink.href = url;
                     shipLink.className = 'ship-link';
                     shipLink.target = '_blank';
                     shipLink.draggable = true;
                     shipLink.dataset.shipId = ship.id;
-                    
-                    // 드래그 이벤트 리스너 추가
                     shipLink.addEventListener('dragstart', handleDragStart);
                     shipLink.addEventListener('dragend', handleDragEnd);
                     shipLink.addEventListener('dragover', handleDragOver);
                     shipLink.addEventListener('dragenter', handleDragEnter);
                     shipLink.addEventListener('dragleave', handleDragLeave);
                     shipLink.addEventListener('drop', handleDrop);
-                    
                     const shipName = document.createElement('div');
                     shipName.className = 'ship-name';
                     if (shipNameCount.get(ship.name) > 1) {
@@ -640,19 +623,17 @@
                     }
                     shipName.textContent = ship.name;
                     shipLink.appendChild(shipName);
-
                     const shipDesc = document.createElement('div');
                     shipDesc.className = 'ship-description';
                     shipDesc.textContent = ship.memo || '';
                     shipLink.appendChild(shipDesc);
-                    
                     regionDiv.appendChild(shipLink);
                 });
-                
                 resultDiv.appendChild(regionDiv);
             });
-            
-            showPopupMessage('링크가 생성되었습니다.', 'success');
+            if (!isSearch) {
+                showPopupMessage('링크가 생성되었습니다.', 'success');
+            }
         }
         
         // ESC 키를 눌렀을 때 모달 닫기
@@ -682,6 +663,14 @@
             // CSV 파일 로드
             loadCSV();
         };
+
+        // 검색창 입력 시마다 createLinks 호출
+        setTimeout(function() {
+            var searchInput = document.getElementById('searchInput');
+            if (searchInput) {
+                searchInput.addEventListener('input', function() { createLinks(true); });
+            }
+        }, 0);
     </script>
 </body>
 </html>

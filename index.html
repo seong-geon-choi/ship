@@ -325,6 +325,10 @@
                     <input type="checkbox" id="sortMemoCheckbox" style="vertical-align:middle; margin-right:4px;">
                     메모로 정렬
                 </label>
+                <label style="margin-left:10px; font-size:14px;">
+                    지역분할
+                    <input type="number" id="regionSplitInput" value="20" min="1" style="width:50px; margin-left:4px; padding:8px; border-radius:4px; border:1px solid #ddd; font-size:14px; background-color:#fff;">
+                </label>
             </div>
             
             <div class="edit-buttons">
@@ -607,55 +611,67 @@
                 }
                 return;
             }
+            const splitCount = Number(document.getElementById('regionSplitInput')?.value) || 20;
             Object.keys(regions).sort().forEach(region => {
-                const regionDiv = document.createElement('div');
-                regionDiv.className = 'region';
-                const regionTitle = document.createElement('h2');
-                regionTitle.textContent = `${region} (${regions[region].length})`;
-                regionDiv.appendChild(regionTitle);
-                // 정렬 기준 적용
-                const sortMemo = document.getElementById('sortMemoCheckbox')?.checked;
-                regions[region].sort((a, b) => {
-                    if (sortMemo) {
-                        return (a.memo || '').localeCompare(b.memo || '', 'ko') || a.name.localeCompare(b.name, 'ko');
+                const regionShips = regions[region];
+                // 그룹 나누기
+                for (let i = 0; i < regionShips.length; i += splitCount) {
+                    const group = regionShips.slice(i, i + splitCount);
+                    const groupNum = Math.floor(i / splitCount) + 1;
+                    const totalGroups = Math.ceil(regionShips.length / splitCount);
+                    const regionDiv = document.createElement('div');
+                    regionDiv.className = 'region';
+                    const regionTitle = document.createElement('h2');
+                    if (totalGroups === 1) {
+                        regionTitle.textContent = `${region} (${group.length})`;
                     } else {
-                        return a.name.localeCompare(b.name, 'ko');
+                        regionTitle.textContent = `${region}${groupNum}(${group.length})`;
                     }
-                });
-                regions[region].forEach(ship => {
-                    const shipLink = document.createElement('a');
-                    let baseUrl = ship.url;
-                    if (!baseUrl.startsWith('http://') && !baseUrl.startsWith('https://')) {
-                        baseUrl = 'http://' + baseUrl;
-                    }
-                    const url = ship.urlType === '1' ? 
-                        `${baseUrl}${daystr}` : 
-                        `${baseUrl}${daystr2}#d${year}-${month}-${day}`;
-                    shipLink.href = url;
-                    shipLink.className = 'ship-link';
-                    shipLink.target = '_blank';
-                    shipLink.draggable = true;
-                    shipLink.dataset.shipId = ship.id;
-                    shipLink.addEventListener('dragstart', handleDragStart);
-                    shipLink.addEventListener('dragend', handleDragEnd);
-                    shipLink.addEventListener('dragover', handleDragOver);
-                    shipLink.addEventListener('dragenter', handleDragEnter);
-                    shipLink.addEventListener('dragleave', handleDragLeave);
-                    shipLink.addEventListener('drop', handleDrop);
-                    const shipName = document.createElement('div');
-                    shipName.className = 'ship-name';
-                    if (shipNameCount.get(ship.name) > 1) {
-                        shipName.style.backgroundColor = 'pink';
-                    }
-                    shipName.textContent = ship.name;
-                    shipLink.appendChild(shipName);
-                    const shipDesc = document.createElement('div');
-                    shipDesc.className = 'ship-description';
-                    shipDesc.textContent = ship.memo || '';
-                    shipLink.appendChild(shipDesc);
-                    regionDiv.appendChild(shipLink);
-                });
-                resultDiv.appendChild(regionDiv);
+                    regionDiv.appendChild(regionTitle);
+                    // 정렬 기준 적용
+                    const sortMemo = document.getElementById('sortMemoCheckbox')?.checked;
+                    group.sort((a, b) => {
+                        if (sortMemo) {
+                            return (a.memo || '').localeCompare(b.memo || '', 'ko') || a.name.localeCompare(b.name, 'ko');
+                        } else {
+                            return a.name.localeCompare(b.name, 'ko');
+                        }
+                    });
+                    group.forEach(ship => {
+                        const shipLink = document.createElement('a');
+                        let baseUrl = ship.url;
+                        if (!baseUrl.startsWith('http://') && !baseUrl.startsWith('https://')) {
+                            baseUrl = 'http://' + baseUrl;
+                        }
+                        const url = ship.urlType === '1' ? 
+                            `${baseUrl}${daystr}` : 
+                            `${baseUrl}${daystr2}#d${year}-${month}-${day}`;
+                        shipLink.href = url;
+                        shipLink.className = 'ship-link';
+                        shipLink.target = '_blank';
+                        shipLink.draggable = true;
+                        shipLink.dataset.shipId = ship.id;
+                        shipLink.addEventListener('dragstart', handleDragStart);
+                        shipLink.addEventListener('dragend', handleDragEnd);
+                        shipLink.addEventListener('dragover', handleDragOver);
+                        shipLink.addEventListener('dragenter', handleDragEnter);
+                        shipLink.addEventListener('dragleave', handleDragLeave);
+                        shipLink.addEventListener('drop', handleDrop);
+                        const shipName = document.createElement('div');
+                        shipName.className = 'ship-name';
+                        if (shipNameCount.get(ship.name) > 1) {
+                            shipName.style.backgroundColor = 'pink';
+                        }
+                        shipName.textContent = ship.name;
+                        shipLink.appendChild(shipName);
+                        const shipDesc = document.createElement('div');
+                        shipDesc.className = 'ship-description';
+                        shipDesc.textContent = ship.memo || '';
+                        shipLink.appendChild(shipDesc);
+                        regionDiv.appendChild(shipLink);
+                    });
+                    resultDiv.appendChild(regionDiv);
+                }
             });
             if (!isSearch) {
                 showPopupMessage('링크가 생성되었습니다.', 'success');
@@ -690,7 +706,7 @@
             loadCSV();
         };
 
-        // 검색창/체크박스 입력 시마다 createLinks 호출
+        // 검색창/체크박스/지역분할 입력 시마다 createLinks 호출
         setTimeout(function() {
             var searchInput = document.getElementById('searchInput');
             if (searchInput) {
@@ -699,6 +715,10 @@
             var sortMemoCheckbox = document.getElementById('sortMemoCheckbox');
             if (sortMemoCheckbox) {
                 sortMemoCheckbox.addEventListener('change', function() { createLinks(true); });
+            }
+            var regionSplitInput = document.getElementById('regionSplitInput');
+            if (regionSplitInput) {
+                regionSplitInput.addEventListener('input', function() { createLinks(true); });
             }
         }, 0);
     </script>

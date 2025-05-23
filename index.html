@@ -601,7 +601,7 @@
                 const regionDiv = document.createElement('div');
                 regionDiv.className = 'region';
                 const regionTitle = document.createElement('h2');
-                regionTitle.textContent = region;
+                regionTitle.textContent = `${region} (${regions[region].length})`;
                 regionDiv.appendChild(regionTitle);
                 // 정렬 기준 적용
                 const sortMemo = document.getElementById('sortMemoCheckbox')?.checked;

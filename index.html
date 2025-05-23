@@ -55,9 +55,13 @@
             display: flex;
             gap: 15px;
             align-items: center;
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
+            margin: 0 auto;
+        }
+        
+        #totalCount {
+            min-width: 80px;
+            text-align: left;
+            font-weight: bold;
         }
         
         /* 편집 버튼 영역 */
@@ -312,6 +316,7 @@
 
     <div class="top-controls-container">
         <div class="top-controls">
+            <span id="totalCount"></span>
             <div class="date-selection">
                 <label for="dateInput">날짜 선택:</label>
                 <input type="date" id="dateInput" onchange="createLinks()">
@@ -577,6 +582,11 @@
                     (ship.name && ship.name.toLowerCase().includes(searchValue)) ||
                     (ship.region && ship.region.toLowerCase().includes(searchValue))
                 );
+            }
+            // 전체 수량 표시
+            const totalCountSpan = document.getElementById('totalCount');
+            if (totalCountSpan) {
+                totalCountSpan.textContent = `전체 : ${visibleShips.length}`;
             }
             const regions = {};
             const shipNameCount = new Map();

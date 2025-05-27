@@ -142,8 +142,8 @@ ID,REGION,NAME,RESERVATION_URL,URL_TYPE,SHOW,MEMO
 151,인천 영종도,오뚜기호,https://ottogi.sunsang24.com/,2,X,20명-
 152,인천 영종도,인천365호,https://365.sunsang24.com/,2,X,15명-지정좌석
 153,인천 영종도,제우스호,https://chungmafishing.com/,1,X,22명-
-154,인천 영종도,청마/아트/고강/제우스,https://www.chungmafishing.com,1,X,20명-주차 주의
-155,인천 영종도,청춘호,http://영종도청춘호.kr/,1,O,18명-
+154,인천 영종도,청마/아트/고강/제우스,https://www.chungmafishing.com,1,O,20명-주차 주의
+155,인천 영종도,청춘호,http://영종도청춘호.kr/,1,X,18명-
 156,인천 영흥도,21금강호,http://www.taeyeongnaksi.co.kr/,1,X,13명-
 157,인천 영흥도,Team 만수,https://teammansu.kr,1,X,(자리 선택)
 158,인천 영흥도,Team 지오디,https://www.teamgod.kr,1,O,(신)(자리 선택)
@@ -153,7 +153,7 @@ ID,REGION,NAME,RESERVATION_URL,URL_TYPE,SHOW,MEMO
 162,인천 영흥도,골드피싱,http://www.goldfishingho.com,1,X,(자리 선택)
 163,인천 영흥도,금강7호,http://www.kumkangho.co.kr/,1,O,20명-지정좌석
 164,인천 영흥도,나이스호,http://www.niceho.com/,1,O,20명-
-165,인천 영흥도,뉴승진호,https://www.yhseaking.com/,1,O,11명-
+165,인천 영흥도,뉴승진호,https://www.yhseaking.com/,1,X,11명-
 166,인천 영흥도,뉴청운호,http://영흥도청운호.com/,1,X,20명-지정좌석
 167,인천 영흥도,레전드호,http://레전드호.com/,1,O,16명-
 168,인천 영흥도,루어피싱호,http://yhdfish.net/,1,X,20명-지정좌석
@@ -161,7 +161,7 @@ ID,REGION,NAME,RESERVATION_URL,URL_TYPE,SHOW,MEMO
 170,인천 영흥도,만수피싱호,https://www.만수피싱.kr/,1,O,20명-지정좌석
 171,인천 영흥도,명성호,http://www.영흥도명성호.com/,1,X,20명-
 172,인천 영흥도,모닝스타호,http://morningstarho.com/,1,O,20명-지정좌석
-173,인천 영흥도,부라보호,http://bravoho.kr/,1,X,20명-
+173,인천 영흥도,부라보호,http://bravoho.kr/,1,O,20명-
 174,인천 영흥도,빅토리/빅토리아/뉴승진호,https://www.yhseaking.com,1,O,(자리 선택)
 175,인천 영흥도,빅토리아호,https://www.yhseaking.com/,1,O,20명-지정좌석
 176,인천 영흥도,빅토리호,https://www.yhseaking.com/,1,X,8명-지정좌석
@@ -177,7 +177,7 @@ ID,REGION,NAME,RESERVATION_URL,URL_TYPE,SHOW,MEMO
 186,인천 영흥도,영석호,http://영석호.com/,1,O,20명-(신)지정좌석
 187,인천 영흥도,영암호,http://www.ybada.com/,1,O,11명-
 188,인천 영흥도,영진5호,https://영흥도배낚시.com/,1,X,12명-
-189,인천 영흥도,영진호,http://www.youngjinho.net/,1,X,20명-지정좌석
+189,인천 영흥도,영진호,http://www.youngjinho.net/,1,O,20명-지정좌석
 190,인천 영흥도,올림푸스호,http://www.olympusho.com/,1,O,15명-지정좌석
 191,인천 영흥도,원스타호,http://www.paradiseho.com/,1,O,15명-지정좌석
 192,인천 영흥도,은하1호,http://www.gilfish.co.kr/,1,O,20명-지정좌석

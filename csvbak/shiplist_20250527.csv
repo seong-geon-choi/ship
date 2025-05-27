@@ -114,7 +114,7 @@ ID,REGION,NAME,RESERVATION_URL,URL_TYPE,SHOW,MEMO
 123,인천 연안부두,뉴마린스타호,https://khanfishing.com/,1,X,20명-지정좌석
 124,인천 연안부두,루키나2호,https://lukina.sunsang24.com/,2,X,20명-
 125,인천 연안부두,루키나2호/루키나호,http://lukina.sunsang24.com,2,X,(자리 선택)
-126,인천 연안부두,루키나5호,https://lukina.sunsang24.com/,2,O,54명-
+126,인천 연안부두,루키나5호,https://lukina.sunsang24.com/,2,X,54명-
 127,인천 연안부두,루키나호,https://lukina.sunsang24.com/,2,X,20명-지정좌석
 128,인천 연안부두,마루호,https://www.sharkfishing.kr/,1,X,20명-
 129,인천 연안부두,베스트1호,https://khanfishing.com/,1,X,20명-
@@ -124,7 +124,7 @@ ID,REGION,NAME,RESERVATION_URL,URL_TYPE,SHOW,MEMO
 133,인천 연안부두,스마트2호,https://smartho.sunsang24.com/,2,X,20명-
 134,인천 연안부두,스모키호,https://www.sharkfishing.kr/,1,X,20명-
 135,인천 연안부두,시크릿호,https://khanfishing.com/,1,X,20명-지정좌석
-136,인천 연안부두,와이파이호,https://khanfishing.com/,1,O,20명-
+136,인천 연안부두,와이파이호,https://khanfishing.com/,1,X,20명-
 137,인천 연안부두,왕만두호,https://khanfishing.com/,1,X,20명-지정좌석
 138,인천 연안부두,욜로호,https://khanfishing.com/,1,X,20명-
 139,인천 연안부두,제트호,https://khanfishing.com/,1,X,20명-

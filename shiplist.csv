@@ -141,7 +141,6 @@ ID,REGION,NAME,RESERVATION_URL,URL_TYPE,SHOW,MEMO
 150,인천 영종도,아트호,https://chungmafishing.com/,1,X,21명-
 151,인천 영종도,오뚜기호,https://ottogi.sunsang24.com/,2,X,20명-
 152,인천 영종도,인천365호,https://365.sunsang24.com/,2,X,15명-지정좌석
-153,인천 영종도,제우스호,https://chungmafishing.com/,1,X,22명-
 154,인천 영종도,청마/아트/고강/제우스,https://www.chungmafishing.com,1,O,20명-주차 주의
 155,인천 영종도,청춘호,http://영종도청춘호.kr/,1,X,18명-
 156,인천 영흥도,21금강호,http://www.taeyeongnaksi.co.kr/,1,X,13명-
@@ -165,7 +164,6 @@ ID,REGION,NAME,RESERVATION_URL,URL_TYPE,SHOW,MEMO
 174,인천 영흥도,빅토리/빅토리아/뉴승진호,https://www.yhseaking.com,1,O,(자리 선택)
 175,인천 영흥도,빅토리아호,https://www.yhseaking.com/,1,O,20명-지정좌석
 176,인천 영흥도,빅토리호,https://www.yhseaking.com/,1,X,8명-지정좌석
-177,인천 영흥도,슈퍼스타호,http://www.yhdfishing.com/,1,X,20명-지정좌석
 178,인천 영흥도,스타트호,http://www.스타트호.com/,1,X,20명-지정좌석
 179,인천 영흥도,아라2호,http://www.araho.co.kr/,1,X,18명-선착순
 180,인천 영흥도,아라3호,http://www.araho.co.kr/,1,X,20명-지정좌석
@@ -504,7 +502,6 @@ ID,REGION,NAME,RESERVATION_URL,URL_TYPE,SHOW,MEMO
 513,충남 보령 오천항,첼린저호,http://nfishing.net/,1,X,16명-
 514,충남 보령 오천항,카즈미호,https://카즈미호.com/,1,O,20명-
 515,충남 보령 오천항,타이푼호,http://www.friendho.com/,1,O,21명-
-516,충남 보령 오천항,팀루피호,https://masterfishing.kr,1,X,
 517,충남 보령 오천항,팀오디세이호,http://www.joeunfish.com/,1,O,21명-
 518,충남 보령 오천항,팀프랜드호,http://www.friendho.com/,1,O,(신)-20명-
 519,충남 보령 오천항,팀한프로호,https://teamhanpro.com/,1,O,20명-

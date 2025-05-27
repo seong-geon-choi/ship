@@ -67,7 +67,7 @@ ID,REGION,NAME,RESERVATION_URL,URL_TYPE,SHOW,MEMO
 76,인천 남항,고래호,https://jnaksi.com/,1,X,49명-체험낚시
 77,인천 남항,금강스타호,https://jnaksi.com/,1,X,45명-체험낚시
 78,인천 남항,나이스호,http://www.nicefish7.com/,1,X,20명-
-79,인천 남항,뉴스타호,http://www.haedongstar.com/,1,O,20명-
+79,인천 남항,뉴스타호,http://www.haedongstar.com/,1,X,20명-
 80,인천 남항,드래곤호,http://www.seastarho.com/,1,X,20명-
 81,인천 남항,드림피싱호,http://dreamfishing.co.kr/,1,X,20명-
 82,인천 남항,명덕5호,https://www.mdho.co.kr/niabbs5/,1,X,55명-체험낚시
@@ -79,7 +79,7 @@ ID,REGION,NAME,RESERVATION_URL,URL_TYPE,SHOW,MEMO
 88,인천 남항,새시대호,https://jnaksi.com/,1,X,55명-체험낚시
 89,인천 남항,송도호,http://www.hjfish.kr/,1,X,45명-체험낚시
 90,인천 남항,슈퍼노바호,https://supernova.sunsang24.com/,2,X,20명-자리선택
-91,인천 남항,신나라호,http://www.sinnara21.co.kr/niabbs5/,1,O,53명-체험낚시
+91,인천 남항,신나라호,http://www.sinnara21.co.kr/niabbs5/,1,X,53명-체험낚시
 92,인천 남항,썬스타호,https://sunstarho.sunsang24.com/,2,X,20명-
 93,인천 남항,에이스호,https://ace.sunsang24.com/,2,X,20명-
 94,인천 남항,은아3호,https://sunstarho.sunsang24.com/,2,X,20명-

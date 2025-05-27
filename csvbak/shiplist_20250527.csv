@@ -720,7 +720,6 @@ ID,REGION,NAME,RESERVATION_URL,URL_TYPE,SHOW,MEMO
 740,충남 태안 신진항,항공모함호,https://manaru.com/,1,O,20명-
 741,충남 태안 신진항,해성호,http://www.taeanfish.co.kr/,1,X,10명-
 742,충남 태안 신진항,홍풍호,http://www.saenaru.co.kr/,1,X,15명-
-743,충남 태안 안면도,무야호,https://marineho.sunsang24.com,2,O,(자리 선택)
 744,충남 태안 안흥항,경진호,http://www.ahgf.co.kr/,1,X,11명-
 745,충남 태안 안흥항,나르샤호,http://www.narshaho.com/,1,X,20명-유선예약
 746,충남 태안 안흥항,남덕5호,http://www.ahgf.co.kr/,1,X,20명-물/음료 없지만 배질 좋음.
@@ -741,7 +740,7 @@ ID,REGION,NAME,RESERVATION_URL,URL_TYPE,SHOW,MEMO
 766,충남 태안 영목항,비제이호,https://bj.sunsang24.com/,2,X,20명-
 767,충남 태안 영목항,샤인블루호,http://www.chungkwangho.net/,1,O,13명 배는 작으나 배질 좋음
 768,충남 태안 영목항,섬스타호,http://www.sumstarho.com/,1,X,20명-평 안 좋음
-771,충남 태안 영목항,악바리호,https://bj.sunsang24.com/,2,X,20명-노예선, 평 좋음
+771,충남 태안 영목항,악바리호,https://bj.sunsang24.com/,2,X,20명-노예선
 773,충남 태안 영목항,파티호,https://os.sunsang24.com/,2,O,15명-평 좋음
 774,충남 태안 영목항,청광호,http://www.chungkwangho.net/,1,O,20명-
 775,충남 태안 영목항,청남호,http://www.chungnamho.com/,1,O,17명-

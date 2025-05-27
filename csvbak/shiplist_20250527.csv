@@ -608,7 +608,7 @@ ID,REGION,NAME,RESERVATION_URL,URL_TYPE,SHOW,MEMO
 627,충남 서천 홍원항,해돋이호,https://www.sunupfishing.com/,1,X,15명-
 628,충남 서천 홍원항,해진호,https://haejinho.sunsang24.com/,2,X,21명-
 629,충남 서천 홍원항,헌터호,http://hongwonfishingplaza.com/,1,X,21명-
-630,충남 서천 홍원항,형제피싱호,http://hhj.kr/,1,O,21명-
+630,충남 서천 홍원항,형제피싱호,http://hhj.kr/,1,X,21명-
 631,충남 서천 홍원항,호해스타호,http://www.acefish.net/,1,X,15명-
 632,충남 서천 홍원항,힐링호,http://www.healingfish.co.kr/,1,X,20명-
 633,충남 태안 구매항,용성호,https://yong.sunsang24.com/,2,X,17명-
@@ -678,7 +678,7 @@ ID,REGION,NAME,RESERVATION_URL,URL_TYPE,SHOW,MEMO
 698,충남 태안 백사장항,구라미끼호,http://www.haesin.net/,1,X,17명-
 699,충남 태안 백사장항,마린1호,https://marineho.sunsang24.com/,2,X,20명-지정좌석
 700,충남 태안 백사장항,무야호,https://marineho.sunsang24.com/,2,O,19명-지정좌석
-701,충남 태안 백사장항,빅토리호,https://marineho.sunsang24.com/,2,O,20명-
+701,충남 태안 백사장항,빅토리호,https://marineho.sunsang24.com/,2,X,20명-
 702,충남 태안 백사장항,영차호,http://영차피싱.kr/,1,X,20명-
 703,충남 태안 백사장항,진주만호,https://marineho.sunsang24.com/,2,X,19명-지정좌석
 704,충남 태안 백사장항,킹스타호,http://www.haesin.net/,1,X,20명-

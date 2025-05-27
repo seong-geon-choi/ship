@@ -723,15 +723,12 @@ ID,REGION,NAME,RESERVATION_URL,URL_TYPE,SHOW,MEMO
 743,충남 태안 안면도,무야호,https://marineho.sunsang24.com,2,O,(자리 선택)
 744,충남 태안 안흥항,경진호,http://www.ahgf.co.kr/,1,X,11명-
 745,충남 태안 안흥항,나르샤호,http://www.narshaho.com/,1,X,20명-유선예약
-746,충남 태안 안흥항,남덕5호,http://www.ahgf.co.kr/,1,X,20명-
-747,충남 태안 안흥항,뉴신정호,http://newsj.co.kr/,1,X,18명-
-749,충남 태안 안흥항,대성호,http://www.ahgf.co.kr/,1,X,18명-
-750,충남 태안 안흥항,레드피싱호,http://www.redfishing.net/,1,X,17명-
-751,충남 태안 안흥항,레인져호,https://www.badawa.co.kr/,1,X,20명-
-752,충남 태안 안흥항,바다2호,http://www.ahgf.co.kr/,1,X,16명-
-753,충남 태안 안흥항,부흥호,http://www.anhbuh.com/,1,X,17명-
-754,충남 태안 안흥항,블루피싱호,http://bluefishingho.co.kr/,1,X,21명-
-755,충남 태안 안흥항,안성호,https://www.badawa.co.kr/,1,X,11명-
+746,충남 태안 안흥항,남덕5호,http://www.ahgf.co.kr/,1,X,20명-물/음료 없지만 배질 좋음.
+747,충남 태안 안흥항,뉴신정호,http://newsj.co.kr/,1,O,18명-
+749,충남 태안 안흥항,대성호,http://www.ahgf.co.kr/,1,X,18명-평 좋지 않
+752,충남 태안 안흥항,바다2호,http://www.ahgf.co.kr/,1,X,16명-타지말
+753,충남 태안 안흥항,부흥호,http://www.anhbuh.com/,1,X,17명-배 컨디션은 그냥저냥이나 배질 좋음
+754,충남 태안 안흥항,블루피싱호,http://bluefishingho.co.kr/,1,O,21명-
 756,충남 태안 안흥항,안흥1호,http://www.ahgf.co.kr/,1,X,배 낡고 열심히 하나 운전 거친편
 757,충남 태안 안흥항,안흥2호,http://www.2ho.or.kr,1,O,
 758,충남 태안 안흥항,여명호,http://xn--v42bv0rcoar53c6lb.kr,1,O,(신)
@@ -740,23 +737,17 @@ ID,REGION,NAME,RESERVATION_URL,URL_TYPE,SHOW,MEMO
 761,충남 태안 안흥항,탑피싱호,http://www.topfishingho.com/,1,O,16명
 762,충남 태안 안흥항,행운호,http://www.hangwoonho.com/,1,O,침선전
 763,충남 태안 영목항,낚시친구들호,https://friend.sunsang24.com/,2,X,20명-유선예약
-764,충남 태안 영목항,맥가이버호,http://맥가이버피싱.com/,1,X,19명-
-765,충남 태안 영목항,바다생각호,https://think.sunsang24.com/,2,X,10명-
+764,충남 태안 영목항,맥가이버호,http://맥가이버피싱.com/,1,X,19명(신)
 766,충남 태안 영목항,비제이호,https://bj.sunsang24.com/,2,X,20명-
-767,충남 태안 영목항,샤인블루호,http://www.chungkwangho.net/,1,X,13명-
-768,충남 태안 영목항,섬스타호,http://www.sumstarho.com/,1,X,20명-
-769,충남 태안 영목항,아라온1호,https://bj.sunsang24.com/,2,X,12명-
-770,충남 태안 영목항,아라온피싱호,https://bj.sunsang24.com/,2,X,21명-
-771,충남 태안 영목항,악바리호,https://bj.sunsang24.com/,2,X,20명-
-772,충남 태안 영목항,오션킹호,https://oceanking.sunsang24.com/,2,X,20명-지정좌석
-773,충남 태안 영목항,오션파티호,https://os.sunsang24.com/,2,X,15명-
+767,충남 태안 영목항,샤인블루호,http://www.chungkwangho.net/,1,O,13명 배는 작으나 배질 좋음
+768,충남 태안 영목항,섬스타호,http://www.sumstarho.com/,1,X,20명-평 안 좋음
+771,충남 태안 영목항,악바리호,https://bj.sunsang24.com/,2,X,20명-노예선, 평 좋음
+773,충남 태안 영목항,파티호,https://os.sunsang24.com/,2,O,15명-평 좋음
 774,충남 태안 영목항,청광호,http://www.chungkwangho.net/,1,O,20명-
-775,충남 태안 영목항,청남호,http://www.chungnamho.com/,1,X,17명-
-776,충남 태안 영목항,청해호,https://www.안면도청해호.com/,1,X,17명-
-777,충남 태안 영목항,카라호,https://www.karaho.kr/,1,X,15명-
-778,충남 태안 영목항,피싱모아호,http://moafishing.kr/,1,X,15명-
-779,충남 태안 영목항,해복호,https://haesung2ho.com/,1,X,16명-
-780,충남 태안 영목항,해성2호,https://haesung2ho.com/,1,X,19명-
+775,충남 태안 영목항,청남호,http://www.chungnamho.com/,1,O,17명-
+777,충남 태안 영목항,카라호,https://www.karaho.kr/,1,X,15명- 평 안 좋음
+779,충남 태안 영목항,해복호,https://haesung2ho.com/,1,O,16명-
+780,충남 태안 영목항,해성2호,https://haesung2ho.com/,1,O,19명-갑 전문
 781,충남 태안 원북면,벽계수호,https://bgsho.com/,1,X,11명-
 782,충남 태안 천리포항,글램핑1호,https://glamping.sunsang24.com/,2,X,11명-
 783,충남 태안 천리포항,레드스카이호,http://www.teamskyfishing.com/,1,X,16명-

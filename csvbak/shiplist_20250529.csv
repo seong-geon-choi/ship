@@ -131,19 +131,17 @@ ID,REGION,NAME,RESERVATION_URL,URL_TYPE,SHOW,MEMO
 140,인천 연안부두,팀에프원,https://kazmi.kr,1,X,(자리 선택)
 141,인천 연안부두,팀에프원호,https://teamf.kr/,1,O,20명-지정좌석
 142,인천 연안부두,팀에프투호,https://teamf.kr/,1,X,20명-
-143,인천 영종도,K세븐호,https://ottogi.sunsang24.com/,2,X,20명-
-144,인천 영종도,고강호,https://chungmafishing.com/,1,X,23명-
-145,인천 영종도,미르호,https://ottogi.sunsang24.com/,2,X,19명-
+143,인천 영종도,K세븐호(미르선단),https://ottogi.sunsang24.com/,2,X,20명-
+145,인천 영종도,미르호(미르선단),https://ottogi.sunsang24.com/,2,O,(신)19명-선실 좁으나 평은 좋음
 146,인천 영종도,블루웨일호,https://5sunrise.thefishing.kr/,1,X,9명-
-147,인천 영종도,비키니호,https://ottogi.sunsang24.com/,2,X,20명-
-148,인천 영종도,세븐호,https://ottogi.sunsang24.com/,2,X,20명-
-149,인천 영종도,순풍호,https://happyho.sunsang24.com/,2,X,20명-
-150,인천 영종도,아트호,https://chungmafishing.com/,1,X,21명-
-151,인천 영종도,오뚜기호,https://ottogi.sunsang24.com/,2,X,20명-
-152,인천 영종도,인천365호,https://365.sunsang24.com/,2,X,15명-지정좌석
+147,인천 영종도,비키니호(미르선단),https://ottogi.sunsang24.com/,2,X,8인
+148,인천 영종도,세븐호(미르선단),https://ottogi.sunsang24.com/,2,O,20명-
+149,인천 영종도,순풍호,https://happyho.sunsang24.com/,2,X,20명-어선
+151,인천 영종도,오뚜기호(미르선단),https://ottogi.sunsang24.com/,2,O,20명-
+152,인천 영종도,인천365호,https://365.sunsang24.com/,2,X,15명-지정좌석. 평 나쁨
 154,인천 영종도,청마/아트/고강/제우스,https://www.chungmafishing.com,1,O,20명-주차 주의
 155,인천 영종도,청춘호,http://영종도청춘호.kr/,1,X,18명- 선장 사무장 낚시함..
-157,인천 영흥도,Team 만수,https://teammansu.kr,1,X,(자리 선택)
+157,인천 영흥도,Team 만수,https://teammansu.kr,1,O,(신)(자리 선택)
 158,인천 영흥도,Team 지오디,https://www.teamgod.kr,1,O,(신)(자리 선택)
 160,인천 영흥도,강팀호,http://www.ybada.com/,1,X,(신)(자리 선택) 20명. 배 넓고 친절
 162,인천 영흥도,골드피싱,http://www.goldfishingho.com,1,X,(자리 선택)
@@ -175,8 +173,7 @@ ID,REGION,NAME,RESERVATION_URL,URL_TYPE,SHOW,MEMO
 198,인천 영흥도,짱구호/짱구투,http://www.ybada.com,1,X,(신)(자리 선택) 짱구호 평은 그닥
 199,인천 영흥도,카리스마호,https://charisma.sunsang24.com/,2,O,20명-지정좌석
 200,인천 영흥도,크루즈호,http://www.cruiseho.com/,1,O,20명-지정좌석. 평 나쁨
-201,인천 영흥도,팀만수호,https://teammansu.kr/,1,O,20명-지정좌석
-202,인천 영흥도,페라리호,http://www.페라리호.com/,1,X,20명-지정좌석
+202,인천 영흥도,페라리호,http://www.페라리호.com/,1,X,20명-지정좌석. 평 나쁨
 203,인천 영흥도,해진호,http://www.haejinho.com/,1,O,14명-지정좌석
 204,전북 군산 비응항,K1호,https://k1f.sunsang24.com/,2,X,18명-
 205,전북 군산 비응항,K2호,https://k1f.sunsang24.com/,2,X,20명-

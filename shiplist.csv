@@ -50,7 +50,7 @@ ID,REGION,NAME,RESERVATION_URL,URL_TYPE,SHOW,MEMO
 59,경기 화성 전곡항,스타호/레인보우호,https://jstar.thefishing.kr,1,X,(자리 선택)
 60,경기 화성 전곡항,신명스카이호,http://shinmyungho.com/,1,O,20명-지정좌석
 61,경기 화성 전곡항,신흥특호,https://24marine.sunsang24.com/,2,X,20명-
-62,경기 화성 전곡항,양철호,http://www.양철호.com/,1,O,20명-지정좌석
+62,경기 화성 전곡항,양철호,http://www.양철호.com/,1,O,20명-지정좌석. 평 좋음
 63,경기 화성 전곡항,에버그린호,https://24marine.sunsang24.com/,2,X,20명-
 64,경기 화성 전곡항,예지퀸호,https://yejiqueen.sunsang24.com/,2,X,19명-지정좌석
 65,경기 화성 전곡항,옐로우피싱,https://yellow.sunsang24.com/,1,O,(자리 선택)
@@ -142,46 +142,39 @@ ID,REGION,NAME,RESERVATION_URL,URL_TYPE,SHOW,MEMO
 151,인천 영종도,오뚜기호,https://ottogi.sunsang24.com/,2,X,20명-
 152,인천 영종도,인천365호,https://365.sunsang24.com/,2,X,15명-지정좌석
 154,인천 영종도,청마/아트/고강/제우스,https://www.chungmafishing.com,1,O,20명-주차 주의
-155,인천 영종도,청춘호,http://영종도청춘호.kr/,1,X,18명-
-156,인천 영흥도,21금강호,http://www.taeyeongnaksi.co.kr/,1,X,13명-
+155,인천 영종도,청춘호,http://영종도청춘호.kr/,1,X,18명- 선장 사무장 낚시함..
 157,인천 영흥도,Team 만수,https://teammansu.kr,1,X,(자리 선택)
 158,인천 영흥도,Team 지오디,https://www.teamgod.kr,1,O,(신)(자리 선택)
-159,인천 영흥도,강바다호,http://www.ybada.com/,1,O,20명-
-160,인천 영흥도,강팀호,http://www.ybada.com/,1,X,20명-
-161,인천 영흥도,경인호,https://gyeongin.sunsang24.com/,2,O,20명-
+160,인천 영흥도,강팀호,http://www.ybada.com/,1,X,(신)(자리 선택) 20명. 배 넓고 친절
 162,인천 영흥도,골드피싱,http://www.goldfishingho.com,1,X,(자리 선택)
-163,인천 영흥도,금강7호,http://www.kumkangho.co.kr/,1,O,20명-지정좌석
-164,인천 영흥도,나이스호,http://www.niceho.com/,1,O,20명-
-165,인천 영흥도,뉴승진호,https://www.yhseaking.com/,1,X,11명-
-166,인천 영흥도,뉴청운호,http://영흥도청운호.com/,1,X,20명-지정좌석
-167,인천 영흥도,레전드호,http://레전드호.com/,1,O,16명-
-168,인천 영흥도,루어피싱호,http://yhdfish.net/,1,X,20명-지정좌석
-169,인천 영흥도,마이웨이호,http://xn--c20b03d25ji7g57dh16a.kr,1,O,(자리 선택)
+163,인천 영흥도,금강7호,http://www.kumkangho.co.kr/,1,O,(신)영흥도 원탑 시설.20명-지정좌석. 평 좋음
+164,인천 영흥도,나이스호,http://www.niceho.com/,1,O,(신) 20명- 평은 그냥.
+166,인천 영흥도,뉴청운호,http://영흥도청운호.com/,1,O,20명-지정좌석. 시설 별로이나 평은 괜찮음.
+167,인천 영흥도,레전드호,http://레전드호.com/,1,X,16명-지정좌석
+168,인천 영흥도,루어피싱호,http://yhdfish.net/,1,X,20명-지정좌석. 평 괜찮음
+169,인천 영흥도,마이웨이호,http://xn--c20b03d25ji7g57dh16a.kr,1,X,(자리 선택)평 나쁨
 170,인천 영흥도,만수피싱호,https://www.만수피싱.kr/,1,O,20명-지정좌석
-171,인천 영흥도,명성호,http://www.영흥도명성호.com/,1,X,20명-
+171,인천 영흥도,명성호,http://www.영흥도명성호.com/,1,X,20명-평 좋음
 172,인천 영흥도,모닝스타호,http://morningstarho.com/,1,O,20명-지정좌석
 173,인천 영흥도,부라보호,http://bravoho.kr/,1,O,20명-
-174,인천 영흥도,빅토리/빅토리아/뉴승진호,https://www.yhseaking.com,1,O,(자리 선택)
-175,인천 영흥도,빅토리아호,https://www.yhseaking.com/,1,O,20명-지정좌석
-176,인천 영흥도,빅토리호,https://www.yhseaking.com/,1,X,8명-지정좌석
+174,인천 영흥도,빅토리/빅토리아/뉴승진호,https://www.yhseaking.com,1,X,(자리 선택) 평 나쁨
 178,인천 영흥도,스타트호,http://www.스타트호.com/,1,X,20명-지정좌석
-179,인천 영흥도,아라2호,http://www.araho.co.kr/,1,X,18명-선착순
-180,인천 영흥도,아라3호,http://www.araho.co.kr/,1,X,20명-지정좌석
+179,인천 영흥도,아라2호,http://www.araho.co.kr/,1,X,18명-선착순. 평 좋음
+180,인천 영흥도,아라3호,http://www.araho.co.kr/,1,X,(신)20명-지정좌석(음식 잘 나옴)
 181,인천 영흥도,아이리스호,http://www.irisho.kr/,1,X,20명-지정좌석
 182,인천 영흥도,야호,http://xn--2f5b291a.com,1,O,(자리 선택)
 183,인천 영흥도,영동1호,http://www.영동1호.com/,1,O,20명-지정좌석
 184,인천 영흥도,영동2호,https://www.youngdong2ho.net/,1,O,20명-지정좌석
-185,인천 영흥도,영동3호,http://ydboat.com/,1,O,20명-지정좌석
+185,인천 영흥도,영동3호,http://ydboat.com/,1,X,20명-지정좌석. 평 나쁨
 186,인천 영흥도,영석호,http://영석호.com/,1,O,20명-(신)지정좌석
-189,인천 영흥도,영진호,http://www.youngjinho.net/,1,O,20명-지정좌석
+189,인천 영흥도,영진호,http://www.youngjinho.net/,1,O,(신)20명-지정좌석
 190,인천 영흥도,올림푸스호,http://www.olympusho.com/,1,O,15명-지정좌석
-191,인천 영흥도,원스타호,http://www.paradiseho.com/,1,O,15명-지정좌석
+191,인천 영흥도,원스타호,http://www.paradiseho.com/,1,O,(신)15명-지정좌석
 192,인천 영흥도,은하1호,http://www.gilfish.co.kr/,1,O,20명-지정좌석) 평 괜찮음. 출조점 앞 탑승
 193,인천 영흥도,전진호,https://junjin.thefishing.kr/,1,O,(신)11명-지정좌석
-195,인천 영흥도,지오디호,https://teamgod.kr/,1,X,20명-지정좌석
 198,인천 영흥도,짱구호/짱구투,http://www.ybada.com,1,X,(신)(자리 선택) 짱구호 평은 그닥
 199,인천 영흥도,카리스마호,https://charisma.sunsang24.com/,2,O,20명-지정좌석
-200,인천 영흥도,크루즈호,http://www.cruiseho.com/,1,O,20명-지정좌석
+200,인천 영흥도,크루즈호,http://www.cruiseho.com/,1,O,20명-지정좌석. 평 나쁨
 201,인천 영흥도,팀만수호,https://teammansu.kr/,1,O,20명-지정좌석
 202,인천 영흥도,페라리호,http://www.페라리호.com/,1,X,20명-지정좌석
 203,인천 영흥도,해진호,http://www.haejinho.com/,1,O,14명-지정좌석

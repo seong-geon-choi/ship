@@ -11,14 +11,12 @@ ID,REGION,NAME,RESERVATION_URL,URL_TYPE,SHOW,MEMO
 9,00.예약,11/14(금) 안흥2호/안흥,http://www.2ho.or.kr,1,O,문갑-고현기 이선영 백승원 최성건-입금완료
 10,00.예약 보류,7/2 씨헌터호/격포,http://xn--jj0bu2czvmlihdwc.com/,1,O,7/2-문어탐사-고현기 이선영 백승원 최성건
 23,경기 시흥 오이도,빨강등대호,http://www.redlight.kr/,1,O,20명-지정좌석
-24,경기 시흥 오이도,스카이호,https://sky.sunsang24.com/,2,X,14명-지정좌석
+24,경기 시흥 오이도,스카이호,https://sky.sunsang24.com/,2,O,14명-지정좌석
 25,경기 시흥 오이도,안산호,https://ansan.sunsang24.com/,2,O,20명-
-26,경기 시흥 오이도,오이도피아호,http://www.oidopia.com/,1,X,20명-지정좌석
 27,경기 시흥 오이도,전투호,http://www.jaebul1ho.com,1,O,20명-(신)(시간배)(자리 선택)
-28,경기 시흥 오이도,킹스타호,https://kingstar.sunsang24.com/,2,O,20명-
+28,경기 시흥 오이도,킹스타호,https://kingstar.sunsang24.com/,2,X,20명-
 29,경기 시흥 오이도,태평2호,https://taepyeong2.sunsang24.com/,2,X,11명-
 30,경기 시흥 오이도,한바다호,http://xn--2j1b67owufgpurea.com,1,O,20명-(신)(시간배)(자리 선택)
-31,경기 평택 평택항,강우호,https://평택항바다배낚시.com/,1,X,-
 32,경기 평택 평택항,경기 평택 평택항피싱호,http://www.ptfishing.net/,1,X,20명-지정좌석
 33,경기 평택 평택항,돌핀호,https://dolphinho.sunsang24.com/,2,X,10명-지정좌석
 34,경기 평택 평택항,동일호,http://빅스타호.com/,1,X,11명-
@@ -29,22 +27,18 @@ ID,REGION,NAME,RESERVATION_URL,URL_TYPE,SHOW,MEMO
 39,경기 평택 평택항,서해피싱호,https://평택항서해피싱.com/,1,X,14명-지정좌석
 40,경기 평택 평택항,수복호,http://수복호.com/,1,X,19명-지정좌석
 41,경기 평택 평택항,수성호,http://평택항수성호.com/,1,X,16명-지정좌석
-42,경기 평택 평택항,에이스피싱호,https://acefishing.sunsang24.com/,2,X,20명-
+42,경기 평택 평택항,에이스피싱호,https://acefishing.sunsang24.com/,2,X,20명-무조건 거르는 
 43,경기 평택 평택항,오닉스호,http://대교피싱호.com/,1,X,20명-지정좌석
 44,경기 평택 평택항,자연호,http://nature.thefishing.kr/,1,X,18명-
 45,경기 평택 평택항,평택등대호,https://평택항바다배낚시.com/,1,X,-
-46,경기 평택 평택항,화성2호,http://hwasung2.com/,1,X,11명-
-47,경기 화성 궁평항,바다호,http://naksibe.dothome.co.kr/,1,X,정보없음-유선예약
 48,경기 화성 궁평항,블랙호,http://kungpyeong.com/,1,X,20명-
 49,경기 화성 궁평항,타이탄호,http://kungpyeong.com/,1,X,20명-지정좌석
-50,경기 화성 전곡항,골드피싱호,https://24marine.sunsang24.com/,2,O,20명-
+50,경기 화성 전곡항,골드피싱호,https://24marine.sunsang24.com/,2,O,20명-별로
 51,경기 화성 전곡항,뉴신명호,http://shinmyungho.com/,1,O,20명-지정좌석
-52,경기 화성 전곡항,뉴신명호/신명 스카이호,http://www.shinmyungho.com,1,X,(자리 선택)
-53,경기 화성 전곡항,대부돌핀호,https://24marine.sunsang24.com/,2,O,20명-
 54,경기 화성 전곡항,동백호,https://24marine.sunsang24.com/,2,X,20명-지정좌석
-55,경기 화성 전곡항,레인보우호,http://www.rainbowho.com/,1,O,20명-지정좌석
+55,경기 화성 전곡항,레인보우호,http://www.rainbowho.com/,1,X,20명-지정좌석
 56,경기 화성 전곡항,리틀대박호,https://jackpot.sunsang24.com/,2,X,20명-유선예약
-57,경기 화성 전곡항,빅보스호,https://24marine.sunsang24.com/,2,O,(신)-20명-지정좌석
+57,경기 화성 전곡항,빅보스호,https://24marine.sunsang24.com/,2,X,(신)-20명-지정좌석
 58,경기 화성 전곡항,스타피싱호,http://www.rainbowho.com/,1,O,20명-지정좌석
 59,경기 화성 전곡항,스타호/레인보우호,https://jstar.thefishing.kr,1,X,(자리 선택)
 60,경기 화성 전곡항,신명스카이호,http://shinmyungho.com/,1,O,20명-지정좌석
@@ -52,17 +46,14 @@ ID,REGION,NAME,RESERVATION_URL,URL_TYPE,SHOW,MEMO
 62,경기 화성 전곡항,양철호,http://www.양철호.com/,1,O,20명-지정좌석. 평 좋음
 63,경기 화성 전곡항,에버그린호,https://24marine.sunsang24.com/,2,X,20명-
 64,경기 화성 전곡항,예지퀸호,https://yejiqueen.sunsang24.com/,2,X,19명-지정좌석
-65,경기 화성 전곡항,옐로우피싱,https://yellow.sunsang24.com/,1,O,(자리 선택)
-66,경기 화성 전곡항,옐로우피싱호,https://24marine.sunsang24.com/,2,O,19명-지정좌석
-67,경기 화성 전곡항,왕선장호,https://king.sunsang24.com/,2,O,19명-지정좌석
-68,경기 화성 전곡항,유로파호,https://europa.sunsang24.com/,2,O,20명-
-69,경기 화성 전곡항,입질대박호,https://chunil.sunsang24.com/,2,O,20명-지정좌석
+65,경기 화성 전곡항,옐로우피싱,https://yellow.sunsang24.com/,1,O,(자리 선택) 평 좋음
+67,경기 화성 전곡항,왕선장호,https://king.sunsang24.com/,2,O,19명-지정좌석. 평 별로
+68,경기 화성 전곡항,유로파호,https://europa.sunsang24.com/,2,O,(신)20명. 평 좋음
+69,경기 화성 전곡항,입질대박호,https://chunil.sunsang24.com/,2,X,20명-지정좌석
 70,경기 화성 전곡항,제비호,https://jebi.sunsang24.com,2,O,(자리 선택)
-71,경기 화성 전곡항,태평호,https://24marine.sunsang24.com/,2,O,20명-지정좌석
+71,경기 화성 전곡항,태평호,https://24marine.sunsang24.com/,2,X,20명-지정좌석
 72,경기 화성 전곡항,해운호,https://haeun.sunsang24.com/,2,X,20명-
-73,경기 화성 전곡항,화성606호,https://24marine.sunsang24.com/,2,X,20명-지정좌석
-74,경기 화성 제부항,에코프로아호,https://ecoproa.sunsang24.com/,2,X,10명-유선예약
-75,성구미 포구,파란고래호,https://www.bluewhaleho.com/,1,X,21명-지정좌석
+75,성구미 포구,파란고래호,https://www.bluewhaleho.com/,1,O,21명-지정좌석
 76,인천 남항,고래호,https://jnaksi.com/,1,X,49명-체험낚시
 77,인천 남항,금강스타호,https://jnaksi.com/,1,X,45명-체험낚시
 78,인천 남항,나이스호,http://www.nicefish7.com/,1,X,20명-
@@ -86,7 +77,6 @@ ID,REGION,NAME,RESERVATION_URL,URL_TYPE,SHOW,MEMO
 96,인천 남항,킹콩2호,https://www.kingkongship.com/niabbs5/,1,X,47명-
 97,인천 남항,킹콩6호,https://www.kingkongship.com/niabbs5/,1,X,50명-
 98,인천 남항,킹콩8호,https://www.kingkongship.com/niabbs5/,1,X,61명-체험낚시
-99,인천 남항,테슬란호,https://tsl.sunsang24.com/,2,X,20명-
 100,인천 남항,파워호,http://seohaeho.kr/,1,X,20명-
 101,인천 남항,피닉스호,https://www.haewonho.com/niabbs5/,1,X,40명-
 102,인천 남항,하나호,https://www.kukjaenaksi.com/niabbs5/,1,X,49명-체험낚시

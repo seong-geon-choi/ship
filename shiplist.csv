@@ -7,7 +7,7 @@ ID,REGION,NAME,RESERVATION_URL,URL_TYPE,SHOW,MEMO
 8,00.예약,10/17(금) 만석호/삼길포,https://www.mscufishing.com,1,O,쭈갑-고현기 이선영 백승원 최성건-입금대기 7월까지 입금
 9,00.예약,10/17(금) 영석호/영흥도,http://www.xn--3i4bl3g39q.com,1,O,갑-고현기 이선영 백승원 최성건 예약금16만 입금
 10,00.예약,11/02(일) Team 지오디/영흥도,https://www.teamgod.kr,1,O,11/02 갑-고현기 이선영 백승원 최성건 예약금20 입금
-11,00.예약,11/14(금) 안흥2호/안흥,http://www.2ho.or.kr,1,O,문갑-고현기 이선영 백승원 최성건-입금완료
+11,00.예약,11/14(금) 안흥2호/안흥,https://2ho.sunsang24.com/,2,O,문갑-고현기 이선영 백승원 최성건-입금완료
 12,00.예약 보류,7/2 씨헌터호/격포,http://xn--jj0bu2czvmlihdwc.com/,1,O,7/2-문어탐사-고현기 이선영 백승원 최성건
 1,경기 시흥 오이도,포세이돈호,https://poseidon.sunsang24.com/,2,O,
 822,경기 시흥 오이도,승원호,https://www.ioido.kr/,1,O,(신)시간배-종일배
@@ -701,7 +701,7 @@ ID,REGION,NAME,RESERVATION_URL,URL_TYPE,SHOW,MEMO
 755,충남 태안 안흥항,부흥호,http://www.anhbuh.com/,1,X,17명-배 컨디션은 그냥저냥이나 배질 좋음
 756,충남 태안 안흥항,블루피싱호,http://bluefishingho.co.kr/,1,O,21명-
 758,충남 태안 안흥항,안흥1호,http://www.ahgf.co.kr/,1,X,배 낡고 열심히 하나 운전 거친편
-759,충남 태안 안흥항,안흥2호,http://www.2ho.or.kr,1,O,
+759,충남 태안 안흥항,안흥2호,https://2ho.sunsang24.com/,2,O,
 760,충남 태안 안흥항,여명호,http://xn--v42bv0rcoar53c6lb.kr,1,O,(신)
 761,충남 태안 안흥항,은진호,http://eunjinho.com/,1,X,사무장o 배는 조금 좁으나 배질은 괜
 762,충남 태안 안흥항,청용호,http://www.changdukho.com/,1,O,21명

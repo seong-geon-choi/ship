@@ -1,7 +1,6 @@
 ID,REGION,NAME,RESERVATION_URL,URL_TYPE,SHOW,MEMO
-1,전북 군산,똥까호,https://ddonggga.sunsang24.com/,2,O,
 2,00.예약,09/12(금) 은하1호/영흥도 12물,http://www.gilfish.co.kr/,1,O,쭈-백승원 외 1(1 11)
-3,00.예약,09/03(수) 영석호/영흥도 3물,http://www.xn--3i4bl3g39q.com,1,O,쭈-고현기 이선영 백승원 최성건 예약금 16만 입금
+3,00.예약,09/03(수) 어랑호/회변항 3물,-,1,O,쭈-고현기 이선영 백승원 최성건 32만 전액 입금
 4,00.예약,09/28(일) Team 지오디/영흥도 13물,https://www.teamgod.kr,1,O,9/28 갑-최백오 예약금 15입금
 5,00.예약,10/11(토) 여명호/안흥 11물,http://xn--v42bv0rcoar53c6lb.kr,1,O,갑-4고현기 이선영 백승원 최성건-입금완료
 6,00.예약,10/17(금) 만석호/삼길포 2물,https://www.mscufishing.com,1,O,쭈갑-고현기 이선영 백승원 최성건-입금완료
@@ -167,6 +166,7 @@ ID,REGION,NAME,RESERVATION_URL,URL_TYPE,SHOW,MEMO
 166,인천 영흥도,크루즈호,http://www.cruiseho.com/,1,O,20명-지정좌석. 평 나쁨
 167,인천 영흥도,페라리호,http://www.페라리호.com/,1,X,20명-지정좌석. 평 나쁨
 168,인천 영흥도,해진호,http://www.haejinho.com/,1,O,14명-지정좌석
+1,전북 군산,똥까호,https://ddonggga.sunsang24.com/,2,O,
 169,전북 군산 비응항,K1호,https://k1f.sunsang24.com/,2,X,18명-
 170,전북 군산 비응항,K2호,https://k1f.sunsang24.com/,2,X,20명-
 171,전북 군산 비응항,갈매기호,http://gunsannaksi.com/,1,X,14명-

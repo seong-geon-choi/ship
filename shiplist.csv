@@ -321,7 +321,7 @@ ID,REGION,NAME,RESERVATION_URL,URL_TYPE,SHOW,MEMO
 321,충남 보령 대천항,뉴코리아호,http://삼성호.com/,1,X,19명-
 322,충남 보령 대천항,대천한프로호,https://hanpro.thefishing.kr/,1,O,21명-
 323,충남 보령 대천항,드림호,http://삼성호.com/,1,X,17명-
-324,충남 보령 대천항,럭키세븐호,https://www.hifishing.net/,1,X,20명-
+324,충남 보령 대천항,럭키세븐호,https://www.hifishing.net/,1,O,20명-
 325,충남 보령 대천항,레전드호,https://까칠이호.com/,1,X,18명-
 326,충남 보령 대천항,마돈나호,http://www.madonnaho.com/,1,X,16명-
 327,충남 보령 대천항,메이저호,http://www.ochzeus.com/,1,X,19명-
@@ -480,7 +480,7 @@ ID,REGION,NAME,RESERVATION_URL,URL_TYPE,SHOW,MEMO
 482,충남 보령 오천항,팀프랜드호,http://www.friendho.com/,1,O,(신)-20명-
 483,충남 보령 오천항,포세이돈호,http://www.poseidonho.com/,1,X,21명-
 484,충남 보령 오천항,프랜드2호,http://www.friendho.com/,1,X,21명-
-485,충남 보령 오천항,프린스호,https://princeho.sunsang24.com/,2,X,17명-
+485,충남 보령 오천항,프린스호,https://princeho.sunsang24.com/,2,O,17명-
 486,충남 보령 오천항,해마호,https://haemaho.sunsang24.com/,2,O,17명-
 487,충남 보령 오천항,해모수호,https://haemosoo.sunsang24.com/,2,X,17명-
 488,충남 보령 오천항,해양호,https://teamhanpro.com/,1,X,17명-

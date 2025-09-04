@@ -448,7 +448,7 @@ ID,REGION,NAME,RESERVATION_URL,URL_TYPE,SHOW,MEMO
 450,충남 보령 오천항,블루호,https://www.bluefishing.asia/,1,X,20명-
 451,충남 보령 오천항,비비호,https://ocpro.sunsang24.com/,2,X,19명-
 452,충남 보령 오천항,비엔나호,https://www.vinaho.com/,1,X,16명-
-453,충남 보령 오천항,빅보스호,https://bigboss24.sunsang24.com/,2,X,17명-
+453,충남 보령 오천항,빅보스호,https://bigboss24.sunsang24.com/,2,O,17명-
 454,충남 보령 오천항,샤크호,http://sharkho.com/,1,O,20명-
 455,충남 보령 오천항,성령5호,http://www.sungryungho.com/,1,X,20명-
 456,충남 보령 오천항,스피드호,http://코리아피싱.kr/,1,X,20명-
@@ -481,7 +481,7 @@ ID,REGION,NAME,RESERVATION_URL,URL_TYPE,SHOW,MEMO
 483,충남 보령 오천항,포세이돈호,http://www.poseidonho.com/,1,X,21명-
 484,충남 보령 오천항,프랜드2호,http://www.friendho.com/,1,X,21명-
 485,충남 보령 오천항,프린스호,https://princeho.sunsang24.com/,2,X,17명-
-486,충남 보령 오천항,해마호,https://haemaho.sunsang24.com/,2,X,17명-
+486,충남 보령 오천항,해마호,https://haemaho.sunsang24.com/,2,O,17명-
 487,충남 보령 오천항,해모수호,https://haemosoo.sunsang24.com/,2,X,17명-
 488,충남 보령 오천항,해양호,https://teamhanpro.com/,1,X,17명-
 489,충남 보령 오천항,호랭이호,https://horeng2.sunsang24.com/,2,O,21명-
@@ -500,7 +500,7 @@ ID,REGION,NAME,RESERVATION_URL,URL_TYPE,SHOW,MEMO
 502,충남 보령 회변항,아라호,https://goaraho.sunsang24.com/,2,O,21명-
 503,충남 보령 회변항,꽃게호,http://www.꽃게호.com/,1,X,15명-
 504,충남 보령 회변항,뉴경진호,http://www.kjho.kr/,1,X,16명-
-505,충남 보령 회변항,몽스타호,http://스타낚시.com/,1,X,17명-
+505,충남 보령 회변항,몽스타호,http://스타낚시.com/,1,O,17명-
 506,충남 보령 회변항,오성스타호,http://스타낚시.com/,1,O,20명-
 507,충남 서산 삼길포,골드피싱호,http://www.mscufishing.com/,1,X,20명-
 508,충남 서산 삼길포,나대세호,http://www.mscufishing.com/,1,X,20명-
@@ -526,7 +526,7 @@ ID,REGION,NAME,RESERVATION_URL,URL_TYPE,SHOW,MEMO
 528,충남 서천 홍원항,뉴카니발2호,http://www.carnivalho.com/,1,X,21명-
 529,충남 서천 홍원항,뉴해양호,https://newhaeyang.sunsang24.com/,2,X,21명-지정좌석
 530,충남 서천 홍원항,다크호스호,http://www.jofishing.co.kr/,1,X,17명-
-531,충남 서천 홍원항,도깨비호,https://www.doggaebi.kr,1,X,
+531,충남 서천 홍원항,도깨비호,https://www.doggaebi.kr,1,O,
 532,충남 서천 홍원항,돌핀호,https://hongwonhang.thefishing.kr/,1,X,15명-
 533,충남 서천 홍원항,드래곤호,http://드래곤호.kr/,1,X,20명-
 534,충남 서천 홍원항,레드펄호,http://www.레드펄호.com/,1,X,21명-지정좌석
@@ -551,7 +551,7 @@ ID,REGION,NAME,RESERVATION_URL,URL_TYPE,SHOW,MEMO
 553,충남 서천 홍원항,스마트호,http://www.smartho.co.kr/,1,X,21명-
 554,충남 서천 홍원항,시실리호,http://yjfishing.kr/,1,X,20명-
 555,충남 서천 홍원항,시즌1호,http://hongwonfishingplaza.com/,1,X,11명-
-556,충남 서천 홍원항,신세계호,http://www.sinsegeho.com/,1,X,21명-
+556,충남 서천 홍원항,신세계호,http://www.sinsegeho.com/,1,O,21명-
 557,충남 서천 홍원항,씨헌터호,https://seahunter.sunsang24.com/,2,X,11명-
 558,충남 서천 홍원항,아일랜드호,http://hwrock.thefishing.kr/,1,X,21명-
 559,충남 서천 홍원항,아쿠아마린호,http://aquamarineho.com/,1,X,18명-
@@ -568,7 +568,7 @@ ID,REGION,NAME,RESERVATION_URL,URL_TYPE,SHOW,MEMO
 570,충남 서천 홍원항,지니호,http://hongwonfishingplaza.com/,1,X,17명-
 571,충남 서천 홍원항,카멜리아호,http://hongwonfishingplaza.com/,1,X,20명-
 572,충남 서천 홍원항,캡틴제이티호,http://www.captainjt.com/,1,X,16명-
-573,충남 서천 홍원항,타이탄호,http://hongwonfishingplaza.com/,1,X,21명-
+573,충남 서천 홍원항,타이탄호,http://hongwonfishingplaza.com/,1,O,21명-
 574,충남 서천 홍원항,파라곤호,https://paragon.sunsang24.com/,2,X,20명-
 575,충남 서천 홍원항,팬텀호,http://www.f1fishing.com/,1,X,21명-
 576,충남 서천 홍원항,페라리호,http://www.f1fishing.com/,1,X,21명-

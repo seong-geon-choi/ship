@@ -1,0 +1,755 @@
+ID,REGION,NAME,RESERVATION_URL,URL_TYPE,SHOW,MEMO
+2,00.예약,09/12(금) 은하1호/영흥도 12물,http://www.gilfish.co.kr/,1,O,쭈-백승원 외 1(1 11)
+3,00.예약,09/03(수) 어랑호/회변항 3물,-,1,O,쭈-고현기 이선영 백승원 최성건 32만 전액 입금
+4,00.예약,09/28(일) Team 지오디/영흥도 13물,https://www.teamgod.kr,1,O,9/28 갑-최백오 예약금 15입금
+5,00.예약,10/11(토) 여명호/안흥 11물,http://xn--v42bv0rcoar53c6lb.kr,1,O,갑-4고현기 이선영 백승원 최성건-입금완료
+6,00.예약,10/17(금) 만석호/삼길포 2물,https://www.mscufishing.com,1,O,쭈갑-고현기 이선영 백승원 최성건-입금완료
+7,00.예약,10/17(금) 영석호/영흥도 2물,http://www.xn--3i4bl3g39q.com,1,O,갑-고현기 이선영 백승원 최성건 예약금16만 입금
+8,00.예약,11/02(일) Team 지오디/영흥도 4물,https://www.teamgod.kr,1,O,11/02 갑-고현기 이선영 백승원 최성건 예약금20 입금
+9,00.예약,11/14(금) 안흥2호/안흥 1물,https://2ho.sunsang24.com/,2,O,문갑-고현기 이선영 백승원 최성건-입금완료
+10,01. 탑승완료,06/14(토) 승주호/삼길포,https://www.mscufishing.com,1,O,광우농-3+친-입금완료
+11,01. 탑승완료,05/18(일) 만석호/삼길포,포 https://www.mscufishing.com,1,O,광우농
+12,01. 탑승완료,폭파 07/04(금) 깜보호/무창포,http://xn--h50bq35ao3c7qt.com/index.php,1,O,문어 탐사-고현기 이선영 백승원 최성건-입금완료
+13,경기 시흥 오이도,포세이돈호,https://poseidon.sunsang24.com/,2,O,
+14,경기 시흥 오이도,승원호,https://www.ioido.kr/,1,O,(신)시간배-종일배
+15,경기 시흥 오이도,빨강등대호,http://www.redlight.kr/,1,O,20명-지정좌석
+16,경기 시흥 오이도,스카이호,https://sky.sunsang24.com/,2,O,14명-지정좌석
+17,경기 시흥 오이도,안산호,https://ansan.sunsang24.com/,2,O,20명-쭈갑예약 오픈 전
+18,경기 시흥 오이도,전투호,http://www.jaebul1ho.com,1,O,20명-(신)(시간배)(자리 선택)
+19,경기 시흥 오이도,킹스타호,https://kingstar.sunsang24.com/,2,X,20명-
+20,경기 시흥 오이도,태평2호,https://taepyeong2.sunsang24.com/,2,X,11명-
+21,경기 시흥 오이도,한바다호,http://xn--2j1b67owufgpurea.com,1,O,20명-(신)(시간배)(자리 선택)
+22,경기 평택 평택항,경기 평택 평택항피싱호,http://www.ptfishing.net/,1,X,20명-지정좌석
+23,경기 평택 평택항,돌핀호,https://dolphinho.sunsang24.com/,2,X,10명-지정좌석
+24,경기 평택 평택항,동일호,http://빅스타호.com/,1,X,11명-
+25,경기 평택 평택항,등대호,http://www.배낚시.kr/,1,X,14명-
+26,경기 평택 평택항,베스트피싱호,http://평택항베스트피싱.com/,1,X,16명-지정좌석
+27,경기 평택 평택항,베스트호,https://평택항바다배낚시.com/,1,X,정보없음-유선예약
+28,경기 평택 평택항,빅스타호,http://빅스타호.com/,1,X,20명-지정좌석
+29,경기 평택 평택항,서해피싱호,https://평택항서해피싱.com/,1,X,14명-지정좌석
+30,경기 평택 평택항,수복호,http://수복호.com/,1,X,19명-지정좌석
+31,경기 평택 평택항,수성호,http://평택항수성호.com/,1,X,16명-지정좌석
+32,경기 평택 평택항,에이스피싱호,https://acefishing.sunsang24.com/,2,X,20명-무조건 거르는 
+33,경기 평택 평택항,오닉스호,http://대교피싱호.com/,1,X,20명-지정좌석
+34,경기 평택 평택항,자연호,http://nature.thefishing.kr/,1,X,18명-
+35,경기 평택 평택항,평택등대호,https://평택항바다배낚시.com/,1,X,-
+36,경기 화성 궁평항,블랙호,http://kungpyeong.com/,1,X,20명-
+37,경기 화성 궁평항,타이탄호,http://kungpyeong.com/,1,X,20명-지정좌석
+38,경기 화성 전곡항,골드피싱호,https://24marine.sunsang24.com/,2,O,20명-별로
+39,경기 화성 전곡항,뉴신명호/신명스카이호,http://shinmyungho.com/,1,O,20명-지정좌석
+40,경기 화성 전곡항,동백호,https://24marine.sunsang24.com/,2,X,20명-지정좌석
+41,경기 화성 전곡항,레인보우호,http://www.rainbowho.com/,1,X,20명-지정좌석
+42,경기 화성 전곡항,리틀대박호,https://jackpot.sunsang24.com/,2,X,20명-유선예약
+43,경기 화성 전곡항,빅보스호,https://24marine.sunsang24.com/,2,X,(신)-20명-지정좌석
+44,경기 화성 전곡항,스타피싱호,http://www.rainbowho.com/,1,O,20명-지정좌석
+45,경기 화성 전곡항,스타호/레인보우호,https://jstar.thefishing.kr,1,X,(자리 선택)
+47,경기 화성 전곡항,신흥특호,https://24marine.sunsang24.com/,2,X,20명-
+48,경기 화성 전곡항,양철호,http://www.양철호.com/,1,O,20명-지정좌석. 평 좋음
+49,경기 화성 전곡항,에버그린호,https://24marine.sunsang24.com/,2,X,20명-
+50,경기 화성 전곡항,예지퀸호,https://yejiqueen.sunsang24.com/,2,X,19명-지정좌석
+51,경기 화성 전곡항,옐로우피싱,https://yellow.sunsang24.com/,2,O,(자리 선택) 평 좋음
+52,경기 화성 전곡항,왕선장호,https://king.sunsang24.com/,2,O,19명-지정좌석. 평 별로
+53,경기 화성 전곡항,유로파호,https://europa.sunsang24.com/,2,O,(신)20명. 평 좋음
+54,경기 화성 전곡항,입질대박호,https://chunil.sunsang24.com/,2,X,20명-지정좌석
+55,경기 화성 전곡항,제비호,https://jebi.sunsang24.com,2,O,(자리 선택)
+56,경기 화성 전곡항,태평호,https://24marine.sunsang24.com/,2,X,20명-지정좌석
+57,경기 화성 전곡항,해운호,https://haeun.sunsang24.com/,2,X,20명-
+58,성구미 포구,파란고래호,https://www.bluewhaleho.com/,1,O,21명-지정좌석
+59,인천 남항,고래호,https://jnaksi.com/,1,X,49명-체험낚시
+60,인천 남항,금강스타호,https://jnaksi.com/,1,X,45명-체험낚시
+61,인천 남항,나이스호,http://www.nicefish7.com/,1,X,20명-
+62,인천 남항,뉴스타호,http://www.haedongstar.com/,1,X,20명-
+63,인천 남항,드래곤호,http://www.seastarho.com/,1,X,20명-
+64,인천 남항,드림피싱호,http://dreamfishing.co.kr/,1,X,20명-
+65,인천 남항,명덕5호,https://www.mdho.co.kr/niabbs5/,1,X,55명-체험낚시
+66,인천 남항,모비딕호,https://jnaksi.com/,1,X,20명-
+67,인천 남항,반가워호,https://bangawer.com/,1,X,75명-체험낚시
+68,인천 남항,백마3호,https://whitehorse.sunsang24.com/,2,X,20명-
+69,인천 남항,백호,https://www.haewonho.com/niabbs5/,1,X,58명-체험낚시
+70,인천 남항,부킹호,https://www.kukjaenaksi.com/niabbs5/,1,X,20명-
+71,인천 남항,새시대호,https://jnaksi.com/,1,X,55명-체험낚시
+72,인천 남항,송도호,http://www.hjfish.kr/,1,X,45명-체험낚시
+73,인천 남항,슈퍼노바호,https://supernova.sunsang24.com/,2,X,20명-자리선택
+74,인천 남항,신나라호,http://www.sinnara21.co.kr/niabbs5/,1,X,53명-체험낚시
+75,인천 남항,썬스타호,https://sunstarho.sunsang24.com/,2,X,20명-
+76,인천 남항,에이스호,https://ace.sunsang24.com/,2,X,20명-
+77,인천 남항,은아3호,https://sunstarho.sunsang24.com/,2,X,20명-
+78,인천 남항,자이언트2호,http://giantho.thefishing.kr/,1,X,50명-체험낚시
+79,인천 남항,킹콩2호,https://www.kingkongship.com/niabbs5/,1,X,47명-
+80,인천 남항,킹콩6호,https://www.kingkongship.com/niabbs5/,1,X,50명-
+81,인천 남항,킹콩8호,https://www.kingkongship.com/niabbs5/,1,X,61명-체험낚시
+82,인천 남항,파워호,http://seohaeho.kr/,1,X,20명-
+83,인천 남항,피닉스호,https://www.haewonho.com/niabbs5/,1,X,40명-
+84,인천 남항,하나호,https://www.kukjaenaksi.com/niabbs5/,1,X,49명-체험낚시
+85,인천 남항,하하호호,https://jnaksi.com/,1,X,63명-체험낚시
+86,인천 남항,해성2호,http://www.seastarho.com/,1,X,48명-체험낚시
+87,인천 남항,해피호,https://www.kukjaenaksi.com/niabbs5/,1,X,57명-체험낚시
+88,인천 남항,화인호,http://www.hjfish.kr/,1,X,20명-
+89,인천 남항,히트호,http://www.inchonnaksi.com/,1,X,20명-
+90,인천 만석부두,마린스타1호,https://www.marinestarho.com/,1,O,21명-지정좌석
+91,인천 만석부두,마린스타3호,https://www.marinestarho.com/,1,X,21명-지정좌석
+92,인천 만석부두,선호,http://www.aseafish.co.kr/,1,X,20명-
+93,인천 만석부두,순영호,https://mfish.sunsang24.com/,2,X,40명-
+94,인천 만석부두,신성호,https://mfish.sunsang24.com/,2,X,16명-
+95,인천 만석부두,장안호,http://www.aseafish.co.kr/,1,X,12명-
+96,인천 만석부두,평안호,https://mfish.sunsang24.com/,2,X,14명-
+97,인천 만석부두,해성호,http://www.aseafish.co.kr/,1,X,13명-
+98,인천 만석부두,해오름호,https://mfish.sunsang24.com/,2,X,12명-
+99,인천 만석부두,해용호,http://www.haeyongho.com/,1,X,20명-
+100,인천 만석부두,현성호,https://mfish.sunsang24.com/,2,X,12명-
+101,인천 만석부두,현주호,https://mfish.sunsang24.com/,2,X,20명-
+102,인천 만석부두,황해3호,http://www.aseafish.co.kr/,1,X,20명-
+103,인천 연안부두,가마우지호,https://khanfishing.com/,1,X,20명-지정좌석
+104,인천 연안부두,고트호,https://smartho.sunsang24.com/,2,X,20명-
+105,인천 연안부두,뉴마린스타호,https://khanfishing.com/,1,X,20명-지정좌석
+106,인천 연안부두,루키나2호,https://lukina.sunsang24.com/,2,X,20명-
+107,인천 연안부두,루키나2호/루키나호,http://lukina.sunsang24.com,2,X,(자리 선택)
+108,인천 연안부두,루키나5호,https://lukina.sunsang24.com/,2,X,54명-
+109,인천 연안부두,루키나호,https://lukina.sunsang24.com/,2,X,20명-지정좌석
+110,인천 연안부두,마루호,https://www.sharkfishing.kr/,1,X,20명-
+111,인천 연안부두,베스트1호,https://khanfishing.com/,1,X,20명-
+112,인천 연안부두,베스트3호,https://khanfishing.com/,1,X,20명-
+113,인천 연안부두,보스호,http://www.bossfishing.kr/,1,X,20명-
+114,인천 연안부두,스마트1호,https://smartho.sunsang24.com/,2,X,20명-지정좌석
+115,인천 연안부두,스마트2호,https://smartho.sunsang24.com/,2,X,20명-
+116,인천 연안부두,스모키호,https://www.sharkfishing.kr/,1,X,20명-
+117,인천 연안부두,시크릿호,https://khanfishing.com/,1,X,20명-지정좌석
+118,인천 연안부두,와이파이호,https://khanfishing.com/,1,X,20명-
+119,인천 연안부두,왕만두호,https://khanfishing.com/,1,X,20명-지정좌석
+120,인천 연안부두,욜로호,https://khanfishing.com/,1,X,20명-
+121,인천 연안부두,제트호,https://khanfishing.com/,1,X,20명-
+122,인천 연안부두,팀에프원,https://kazmi.kr,1,X,(자리 선택)
+123,인천 연안부두,팀에프원호,https://teamf.kr/,1,O,20명-지정좌석
+124,인천 연안부두,팀에프투호,https://teamf.kr/,1,X,20명-
+125,인천 영종도,K세븐호(미르선단),https://ottogi.sunsang24.com/,2,X,20명-
+126,인천 영종도,미르호(미르선단),https://ottogi.sunsang24.com/,2,O,(신)19명-선실 좁으나 평은 좋음
+127,인천 영종도,블루웨일호,https://5sunrise.thefishing.kr/,1,X,9명-
+128,인천 영종도,비키니호(미르선단),https://ottogi.sunsang24.com/,2,X,8인
+129,인천 영종도,세븐호(미르선단),https://ottogi.sunsang24.com/,2,O,20명-
+130,인천 영종도,순풍호,https://happyho.sunsang24.com/,2,X,20명-어선
+131,인천 영종도,오뚜기호(미르선단),https://ottogi.sunsang24.com/,2,O,20명-
+132,인천 영종도,인천365호,https://365.sunsang24.com/,2,X,15명-지정좌석. 평 나쁨
+133,인천 영종도,청마/아트/고강/제우스,https://www.chungmafishing.com,1,O,20명-주차 주의
+134,인천 영종도,청춘호,http://영종도청춘호.kr/,1,X,18명- 선장 사무장 낚시함..
+135,인천 영흥도,Team 만수,https://teammansu.kr,1,O,(신)(자리 선택)
+136,인천 영흥도,Team 지오디,https://www.teamgod.kr,1,O,(신)(자리 선택)
+137,인천 영흥도,강팀호,http://www.ybada.com/,1,X,(신)(자리 선택) 20명. 배 넓고 친절
+138,인천 영흥도,골드피싱,http://www.goldfishingho.com,1,X,(자리 선택)
+139,인천 영흥도,금강7호,http://www.kumkangho.co.kr/,1,O,(신)영흥도 원탑 시설.20명-지정좌석. 평 좋음
+140,인천 영흥도,나이스호,http://www.niceho.com/,1,O,(신) 20명- 평은 그냥.
+141,인천 영흥도,뉴청운호,http://영흥도청운호.com/,1,O,20명-지정좌석. 시설 별로이나 평은 괜찮음.
+142,인천 영흥도,레전드호,http://레전드호.com/,1,X,16명-지정좌석
+143,인천 영흥도,루어피싱호,http://yhdfish.net/,1,X,20명-지정좌석. 평 괜찮음
+144,인천 영흥도,마이웨이호,http://xn--c20b03d25ji7g57dh16a.kr,1,X,(자리 선택)평 나쁨
+145,인천 영흥도,만수피싱호,https://www.만수피싱.kr/,1,O,20명-지정좌석
+146,인천 영흥도,명성호,http://www.영흥도명성호.com/,1,X,20명-평 좋음
+147,인천 영흥도,모닝스타호,http://morningstarho.com/,1,O,20명-지정좌석
+148,인천 영흥도,부라보호,http://bravoho.kr/,1,O,20명-
+149,인천 영흥도,빅토리/빅토리아/뉴승진호,https://www.yhseaking.com,1,X,(자리 선택) 평 나쁨
+150,인천 영흥도,스타트호,http://www.스타트호.com/,1,X,20명-지정좌석
+151,인천 영흥도,아라2호,http://www.araho.co.kr/,1,X,18명-선착순. 평 좋음
+152,인천 영흥도,아라3호,http://www.araho.co.kr/,1,X,(신)20명-지정좌석(음식 잘 나옴)
+153,인천 영흥도,아이리스호,http://www.irisho.kr/,1,X,20명-지정좌석
+154,인천 영흥도,야호,http://xn--2f5b291a.com,1,O,(자리 선택)
+155,인천 영흥도,영동1호,http://www.영동1호.com/,1,O,20명-지정좌석
+156,인천 영흥도,영동2호,https://www.youngdong2ho.net/,1,O,20명-지정좌석
+157,인천 영흥도,영동3호,http://ydboat.com/,1,X,20명-지정좌석. 평 나쁨
+158,인천 영흥도,영석호,http://영석호.com/,1,O,20명-(신)지정좌석
+159,인천 영흥도,영진호,http://www.youngjinho.net/,1,O,(신)20명-지정좌석
+160,인천 영흥도,올림푸스호,http://www.olympusho.com/,1,O,15명-지정좌석
+161,인천 영흥도,원스타호,http://www.paradiseho.com/,1,O,(신)15명-지정좌석
+162,인천 영흥도,은하1호,http://www.gilfish.co.kr/,1,O,20명-지정좌석 평 괜찮음. 출조점 앞 탑승
+163,인천 영흥도,전진호,https://junjin.thefishing.kr/,1,O,(신)11명-지정좌석
+164,인천 영흥도,짱구호/짱구투,http://www.ybada.com,1,X,(신)(자리 선택) 짱구호 평은 그닥
+165,인천 영흥도,카리스마호,https://charisma.sunsang24.com/,2,O,20명-지정좌석
+166,인천 영흥도,크루즈호,http://www.cruiseho.com/,1,O,20명-지정좌석. 평 나쁨
+167,인천 영흥도,페라리호,http://www.페라리호.com/,1,X,20명-지정좌석. 평 나쁨
+168,인천 영흥도,해진호,http://www.haejinho.com/,1,O,14명-지정좌석
+1,전북 군산,똥까호,https://ddonggga.sunsang24.com/,2,O,
+169,전북 군산 비응항,K1호,https://k1f.sunsang24.com/,2,X,18명-
+170,전북 군산 비응항,K2호,https://k1f.sunsang24.com/,2,X,20명-
+171,전북 군산 비응항,갈매기호,http://gunsannaksi.com/,1,X,14명-
+172,전북 군산 비응항,강남호,https://kangnam.sunsang24.com/,2,X,20명-
+173,전북 군산 비응항,강프로호,https://kangpro.sunsang24.com/,2,X,18명-
+174,전북 군산 비응항,고수호,https://lubina.sunsang24.com/,2,X,21명-
+175,전북 군산 비응항,골드스타호,https://hermes.sunsang24.com/,2,X,20명-
+176,전북 군산 비응항,그랜드호,http://군산그랜드호.com/,1,X,20명-
+177,전북 군산 비응항,김대영호,http://김대영호.com/,1,X,20명-
+178,전북 군산 비응항,까치리호,http://gunsannaksi.com/,1,X,20명-
+179,전북 군산 비응항,남광피싱호,https://1fishing.co.kr/,1,X,17명-
+180,전북 군산 비응항,뉴라이브호,http://gunsannaksi.com/,1,X,20명-
+181,전북 군산 비응항,뉴라이브호,http://newliveho.kr/,1,X,20명-
+182,전북 군산 비응항,뉴발리호,https://balriho.sunsang24.com/,2,X,20명-
+183,전북 군산 비응항,뉴블루스타호,https://bluestar.sunsang24.com/,2,X,16명-
+184,전북 군산 비응항,뉴빅토리호,https://fdtr.sunsang24.com/,2,X,20명-
+185,전북 군산 비응항,뉴오리온,https://1fishing.co.kr/,1,X,20명-
+186,전북 군산 비응항,니즈호,https://fdtr.sunsang24.com/,2,X,20명-
+187,전북 군산 비응항,다온호,https://daon.sunsang24.com/,2,X,20명-
+188,전북 군산 비응항,다크호스호,https://1fishing.co.kr/,1,X,17명-
+189,전북 군산 비응항,닥스호,https://seo.sunsang24.com/,2,X,20명-
+190,전북 군산 비응항,대호피싱호,http://gunsannaksi.com/,1,X,20명-
+191,전북 군산 비응항,도시어부호,https://city.sunsang24.com/,2,X,20명-
+192,전북 군산 비응항,드래곤호,https://dragon.sunsang24.com/,2,X,18명-
+193,전북 군산 비응항,드림호(아라호 김선장),https://aranaksi.sunsang24.com/,2,X,20명-
+194,전북 군산 비응항,똥까호,http://ddonggga.kr/,1,X,20명-
+195,전북 군산 비응항,뚱스호,https://seo.sunsang24.com/,2,X,20명-
+196,전북 군산 비응항,럭키호,https://venice.sunsang24.com/,2,X,20명-
+197,전북 군산 비응항,레인보우호,https://1fishing.co.kr/,1,X,20명-
+198,전북 군산 비응항,레전드호,http://www.gunsanlegend.co.kr/,1,X,20명-
+199,전북 군산 비응항,루미호,https://roomi.sunsang24.com/,2,X,20명-
+200,전북 군산 비응항,루시호,https://lucy.sunsang24.com/,2,X,18명-
+201,전북 군산 비응항,마루호,https://maruho.sunsang24.com/,2,X,20명-
+202,전북 군산 비응항,만수르호,https://mansour.sunsang24.com/,2,X,19명-
+203,전북 군산 비응항,먹깨비호,https://glutton.sunsang24.com/,2,X,18명-
+204,전북 군산 비응항,미라클호,https://redpulsegs.sunsang24.com/,2,X,13명-
+205,전북 군산 비응항,바다하리호,https://badahariho.sunsang24.com/,2,X,20명-
+206,전북 군산 비응항,발키리호,https://1fishing.co.kr/,1,X,19명-
+207,전북 군산 비응항,범고래호,http://gunsannaksi.com/,1,X,20명-
+208,전북 군산 비응항,베니스호,https://venice.sunsang24.com/,2,X,20명-
+209,전북 군산 비응항,볼보호,https://1fishing.co.kr/,1,X,20명-
+210,전북 군산 비응항,블랙펄1호,http://blackpearlfishing.kr/,1,X,20명-
+211,전북 군산 비응항,블랙펄3호,http://blackpearlfishing.kr/,1,X,20명-
+212,전북 군산 비응항,블랙핑크호,https://balriho.sunsang24.com/,2,X,18명-
+213,전북 군산 비응항,샤크호,https://shinsung.sunsang24.com/,2,X,20명-
+214,전북 군산 비응항,세븐호,https://gsseven.sunsang24.com/,2,X,20명-
+215,전북 군산 비응항,슈퍼마린호,https://shinsung.sunsang24.com/,2,X,20명-
+216,전북 군산 비응항,스마트호,http://gunsannaksi.com/,1,X,20명-
+217,전북 군산 비응항,스텔스호,https://stealth.sunsang24.com/,2,X,20명-
+218,전북 군산 비응항,시그니처호,https://signature.sunsang24.com/,2,X,20명-
+219,전북 군산 비응항,신성호,https://shinsung.sunsang24.com/,2,X,20명-
+220,전북 군산 비응항,아레나호,https://arenaho.sunsang24.com/,2,X,20명-
+221,전북 군산 비응항,아리랑호,https://shinsung.sunsang24.com/,2,X,20명-
+222,전북 군산 비응항,아리울1호,https://hitfleet.sunsang24.com/,2,X,20명-
+223,전북 군산 비응항,아리울2호,https://hitfleet.sunsang24.com/,2,X,17명-
+224,전북 군산 비응항,아시아호,https://asiaho.sunsang24.com/,2,X,20명-
+225,전북 군산 비응항,어락행호,https://arakhaeng.sunsang24.com/,2,X,20명-
+226,전북 군산 비응항,어비스호,https://hitfleet.sunsang24.com/,2,X,20명-
+227,전북 군산 비응항,어청도피싱호,https://어청도피싱.com/,1,X,20명-
+228,전북 군산 비응항,에르메스호,https://hermes.sunsang24.com/,2,X,20명-
+229,전북 군산 비응항,에프원호,https://hitfleet.sunsang24.com/,2,X,20명-
+230,전북 군산 비응항,엘리스호,https://alice.sunsang24.com/,2,X,20명-
+231,전북 군산 비응항,용성호,https://yongsung.sunsang24.com/,2,X,20명-
+232,전북 군산 비응항,웅비1호,http://365ho.kr/,1,X,20명-
+233,전북 군산 비응항,임마누엘호,http://gunsannaksi.com/,1,X,20명-
+234,전북 군산 비응항,자연호,https://1fishing.co.kr/,1,X,20명-
+235,전북 군산 비응항,자이언트호,https://giant.sunsang24.com/,2,X,18명-
+236,전북 군산 비응항,조성호,https://josunghofishing.com/,1,X,20명-
+237,전북 군산 비응항,참바다호,https://chambada.sunsang24.com/,2,X,20명-
+238,전북 군산 비응항,창성호,http://www.changsungho.com/,1,X,20명-
+239,전북 군산 비응항,챔피언호,http://gunsannaksi.com/,1,X,20명-
+240,전북 군산 비응항,카니발호,https://carnival.sunsang24.com/,2,X,20명-
+241,전북 군산 비응항,코리아호,https://arakhaeng.sunsang24.com/,2,X,20명-
+242,전북 군산 비응항,크루즈호,https://redpulsegs.sunsang24.com/,2,X,12명-
+243,전북 군산 비응항,킹마린호,https://kingmarine.sunsang24.com/,2,X,20명-
+244,전북 군산 비응항,킹스타호,https://kingstarho.sunsang24.com/,2,X,20명-
+245,전북 군산 비응항,태평양호,https://taepyoung.sunsang24.com/,2,X,20명-
+246,전북 군산 비응항,태헌호,https://seo.sunsang24.com/,2,X,18명-
+247,전북 군산 비응항,팀루비나2호,https://lubina.sunsang24.com/,2,X,9명-
+248,전북 군산 비응항,포세이돈2호,http://gunsannaksi.com/,1,X,20명-
+249,전북 군산 비응항,포세이돈호,http://poseidonfishing.kr/,1,X,20명-
+250,전북 군산 비응항,프로호,https://shinsung.sunsang24.com/,2,X,20명-
+251,전북 군산 비응항,하나호,https://1fishing.co.kr/,1,X,17명-
+252,전북 군산 비응항,하이원호,https://www.hifish.kr/,1,X,20명-
+253,전북 군산 비응항,해룡호,https://seo.sunsang24.com/,2,X,18명-
+254,전북 군산 비응항,해무니호,https://shinsung.sunsang24.com/,2,X,20명-
+255,전북 군산 비응항,해신호,http://gunsannaksi.com/,1,X,16명-
+256,전북 군산 비응항,홈런호,http://gunsannaksi.com/,1,X,20명-
+257,전북 군산 비응항,후크스타호,https://hookstar.sunsang24.com/,2,X,19명-
+258,전북 부안 가력도항,골드피싱호,https://goldfishing.sunsang24.com/,2,X,20명-
+259,전북 부안 격포항,격포블루마린호,https://waddafishing.kr/,1,O,20명-
+260,전북 부안 격포항,격포블루피싱호,https://waddafishing.kr/,1,X,16명-
+261,전북 부안 격포항,격포힐링호,https://waddafishing.kr/,1,X,19명-
+262,전북 부안 격포항,남부스타2호,http://www.nambunaksi.co.kr/,1,X,17명-
+263,전북 부안 격포항,남부스타호,http://www.nambunaksi.co.kr/,1,X,20명-
+264,전북 부안 격포항,넘버2호,http://www.no1fish.com/,1,X,20명-
+265,전북 부안 격포항,넘버3호,http://www.no1fish.com/,1,X,20명-
+266,전북 부안 격포항,넘버4호,http://www.no1fish.com/,1,X,11명-
+267,전북 부안 격포항,넘버원호,http://www.no1fish.com/,1,X,20명-
+268,전북 부안 격포항,대박1호,http://www.seoulfishing.kr/,1,X,20명-
+269,전북 부안 격포항,대박2호,http://www.seoulfishing.kr/,1,X,20명-
+270,전북 부안 격포항,드래곤1호,http://www.nambunaksi.co.kr/,1,X,20명-
+271,전북 부안 격포항,드래곤2호,http://www.nambunaksi.co.kr/,1,X,17명-
+272,전북 부안 격포항,럭키스타호,http://새만금낚시.com/,1,X,20명-
+273,전북 부안 격포항,블루스카이호,http://bluesky.thefishing.kr/,1,X,20명-
+274,전북 부안 격포항,빅터피싱1호,https://victor.sunsang24.com/,2,X,20명-
+275,전북 부안 격포항,새천년호,http://새만금낚시.com/,1,X,20명-
+276,전북 부안 격포항,씨헌터호,http://새만금낚시.com/,1,X,20명-
+277,전북 부안 격포항,아리스타호,https://waddafishing.kr/,1,X,16명-
+278,전북 부안 격포항,영진피싱호,http://www.nambunaksi.co.kr/,1,X,20명-
+279,전북 부안 격포항,오션투어호,https://oceantour.sunsang24.com/,2,X,20명-
+280,전북 부안 격포항,위도피싱호,https://wido.sunsang24.com/,2,X,20명-
+281,전북 부안 격포항,카이저2호,https://banak24.com/,1,X,20명-
+282,전북 부안 격포항,카이저3호,https://banak24.com/,1,X,20명-
+283,전북 부안 격포항,카이저ACE호,https://banak24.com/,1,X,20명-
+284,전북 부안 격포항,카이저호,https://banak24.com/,1,X,20명-
+285,전북 부안 격포항,포인트호,https://banak24.com/,1,X,11명-
+286,충남 당진 그늘미항,강태공호,https://kang.sunsang24.com/,2,X,11명-유선예약
+287,충남 당진 장고항,경영호,http://yongmuji.fishnet.co.kr/,1,X,19명-
+288,충남 당진 장고항,군자피싱호,https://gunja.sunsang24.com/,2,X,14명-
+289,충남 당진 장고항,그린호,http://www.ysho.kr/,1,X,11명-
+290,충남 당진 장고항,나르샤호,https://greenfishing.sunsang24.com/,2,X,11명-지정좌석
+291,충남 당진 장고항,뉴시아호,https://siaho.sunsang24.com/,2,X,17명-
+292,충남 당진 장고항,동산호,https://greenfishing.sunsang24.com/,2,X,8명-
+293,충남 당진 장고항,등대호,https://greenfishing.sunsang24.com/,2,X,8명-
+294,충남 당진 장고항,라이즈호,https://rise.sunsang24.com/,2,X,20명-
+295,충남 당진 장고항,부엉이호,https://greenfishing.sunsang24.com/,2,X,11명-
+296,충남 당진 장고항,블루오션2호,https://blueocean2.sunsang24.com/,2,X,16명-
+297,충남 당진 장고항,블리츠호,https://greenfishing.sunsang24.com/,2,X,8명-
+298,충남 당진 장고항,써니호,https://greenfishing.sunsang24.com/,2,X,8명-
+299,충남 당진 장고항,어촌호,https://village.sunsang24.com/,2,X,8명-
+300,충남 당진 장고항,영구피싱호,https://cafe.naver.com/dangjin4708,1,X,8명-
+301,충남 당진 장고항,영진호,https://yungjin.sunsang24.com/,2,X,16명-
+302,충남 당진 장고항,용신호,http://www.ysho.kr/,1,X,21명-지정좌석
+303,충남 당진 장고항,원당호,https://greenfishing.sunsang24.com/,2,X,9명-
+304,충남 당진 장고항,진영호,https://jinyoung.sunsang24.com/,2,X,15명-
+305,충남 당진 장고항,청룡호,http://청룡호.kr/,1,X,14명-
+306,충남 당진 장고항,청새치호,https://greenfishing.sunsang24.com/,2,X,8명-유선예약
+307,충남 당진 장고항,태풍호,https://janggofish.sunsang24.com/,2,X,21명-지정좌석
+308,충남 당진 장고항,한일호,https://hanilho.sunsang24.com/,2,X,15명-
+309,충남 당진 장고항,해안선호,https://coastline.sunsang24.com/,2,X,15명-지정좌석
+310,충남 당진 장고항,행복마린호,https://greenfishing.sunsang24.com/,2,X,8명-유선예약
+311,충남 당진 장고항,흥진1호,https://greenfishing.sunsang24.com/,2,X,11명-
+312,충남 당진 한진포구,럭키2호,https://www.lucky2ho.com/,1,X,9명-
+313,충남 보령 대천항,까칠이1호,https://까칠이호.com/,1,X,20명-
+314,충남 보령 대천항,까칠이호,https://까칠이호.com/,1,X,20명-
+315,충남 보령 대천항,깐부호,http://www.ochzeus.com/,1,O,20명-제우스 선단. 평 좋음
+316,충남 보령 대천항,깔조호,http://깔조호.kr/,1,X,17명-
+317,충남 보령 대천항,나로호,http://www.yayaho.kr/,1,X,정보없음-독배전용
+318,충남 보령 대천항,나르샤호,https://시티맨호.com/,1,X,10명-
+319,충남 보령 대천항,나이키호,http://www.nikeho.com/,1,X,20명-
+320,충남 보령 대천항,노블레스호,https://www.hifishing.net/,1,X,17명-독배전용
+321,충남 보령 대천항,뉴코리아호,http://삼성호.com/,1,X,19명-
+322,충남 보령 대천항,대천한프로호,https://hanpro.thefishing.kr/,1,O,21명-
+323,충남 보령 대천항,드림호,http://삼성호.com/,1,X,17명-
+324,충남 보령 대천항,럭키세븐호,https://www.hifishing.net/,1,X,20명-
+325,충남 보령 대천항,레전드호,https://까칠이호.com/,1,X,18명-
+326,충남 보령 대천항,마돈나호,http://www.madonnaho.com/,1,X,16명-
+327,충남 보령 대천항,메이저호,http://www.ochzeus.com/,1,X,19명-
+328,충남 보령 대천항,몬스터호,http://www.ochzeus.com/,1,X,20명-
+329,충남 보령 대천항,삼성호,http://삼성호.com/,1,X,21명-
+330,충남 보령 대천항,세진호,http://삼성호.com/,1,X,16명-
+331,충남 보령 대천항,슈퍼스타호,http://www.ochzeus.com/,1,X,20명-
+332,충남 보령 대천항,스파이더호,http://www.ochzeus.com/,1,X,20명-
+333,충남 보령 대천항,승하호,http://청춘호.kr/,1,X,20명-
+334,충남 보령 대천항,시티맨호,https://시티맨호.com/,1,X,19명-
+335,충남 보령 대천항,아이언호,https://iron.sunsang24.com/,2,X,20명-
+336,충남 보령 대천항,아인스호,https://www.einsho.com/,1,O,20명-
+337,충남 보령 대천항,야야호,http://www.yayaho.kr/,1,O,21명-
+338,충남 보령 대천항,에이원호,http://www.narshaho.net/,1,X,16명-
+339,충남 보령 대천항,영광호,https://시티맨호.com/,1,X,9명-
+340,충남 보령 대천항,예린호,http://yerinfishing.com/,1,X,20명-
+341,충남 보령 대천항,오로라호,http://yerinfishing.com/,1,X,17명-
+342,충남 보령 대천항,오아시스호,https://www.oasisho.com/,1,X,17명-
+343,충남 보령 대천항,은성호,http://삼성호.com/,1,X,21명-
+344,충남 보령 대천항,제우스호,http://www.ochzeus.com/,1,X,20명-
+345,충남 보령 대천항,창용호,https://시티맨호.com/,1,X,8명-
+346,충남 보령 대천항,챔피언호,https://www.hifishing.net/,1,X,20명-
+347,충남 보령 대천항,청춘호,http://청춘호.kr/,1,X,20명-
+348,충남 보령 대천항,카이저호,http://삼성호.com/,1,X,14명-
+349,충남 보령 대천항,팀루피호,https://masterfishing.kr/,1,X,20명-
+350,충남 보령 대천항,포시즌호,https://시티맨호.com/,1,X,21명-
+351,충남 보령 대천항,하이피싱호,https://www.hifishing.net/,1,O,20명-
+352,충남 보령 대천항,한바다호,https://www.hifishing.net/,1,X,8명-
+353,충남 보령 대천항,할리호,http://www.ochzeus.com/,1,X,20명-
+354,충남 보령 대천항,해모수호,https://hms.sunsang24.com/,2,X,16명-
+355,충남 보령 대천항,해성호,http://삼성호.com/,1,X,20명-
+356,충남 보령 무창포항,가디언호,https://vtrfishing.sunsang24.com/,2,X,16명-
+357,충남 보령 무창포항,갤럭시호,https://www.ssfish.kr/,1,X,21명-
+358,충남 보령 무창포항,글로리호,http://www.gloryho.kr,1,X,
+359,충남 보령 무창포항,깜보호/배짱호,http://피싱위너.com/,1,O,20명-
+360,충남 보령 무창포항,뉴빅토리호,http://피싱위너.com/,1,X,20명-먹튀 관련 있음.
+361,충남 보령 무창포항,뉴써니호,http://www.sorafishing.com/,1,X,21명-
+362,충남 보령 무창포항,뉴아폴로호,https://apollo.sunsang24.com/,2,X,16명-
+363,충남 보령 무창포항,뉴오복호,http://www.sorafishing.com/,1,X,20명-
+364,충남 보령 무창포항,뉴천일호,https://www.ssfish.kr/,1,X,21명-
+365,충남 보령 무창포항,뉴체이스호,http://muchangpofishing.com/,1,X,21명-
+366,충남 보령 무창포항,대박피싱호,https://www.muchangpo.kr/,1,X,17명-
+367,충남 보령 무창포항,댓길이호,https://www.muchangpo.kr/,1,O,20명-전투낚시. 평 좋음
+368,충남 보령 무창포항,레전드호,https://www.bravofishing.kr/,1,X,17명-
+369,충남 보령 무창포항,로빈호,http://www.robinho.kr/,1,X,15명-
+370,충남 보령 무창포항,리더스호,https://www.bravofishing.kr/,1,O,21명-
+371,충남 보령 무창포항,모데라토호,http://피싱위너.com/,1,X,20명-
+372,충남 보령 무창포항,바다용사호,https://xn--vf4bo5bt3ep1t.com,1,O,17명- 전투낚시. 평 좋음
+374,충남 보령 무창포항,백마호,https://www.muchangpofishing.co.kr/,1,X,11명-
+375,충남 보령 무창포항,베테랑호,https://vtrfishing.sunsang24.com/,2,X,17명-
+376,충남 보령 무창포항,부자호,https://www.muchangpofishing.co.kr/,1,X,12명-
+377,충남 보령 무창포항,브라보피싱호,https://www.bravofishing.kr/,1,X,17명-
+378,충남 보령 무창포항,브이호,https://www.muchangpofishing.co.kr/,1,X,17명-
+379,충남 보령 무창포항,블루포스호,https://www.ssfish.kr/,1,X,20명-
+380,충남 보령 무창포항,빅마린호,https://www.muchangpofishing.co.kr/,1,X,17명-
+381,충남 보령 무창포항,세븐호,https://www.muchangpofishing.co.kr/,1,X,21명-
+382,충남 보령 무창포항,수지호,https://suji.thefishing.kr/,1,X,20명-지정좌석
+383,충남 보령 무창포항,스카이호,http://www.sorafishing.com/,1,X,20명-
+384,충남 보령 무창포항,스텔스호,https://www.muchangpo.kr/,1,X,20명-
+385,충남 보령 무창포항,신나래호,http://www.robinho.kr/,1,X,15명-
+386,충남 보령 무창포항,신주호,https://chongkakho.com/,1,X,17명-
+387,충남 보령 무창포항,써니호,http://www.sorafishing.com/,1,X,21명-
+388,충남 보령 무창포항,씨마호,http://www.sorafishing.com/,1,X,17명-
+389,충남 보령 무창포항,아파치호,https://suji.thefishing.kr/,1,X,21명-지정좌석
+390,충남 보령 무창포항,알파호,https://www.ssfish.kr/,1,X,17명-
+391,충남 보령 무창포항,에바다호,http://www.kingfishing.net/,1,X,20명-
+392,충남 보령 무창포항,엔조이호,https://enjoy.sunsang24.com/,2,X,20명-
+393,충남 보령 무창포항,유진호,http://www.sorafishing.com/,1,X,8명-
+394,충남 보령 무창포항,이범호,https://www.muchangpo.kr/,1,X,17명-
+395,충남 보령 무창포항,지프로호,https://chongkakho.com/,1,X,15명-
+396,충남 보령 무창포항,짱가호,https://www.ssfish.kr/,1,X,17명-
+397,충남 보령 무창포항,총각1호,https://chongkakho.com/,1,X,17명-
+398,충남 보령 무창포항,총각호,https://chongkakho.com/,1,X,8명-
+399,충남 보령 무창포항,코스모스호,https://www.muchangpofishing.co.kr/,1,X,21명-
+400,충남 보령 무창포항,킹덤호,https://www.bravofishing.kr/,1,X,17명-
+401,충남 보령 무창포항,킹마스터호,https://www.ssfish.kr/,1,X,21명-
+402,충남 보령 무창포항,킹피쉬호,http://www.kingfishing.net/,1,X,20명-
+403,충남 보령 무창포항,테티스호,https://www.ssfish.kr/,1,X,17명-
+404,충남 보령 무창포항,투지호,https://www.muchangpo.kr/,1,X,20명-
+405,충남 보령 무창포항,판타지호,https://vtrfishing.sunsang24.com/,2,X,17명-
+406,충남 보령 무창포항,페가수스호,http://피싱위너.com/,1,X,20명-
+407,충남 보령 무창포항,플러스호,https://suji.thefishing.kr/,1,X,19명-지정좌석
+408,충남 보령 무창포항,피싱마린호,https://www.ssfish.kr/,1,X,21명-
+409,충남 보령 무창포항,헤라호,https://www.ssfish.kr/,1,X,17명-
+410,충남 보령 무창포항,호호호,https://chongkakho.com/,1,X,8명-
+411,충남 보령 무창포항,화니호,https://chongkakho.com/,1,X,17명-
+412,충남 보령 무창포항,효성호,http://www.robinho.kr/,1,X,17명-
+413,충남 보령 무창포항,히트호,https://www.muchangpofishing.co.kr/,1,X,17명-
+414,충남 보령 무창포항,힐링호,https://www.ssfish.kr/,1,X,21명-
+415,충남 보령 오천항,K-1호,http://k1.thefishing.kr/,1,X,20명-
+416,충남 보령 오천항,가즈아호,https://ocpro.sunsang24.com/,2,O,19명-
+417,충남 보령 오천항,갈매기호,http://dongmunfish.com/,1,O,20명-
+418,충남 보령 오천항,거양호,https://keoyang.sunsang24.com/,2,X,11명-
+419,충남 보령 오천항,굿모닝호,http://코리아피싱.kr/,1,X,11명-
+420,충남 보령 오천항,금땡이호,http://www.friendho.com/,1,X,21명-
+421,충남 보령 오천항,꺄오호,http://코리아피싱.kr/,1,X,20명-
+422,충남 보령 오천항,꽃돼지호,https://pigho.sunsang24.com,2,O,21명-점심 제공 x
+423,충남 보령 오천항,나폴리2호,https://www.napoliho.net/,1,O,20명-
+424,충남 보령 오천항,나폴리7호,https://www.napoliho.net/,1,X,17명-
+425,충남 보령 오천항,나폴리호,https://www.napoliho.net/,1,X,(신)-20명-
+426,충남 보령 오천항,누리호,https://nv.sunsang24.com/,2,X,17명-
+427,충남 보령 오천항,뉴나폴리호,https://www.napoliho.net/,1,X,20명-
+428,충남 보령 오천항,뉴바이킹호,https://nv.sunsang24.com/,2,X,17명-
+429,충남 보령 오천항,뉴스카이호,https://newsky.sunsang24.com/,2,X,16명-
+430,충남 보령 오천항,뉴진도호,https://newjd.sunsang24.com/,2,X,11명-
+431,충남 보령 오천항,뉴찬스호,http://www.chanceho.com/,1,X,20명-지정좌석
+432,충남 보령 오천항,대물호,http://오천대물낚시.com/,1,X,17명-
+433,충남 보령 오천항,도지호,https://doji.sunsang24.com/,2,X,20명-
+435,충남 보령 오천항,라라호,https://raraho.kr/,1,O,20명-지정좌석
+436,충남 보령 오천항,루키호,http://www.yamujinfishing.com/,1,X,17명-
+437,충남 보령 오천항,마린보이호,https://marineboy.sunsang24.com/,2,X,13명-
+438,충남 보령 오천항,마운틴호,https://sangsangho.com/,1,X,20명-
+439,충남 보령 오천항,바다용사호,http://용사피싱.com/,1,X,17명-
+440,충남 보령 오천항,바이킹2호,https://viking.sunsang24.com/,2,X,17명-
+441,충남 보령 오천항,바이트호,http://www.biteho.kr/,1,X,19명-
+442,충남 보령 오천항,발키리7호,http://오천루어스쿨.com/,1,X,21명-
+443,충남 보령 오천항,발키리호,http://오천루어스쿨.com/,1,X,21명-
+444,충남 보령 오천항,밥말리호,https://www.bobmarleyho.com/,1,X,17명-
+445,충남 보령 오천항,범블비호,http://범블비호.com/,1,X,20명-
+446,충남 보령 오천항,베누스호,https://ebada.sunsang24.com/,2,X,14명-
+447,충남 보령 오천항,베스트호,http://www.poseidonho.com/,1,X,21명-
+448,충남 보령 오천항,보령찬스호,https://boryeongfish.sunsang24.com/,1,X,20명-
+449,충남 보령 오천항,보령피싱호,https://boryeongfish.sunsang24.com/,1,X,20명-
+450,충남 보령 오천항,블루호,https://www.bluefishing.asia/,1,X,20명-
+451,충남 보령 오천항,비비호,https://ocpro.sunsang24.com/,2,X,19명-
+452,충남 보령 오천항,비엔나호,https://www.vinaho.com/,1,X,16명-
+453,충남 보령 오천항,빅보스호,https://bigboss24.sunsang24.com/,2,X,17명-
+454,충남 보령 오천항,샤크호,http://sharkho.com/,1,O,20명-
+455,충남 보령 오천항,성령5호,http://www.sungryungho.com/,1,X,20명-
+456,충남 보령 오천항,스피드호,http://코리아피싱.kr/,1,X,20명-
+457,충남 보령 오천항,싸부호,https://ssabu.sunsang24.com/,2,X,17명-
+458,충남 보령 오천항,썬가드호,http://코리아피싱.kr/,1,X,16명-
+459,충남 보령 오천항,씨빙이호,https://spdman7.fishmap.kr/,1,X,20명-
+460,충남 보령 오천항,아리랑1호,https://arirang.sunsang24.com/,2,X,20명-
+461,충남 보령 오천항,아리랑7호,https://arirang.sunsang24.com/,2,X,8명-
+462,충남 보령 오천항,아침바다호,http://dongmunfish.com/,1,X,11명-
+463,충남 보령 오천항,야무진2호,http://www.yamujinfishing.com/,1,X,17명-
+464,충남 보령 오천항,야무진호,http://www.yamujinfishing.com/,1,O,20명-
+465,충남 보령 오천항,어쩌다어부호,https://fisherman.sunsang24.com/,2,X,19명-
+466,충남 보령 오천항,엠피닉스호,https://www.napoliho.net/,1,X,17명-
+467,충남 보령 오천항,오디세이호,http://www.joeunfish.com/,1,X,21명-
+468,충남 보령 오천항,오션투어호,http://www.yamujinfishing.com/,1,X,21명-
+469,충남 보령 오천항,위더스호,http://오천대물낚시.com/,1,X,15명-
+470,충남 보령 오천항,유진호,https://www.eugeneho.kr/,1,X,20명-
+471,충남 보령 오천항,육소2호,https://spdman7.fishmap.kr/,1,O,17명-
+472,충남 보령 오천항,육소3호,https://spdman7.fishmap.kr/,1,X,17명-
+473,충남 보령 오천항,이바다호,https://ebada.sunsang24.com/,2,X,21명-
+474,충남 보령 오천항,일복호,https://teamhanpro.com/,1,X,20명-
+475,충남 보령 오천항,자이언트호,https://rkclgh.sunsang24.com/,2,O,21명-
+476,충남 보령 오천항,천하피싱호,http://www.herafishing.net/,1,X,17명-
+477,충남 보령 오천항,천해호,http://dongmunfish.com/,1,X,17명-
+478,충남 보령 오천항,첼린저호,http://nfishing.net/,1,X,16명-
+479,충남 보령 오천항,카즈미호,https://카즈미호.com/,1,O,20명-
+480,충남 보령 오천항,타이푼호,http://www.friendho.com/,1,O,21명-
+481,충남 보령 오천항,팀오디세이호,http://www.joeunfish.com/,1,O,21명-
+482,충남 보령 오천항,팀프랜드호,http://www.friendho.com/,1,O,(신)-20명-
+483,충남 보령 오천항,포세이돈호,http://www.poseidonho.com/,1,X,21명-
+484,충남 보령 오천항,프랜드2호,http://www.friendho.com/,1,X,21명-
+485,충남 보령 오천항,프린스호,https://princeho.sunsang24.com/,2,X,17명-
+486,충남 보령 오천항,해마호,https://haemaho.sunsang24.com/,2,X,17명-
+487,충남 보령 오천항,해모수호,https://haemosoo.sunsang24.com/,2,X,17명-
+488,충남 보령 오천항,해양호,https://teamhanpro.com/,1,X,17명-
+489,충남 보령 오천항,호랭이호,https://horeng2.sunsang24.com/,2,X,21명-
+490,충남 보령 오천항,흑돼지호,https://teamhanpro.com/,1,X,20명-
+491,충남 보령 원산도,대영호,https://chojun.co.kr/,1,X,8명-
+492,충남 보령 원산도,만선1호,https://chojun.co.kr/,1,X,8명-
+493,충남 보령 원산도,미르호,https://chojun.co.kr/,1,X,21명-
+494,충남 보령 원산도,미성3호,https://chojun.co.kr/,1,X,7명-
+495,충남 보령 원산도,승진1호,http://아라한호.com/,1,X,11명-
+496,충남 보령 원산도,아라한호,http://아라한호.com/,1,X,19명-
+497,충남 보령 원산도,언정호,https://chojun.co.kr/,1,X,8명-
+498,충남 보령 원산도,연가호,https://chojun.co.kr/,1,X,16명-
+499,충남 보령 원산도,재규호,http://원산도해신호.com/,1,X,11명-
+500,충남 보령 원산도,포세이돈호,https://chojun.co.kr/,1,X,8명-
+501,충남 보령 원산도,해신호,http://원산도해신호.com/,1,X,17명-
+502,충남 보령 회변항,아라호,https://goaraho.sunsang24.com/,2,O,21명-
+503,충남 보령 회변항,꽃게호,http://www.꽃게호.com/,1,X,15명-
+504,충남 보령 회변항,뉴경진호,http://www.kjho.kr/,1,X,16명-
+505,충남 보령 회변항,몽스타호,http://스타낚시.com/,1,X,17명-
+506,충남 보령 회변항,오성스타호,http://스타낚시.com/,1,O,20명-
+507,충남 서산 삼길포,골드피싱호,http://www.mscufishing.com/,1,X,20명-
+508,충남 서산 삼길포,나대세호,http://www.mscufishing.com/,1,X,20명-
+509,충남 서산 삼길포,넘버원호,https://no1.sunsang24.com/,2,O,(신)지정좌석. 평 좋음
+510,충남 서산 삼길포,뉴항구호,https://daebak.sunsang24.com/,2,O,20명-지정좌석
+511,충남 서산 삼길포,동성호,https://cafe.naver.com/sgpds,1,X,20명-
+512,충남 서산 삼길포,뚜기호,http://www.mscufishing.com/,1,X,11명-
+513,충남 서산 삼길포,레전드호,https://daebak.sunsang24.com/,2,X,11명-
+514,충남 서산 삼길포,만석/승주/헌터/헤르메스,https://www.mscufishing.com,1,O,(자리 선택)-대기안받음
+515,충남 서산 삼길포,영스타호,https://metafishingclub.sunsang24.com/,2,X,15명-지정좌석
+516,충남 서산 삼길포,진주호,https://jinju.sunsang24.com/,2,X,15명-지정좌석
+517,충남 서산 삼길포,천마호,https://metafishingclub.sunsang24.com/,2,X,11명-
+518,충남 서산 창리포구,마린케이호,https://hansung1.sunsang24.com/,2,X,16명-지정좌석
+519,충남 서천 홍원항,가이아호,http://yjfishing.kr/,1,X,21명-
+520,충남 서천 홍원항,가이아호-영진민박,http://www.yjfishing.kr,1,O,
+521,충남 서천 홍원항,골드피싱호,http://www.acefish.net/,1,X,21명-
+522,충남 서천 홍원항,굿데이호,http://굿데이호.com/,1,X,21명-
+523,충남 서천 홍원항,나드리호,https://hongwonhang.thefishing.kr/,1,X,20명-
+524,충남 서천 홍원항,뉴대호피싱,http://www.newdaeho.com/,1,X,19명-
+525,충남 서천 홍원항,뉴승리호,http://yopofishing.co.kr/,1,X,21명-
+526,충남 서천 홍원항,뉴아일랜드호,http://hwrock.thefishing.kr/,1,X,21명-
+527,충남 서천 홍원항,뉴지니피싱호,http://hongwonfishingplaza.com/,1,X,20명-
+528,충남 서천 홍원항,뉴카니발2호,http://www.carnivalho.com/,1,X,21명-
+529,충남 서천 홍원항,뉴해양호,https://newhaeyang.sunsang24.com/,2,X,21명-지정좌석
+530,충남 서천 홍원항,다크호스호,http://www.jofishing.co.kr/,1,X,17명-
+531,충남 서천 홍원항,도깨비호,https://www.doggaebi.kr,1,X,
+532,충남 서천 홍원항,돌핀호,https://hongwonhang.thefishing.kr/,1,X,15명-
+533,충남 서천 홍원항,드래곤호,http://드래곤호.kr/,1,X,20명-
+534,충남 서천 홍원항,레드펄호,http://www.레드펄호.com/,1,X,21명-지정좌석
+535,충남 서천 홍원항,메르세데스호,http://www.f1fishing.com/,1,X,19명-
+536,충남 서천 홍원항,모범낚시호,http://mobumfishing.com/,1,X,21명-
+537,충남 서천 홍원항,미성피싱호,https://hangu.kr/,1,X,21명-
+538,충남 서천 홍원항,바로호,http://www.jofishing.co.kr/,1,X,11명-
+539,충남 서천 홍원항,불루오션1호,http://www.eubufishing.kr/,1,X,20명-
+540,충남 서천 홍원항,블랙카이저호,http://aquamarineho.com/,1,X,11명-
+541,충남 서천 홍원항,블랙펄호,https://www.blackpearlho.com/,1,X,20명-
+542,충남 서천 홍원항,블루오션2호,http://www.eubufishing.kr/,1,X,20명-
+543,충남 서천 홍원항,비너스마린호,http://www.acefish.net/,1,X,20명-
+544,충남 서천 홍원항,비키라호,https://www.bookingfishing.net/,1,X,21명-
+545,충남 서천 홍원항,빅토리아호,http://www.gajanaksi.com/,1,X,21명-
+546,충남 서천 홍원항,샤크2호,https://sharkfishing.sunsang24.com/,2,X,21명-지정좌석
+547,충남 서천 홍원항,샤크호,https://sharkfishing.sunsang24.com/,2,X,21명-지정좌석
+548,충남 서천 홍원항,서도호,https://seodoho.sunsang24.com/,2,X,21명-
+549,충남 서천 홍원항,서해호,http://www.seohaeho.com/,1,X,20명-
+550,충남 서천 홍원항,성공호,http://www.acefish.net/,1,X,17명-
+551,충남 서천 홍원항,성현피싱호,http://www.acefish.net/,1,X,11명-
+552,충남 서천 홍원항,슈퍼피싱호,http://superfishing.kr/,1,X,20명-
+553,충남 서천 홍원항,스마트호,http://www.smartho.co.kr/,1,X,21명-
+554,충남 서천 홍원항,시실리호,http://yjfishing.kr/,1,X,20명-
+555,충남 서천 홍원항,시즌1호,http://hongwonfishingplaza.com/,1,X,11명-
+556,충남 서천 홍원항,신세계호,http://www.sinsegeho.com/,1,X,21명-
+557,충남 서천 홍원항,씨헌터호,https://seahunter.sunsang24.com/,2,X,11명-
+558,충남 서천 홍원항,아일랜드호,http://hwrock.thefishing.kr/,1,X,21명-
+559,충남 서천 홍원항,아쿠아마린호,http://aquamarineho.com/,1,X,18명-
+560,충남 서천 홍원항,에버스타호,http://www.wonjofishing.co.kr/,1,X,20명-
+561,충남 서천 홍원항,에이스한스타호,http://www.hanstarho.kr/,1,X,20명-
+562,충남 서천 홍원항,영진호,http://yjfishing.kr/,1,X,21명-
+563,충남 서천 홍원항,우리호,http://hhj.kr/,1,X,17명-
+564,충남 서천 홍원항,월드피싱호,http://hhj.kr/,1,X,21명-
+565,충남 서천 홍원항,은지피싱호,http://www.acefish.net/,1,X,21명-
+566,충남 서천 홍원항,의지호,http://uijiho.com/,1,X,15명-
+567,충남 서천 홍원항,장진호,http://yopofishing.co.kr/,1,X,15명-
+568,충남 서천 홍원항,제일피싱호,http://www.f1fishing.com/,1,X,21명-
+569,충남 서천 홍원항,조커호-해변펜션,http://www.seasidefishing.kr,1,O,(신)
+570,충남 서천 홍원항,지니호,http://hongwonfishingplaza.com/,1,X,17명-
+571,충남 서천 홍원항,카멜리아호,http://hongwonfishingplaza.com/,1,X,20명-
+572,충남 서천 홍원항,캡틴제이티호,http://www.captainjt.com/,1,X,16명-
+573,충남 서천 홍원항,타이탄호,http://hongwonfishingplaza.com/,1,X,21명-
+574,충남 서천 홍원항,파라곤호,https://paragon.sunsang24.com/,2,X,20명-
+575,충남 서천 홍원항,팬텀호,http://www.f1fishing.com/,1,X,21명-
+576,충남 서천 홍원항,페라리호,http://www.f1fishing.com/,1,X,21명-
+577,충남 서천 홍원항,프린스2호,http://www.wonjofishing.co.kr/,1,X,21명-
+578,충남 서천 홍원항,피닉스호,http://hongwonfishingplaza.com/,1,X,20명-
+579,충남 서천 홍원항,피싱매니아호,https://www.fishingmania.kr/,1,X,18명-지정좌석
+580,충남 서천 홍원항,한울피싱호,http://www.hanwoolfishing.com/,1,X,10명-
+581,충남 서천 홍원항,해돋이호,https://www.sunupfishing.com/,1,X,15명-
+582,충남 서천 홍원항,해진호,https://haejinho.sunsang24.com/,2,X,21명-
+583,충남 서천 홍원항,헌터호,http://hongwonfishingplaza.com/,1,X,21명-
+584,충남 서천 홍원항,형제피싱호,http://hhj.kr/,1,X,21명-
+585,충남 서천 홍원항,호해스타호,http://www.acefish.net/,1,X,15명-
+586,충남 서천 홍원항,힐링호,http://www.healingfish.co.kr/,1,X,20명-
+587,충남 태안 구매항,용성호,https://yong.sunsang24.com/,2,X,17명-
+588,충남 태안 구매항,피쉬뱅크호,https://fishbank.modoo.at/,1,X,20명-
+589,충남 태안 나암도항,줄리아나호,https://juliana.sunsang24.com/,2,X,17명-
+590,충남 태안 내포항,그랜드호,https://fishinggate.sunsang24.com/,2,X,11명-
+591,충남 태안 내포항,나무호,https://fishinggate.sunsang24.com/,2,X,8명-
+592,충남 태안 내포항,뉴스타피싱호,https://fishinggate.sunsang24.com/,2,X,16명-
+593,충남 태안 내포항,대박호,https://fishinggate.sunsang24.com/,2,X,10명-
+594,충남 태안 내포항,레쓰비호,https://fishinggate.sunsang24.com/,2,X,11명-
+595,충남 태안 내포항,바하호,https://fishinggate.sunsang24.com/,2,X,11명-
+596,충남 태안 내포항,블랙베어호,https://fishinggate.sunsang24.com/,2,X,13명-
+597,충남 태안 내포항,블랙펄호,https://fishinggate.sunsang24.com/,2,X,20명-
+598,충남 태안 내포항,블루스카이호,https://fishinggate.sunsang24.com/,2,X,9명-
+599,충남 태안 내포항,씽씽이호,https://fishinggate.sunsang24.com/,2,X,17명-
+600,충남 태안 내포항,아우라호,https://fishinggate.sunsang24.com/,2,X,20명-
+601,충남 태안 내포항,안면도피싱호,https://fishinggate.sunsang24.com/,2,X,15명-
+602,충남 태안 내포항,파라호,https://fishinggate.sunsang24.com/,2,X,8명-
+603,충남 태안 내포항,피싱킬러호,https://fishinggate.sunsang24.com/,2,X,15명-
+604,충남 태안 내포항,해맨호,https://seamanho.sunsang24.com/,2,X,21명-
+605,충남 태안 내포항,해미르호,https://fishinggate.sunsang24.com/,2,X,15명-
+606,충남 태안 당암포구,레드포스호,https://hongdanfishing.sunsang24.com/,2,X,17명-
+607,충남 태안 당암포구,부남호,https://hongdanfishing.sunsang24.com/,2,X,정보없음-독배전용
+608,충남 태안 당암포구,태극1호,https://taegeukho.sunsang24.com/,2,X,19명-
+609,충남 태안 당암포구,태극호,https://hongdanfishing.sunsang24.com/,2,X,20명-
+610,충남 태안 대야도항,골드피싱호,http://www.fishingi.net/,1,X,19명-
+611,충남 태안 대야도항,뉴해풍호,http://www.fishingi.net/,1,X,14명-
+612,충남 태안 대야도항,미카엘호,http://www.fishingi.net/,1,X,13명-
+613,충남 태안 대야도항,복성호,http://www.fishingi.net/,1,X,21명-
+614,충남 태안 대야도항,블랙헬리오스호,http://www.fishingi.net/,1,X,21명-
+615,충남 태안 대야도항,블루오션호,http://www.fishingi.net/,1,X,21명-
+616,충남 태안 대야도항,아일랜드호,http://www.fishingi.net/,1,O,21명-
+617,충남 태안 대야도항,은행나무호,https://tree.sunsang24.com/,2,X,10명-
+618,충남 태안 대야도항,챌린지호,http://www.fishingi.net/,1,X,19명-
+619,충남 태안 드르니항,동진호,https://gold.sunsang24.com/,2,X,20명-
+620,충남 태안 마검포,가가호,https://gagaho.sunsang24.com/,2,O,20명-
+621,충남 태안 마검포,낚시광호,https://cafe.naver.com/teaanbada,1,X,17명-
+622,충남 태안 마검포,뉴정원호,https://www.jungwonho.com/,1,O,(신)-20명-지정좌석
+623,충남 태안 마검포,뉴패밀리호,https://cjh.sunsang24.com/,2,X,20명-
+624,충남 태안 마검포,대한호,http://daehanho.com/,1,X,18명-지정좌석
+625,충남 태안 마검포,레드호,https://tekilho.sunsang24.com/,2,X,15명-
+626,충남 태안 마검포,만선호,https://mansunho.sunsang24.com/,2,X,19명-
+627,충남 태안 마검포,바다사랑호,https://바다사랑호.kr/,1,X,20명-
+628,충남 태안 마검포,성진호,http://sewonho.com/,1,X,14명-지정좌석
+629,충남 태안 마검포,신출항호,https://seojin.sunsang24.com/,2,X,17명-지정좌석
+630,충남 태안 마검포,자연피싱호,https://nature.sunsang24.com/,2,O,20명-
+631,충남 태안 마검포,제일피싱호,https://jeilfishing.sunsang24.com/,2,X,16명-
+632,충남 태안 마검포,태백호,http://태백호.kr/,1,X,17명-
+633,충남 태안 마검포,팀바이트호,,1,X,미정-미정
+634,충남 태안 마검포,플라이호,https://choose.sunsang24.com/,2,X,15명-
+635,충남 태안 마검포,하와이호,http://www.newhawaii.co.kr/,1,X,20명-지정좌석
+636,충남 태안 마검포,해원호,http://www.haewonfish.com/,1,X,21명-
+637,충남 태안 마검포,힐링피싱호,https://www.jungwonho.com/,1,X,11명-
+638,충남 태안 모항항,글로리호,http://gloryho.kr/,1,X,20명-
+639,충남 태안 모항항,나폴레옹호,https://ship.sunsang24.com/,2,X,20명-
+640,충남 태안 모항항,라온호,http://www.raonfishing.com/,1,X,17명-
+641,충남 태안 모항항,유람호,http://유람호.kr/,1,X,15명-
+642,충남 태안 모항항,지도호,http://www.newjidoho.com/,1,X,20명-
+643,충남 태안 모항항,진하호,http://www.jinhaho.com/,1,X,20명-
+644,충남 태안 방포항,미포호,https://golden.sunsang24.com/,2,X,14명-
+645,충남 태안 방포항,복영호,http://bokyoung.thefishing.kr/,1,X,17명-
+646,충남 태안 방포항,안녕하세호,https://hi.sunsang24.com/,2,X,19명-
+647,충남 태안 방포항,오성호,http://bokyoung.thefishing.kr/,1,X,11명-
+648,충남 태안 방포항,천일호,http://fishing1001.com/,1,X,20명-
+649,충남 태안 방포항,해풍2호,https://golden.sunsang24.com/,2,X,11명-
+650,충남 태안 방포항,황금백호,https://golden.sunsang24.com/,2,O,15명-
+651,충남 태안 백사장항,구라미끼호,http://www.haesin.net/,1,X,17명-
+652,충남 태안 백사장항,마린1호,https://marineho.sunsang24.com/,2,X,20명-지정좌석
+653,충남 태안 백사장항,무야호,https://marineho.sunsang24.com/,2,O,19명-지정좌석
+654,충남 태안 백사장항,빅토리호,https://marineho.sunsang24.com/,2,X,20명-
+655,충남 태안 백사장항,영차호,http://영차피싱.kr/,1,X,20명-
+656,충남 태안 백사장항,진주만호,https://marineho.sunsang24.com/,2,X,19명-지정좌석
+657,충남 태안 백사장항,킹스타호,http://www.haesin.net/,1,X,20명-
+658,충남 태안 백사장항,팀아크호,http://영차피싱.kr/,1,X,20명-
+659,충남 태안 백사장항,판타지호,http://www.haesin.net/,1,X,17명-
+660,충남 태안 백사장항,해신1호,http://www.haesin.net/,1,X,20명-
+661,충남 태안 백사장항,해신2호,http://www.haesin.net/,1,X,20명-
+662,충남 태안 백사장항,해신3호,http://www.haesin.net/,1,X,20명-
+663,충남 태안 신진항,뉴용궁호,http://www.sinjindo.kr/,1,X,20명-
+664,충남 태안 신진항,뉴해성호,http://www.그린피싱.com/,1,X,15명-
+665,충남 태안 신진항,루나호,https://manaru.com/,1,X,20명-
+666,충남 태안 신진항,루디호,https://rudy.thefishing.kr/,1,X,20명-
+667,충남 태안 신진항,마그마호,http://badafishing.org/,1,X,17명-
+668,충남 태안 신진항,미라클호,http://badafishing.org/,1,X,17명-
+669,충남 태안 신진항,블랙홀2호,http://www.sinjindo.kr/,1,X,11명-
+670,충남 태안 신진항,블랙홀호,http://www.sinjindo.kr/,1,X,20명-
+671,충남 태안 신진항,블레스호,http://blessho.com/,1,X,16명-
+672,충남 태안 신진항,선양호,http://www.sinjindo.kr/,1,X,11명-
+673,충남 태안 신진항,솔티가호,https://rudy.thefishing.kr/,1,X,20명-
+674,충남 태안 신진항,수덕호,https://taeanfishing.sunsang24.com/,2,X,11명-
+675,충남 태안 신진항,수연호,https://manaru.com/,1,X,20명-
+676,충남 태안 신진항,순환호,http://www.saenaru.co.kr/,1,X,11명-유선예약
+677,충남 태안 신진항,신일호,http://badafishing.org/,1,O,19명-
+678,충남 태안 신진항,신진자연호,http://www.sinjinfishing.net/,1,X,20명-유선예약
+679,충남 태안 신진항,신흥호,http://www.saenaru.co.kr/,1,X,13명-
+680,충남 태안 신진항,안흥2호,https://2ho.sunsang24.com/,2,X,20명-
+681,충남 태안 신진항,어해루호,https://taeanfishing.sunsang24.com/,2,X,17명-
+682,충남 태안 신진항,영복1호,https://manaru.com/,1,X,15명-
+683,충남 태안 신진항,은광호,http://badafishing.org/,1,X,11명-
+684,충남 태안 신진항,은양호,https://manaru.com/,1,X,20명-
+685,충남 태안 신진항,은하호,http://www.sinjindo.kr/,1,X,11명-
+686,충남 태안 신진항,자연7호,http://www.taeanfish.co.kr/,1,X,20명-유선예약
+687,충남 태안 신진항,블레스/퀸블레스호,http://blessho.com/,1,O,20명-
+688,충남 태안 신진항,킹스타호,http://신진도킹스타호.com/,1,X,19명-
+689,충남 태안 신진항,태풍호,http://badafishing.org/,1,O,17명-
+690,충남 태안 신진항,하진호,https://manaru.com/,1,O,15명-
+691,충남 태안 신진항,한하3호,https://www.hanhaho.com/niabbs5/inc.php?inc=sub2&toYear=2025&toMonth=9,1,O,21명(선착순)
+692,충남 태안 신진항,한하스페셜호,https://www.hanhaho.com/,1,X,20명-
+693,충남 태안 신진항,항공모함호,https://manaru.com/,1,O,20명-
+694,충남 태안 신진항,해성호,http://www.taeanfish.co.kr/,1,X,10명-
+695,충남 태안 신진항,홍풍호,http://www.saenaru.co.kr/,1,X,15명-
+696,충남 태안 안흥항,경진호,http://www.ahgf.co.kr/,1,X,11명-
+697,충남 태안 안흥항,나르샤호,http://www.narshaho.com/,1,X,20명-유선예약
+698,충남 태안 안흥항,남덕5호,http://www.ahgf.co.kr/,1,X,20명-물/음료 없지만 배질 좋음.
+699,충남 태안 안흥항,뉴신정호,http://newsj.co.kr/,1,O,18명-
+700,충남 태안 안흥항,대성호,http://www.ahgf.co.kr/,1,X,18명-평 좋지 않
+701,충남 태안 안흥항,바다2호,http://www.ahgf.co.kr/,1,X,16명-타지말
+702,충남 태안 안흥항,부흥호,http://www.anhbuh.com/,1,X,17명-배 컨디션은 그냥저냥이나 배질 좋음
+703,충남 태안 안흥항,블루피싱호,http://bluefishingho.co.kr/,1,O,21명-
+704,충남 태안 안흥항,안흥1호,http://www.ahgf.co.kr/,1,X,배 낡고 열심히 하나 운전 거친편
+705,충남 태안 안흥항,안흥2호,https://2ho.sunsang24.com/,2,O,
+706,충남 태안 안흥항,여명호,http://xn--v42bv0rcoar53c6lb.kr,1,O,(신)
+707,충남 태안 안흥항,은진호,http://eunjinho.com/,1,X,사무장o 배는 조금 좁으나 배질은 괜
+708,충남 태안 안흥항,청용호,http://www.changdukho.com/,1,O,21명
+709,충남 태안 안흥항,탑피싱호,http://www.topfishingho.com/,1,O,16명 출조점 앞 탑승
+710,충남 태안 안흥항,행운호,http://www.hangwoonho.com/,1,O,침선전
+711,충남 태안 영목항,낚시친구들호,https://friend.sunsang24.com/,2,X,20명-유선예약
+712,충남 태안 영목항,맥가이버호,http://맥가이버피싱.com/,1,X,19명(신)
+713,충남 태안 영목항,비제이호,https://bj.sunsang24.com/,2,X,20명-
+714,충남 태안 영목항,샤인블루호,http://www.chungkwangho.net/,1,O,13명 배는 작으나 배질 좋음
+715,충남 태안 영목항,섬스타호,http://www.sumstarho.com/,1,X,20명-평 안 좋음
+716,충남 태안 영목항,악바리호,https://bj.sunsang24.com/,2,X,20명-노예선
+717,충남 태안 영목항,파티호,https://os.sunsang24.com/,2,O,15명-평 좋음
+718,충남 태안 영목항,청광호,http://www.chungkwangho.net/,1,O,20명-
+719,충남 태안 영목항,청남호,http://www.chungnamho.com/,1,O,17명-
+720,충남 태안 영목항,카라호,https://www.karaho.kr/,1,X,15명- 평 안 좋음
+721,충남 태안 영목항,해복호,https://haesung2ho.com/,1,O,16명-
+722,충남 태안 영목항,해성2호,https://haesung2ho.com/,1,O,19명-갑 전문
+723,충남 태안 원북면,벽계수호,https://bgsho.com/,1,X,11명-
+724,충남 태안 천리포항,글램핑1호,https://glamping.sunsang24.com/,2,X,11명-
+725,충남 태안 천리포항,레드스카이호,http://www.teamskyfishing.com/,1,X,16명-
+726,충남 태안 천리포항,팀스카이호,http://www.teamskyfishing.com/,1,X,20명-
+727,충남 홍성 남당항,거북선호,https://glory.sunsang24.com/,2,X,8명-
+728,충남 홍성 남당항,고고씽호,https://gogoxing.sunsang24.com/,2,X,21명-
+729,충남 홍성 남당항,글로리호,https://glory.sunsang24.com/,2,O,19명-
+730,충남 홍성 남당항,뉴대성호,https://www.clubsea.co.kr/,1,O,20명-
+731,충남 홍성 남당항,뉴정환호,https://jh.sunsang24.com,2,O,(자리 선택)
+732,충남 홍성 남당항,뉴해랑호,https://www.clubsea.co.kr/,1,O,17명-
+733,충남 홍성 남당항,다올호,https://daol.sunsang24.com/,2,X,9명-
+734,충남 홍성 남당항,다운샷호,http://www.namdangfishing.com/,1,X,20명-
+735,충남 홍성 남당항,대성1호,https://www.clubsea.co.kr/,1,X,17명-
+736,충남 홍성 남당항,대성호,https://www.clubsea.co.kr/,1,X,20명-
+737,충남 홍성 남당항,대양호,https://www.clubsea.co.kr/,1,X,17명-
+738,충남 홍성 남당항,동백1호,https://dongbaek1.sunsang24.com/,2,X,17명-
+739,충남 홍성 남당항,동백호/피크닉호,https://picnic.sunsang24.com,2,O,(자리 선택)
+740,충남 홍성 남당항,라마르호,http://lamar.totb.kr/,1,O,18명-
+741,충남 홍성 남당항,마린호,https://www.clubsea.co.kr/,1,X,15명-
+742,충남 홍성 남당항,마이웨이호,https://seungjin.sunsang24.com/,2,X,18명-지정좌석
+743,충남 홍성 남당항,블루원호,https://www.clubsea.co.kr/,1,X,20명-
+744,충남 홍성 남당항,수나2호,https://www.clubsea.co.kr/,1,X,20명-
+745,충남 홍성 남당항,썬스타호,https://glory.sunsang24.com/,2,X,11명-
+746,충남 홍성 남당항,씨스타호,https://dongbaek.sunsang24.com/,2,X,11명-
+747,충남 홍성 남당항,아바타호,https://dongbaek.sunsang24.com/,2,X,11명-지정좌석
+748,충남 홍성 남당항,우승피싱호,https://wooseung.sunsang24.com/,2,X,15명-
+749,충남 홍성 남당항,워너비호/장현호,http://www.namdangfishing.com/,1,O,20명-
+750,충남 홍성 남당항,유이일호,https://leeil.sunsang24.com/,2,X,8명-
+751,충남 홍성 남당항,은가비호,https://eungabi.sunsang24.com/,2,O,21명-지정좌석
+752,충남 홍성 남당항,이스타호,https://estar.sunsang24.com/,2,X,8명-
+754,충남 홍성 남당항,정든호,http://www.namdangfishing.com/,1,X,정보없음-
+755,충남 홍성 남당항,제우스피싱호,https://zeusfishing.sunsang24.com/,2,X,17명-
+756,충남 홍성 남당항,진영호,https://jinyoungfishing.sunsang24.com/,2,X,19명-지정좌석
+757,충남 홍성 남당항,천성호,https://csho.sunsang24.com/,2,X,19명-지정좌석
+758,충남 홍성 남당항,피크닉호,https://dongbaek.sunsang24.com/,2,X,19명-지정좌석

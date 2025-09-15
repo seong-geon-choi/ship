@@ -1,13 +1,11 @@
 ID,REGION,NAME,RESERVATION_URL,URL_TYPE,SHOW,MEMO
-760,충남 태안 신진항,미라클호,http://www.xn--oi2b18fs3vynf.kr/index.php,1,O,22명 / 문어
-759,충남 당진 장고항,디스커버리호,http://www.discoveryho.net/,1,O,
-3,01. 탑승완료,09/03(수) 어랑호/회변항 3물,-,1,O,쭈-고현기 이선영 백승원 최성건 32만 전액 입금
 4,00.예약,09/28(일) Team 지오디/영흥도 13물,https://www.teamgod.kr,1,O,9/28 갑-최백오 예약금 15입금
 5,00.예약,10/11(토) 여명호/안흥 11물,http://xn--v42bv0rcoar53c6lb.kr,1,O,갑-4고현기 이선영 백승원 최성건-입금완료
 6,00.예약,10/17(금) 만석호/삼길포 2물,https://www.mscufishing.com,1,O,쭈갑-고현기 이선영 백승원 최성건-입금완료
 7,00.예약,10/17(금) 영석호/영흥도 2물,http://www.xn--3i4bl3g39q.com,1,O,갑-고현기 이선영 백승원 최성건 예약금16만 입금
 8,00.예약,11/02(일) Team 지오디/영흥도 4물,https://www.teamgod.kr,1,O,11/02 갑-고현기 이선영 백승원 최성건 예약금20 입금
 9,00.예약,11/14(금) 안흥2호/안흥 1물,https://2ho.sunsang24.com/,2,O,문갑-고현기 이선영 백승원 최성건-입금완료
+3,01. 탑승완료,09/03(수) 어랑호/회변항 3물,-,1,O,쭈-고현기 이선영 백승원 최성건 32만 전액 입금
 10,01. 탑승완료,06/14(토) 승주호/삼길포,https://www.mscufishing.com,1,O,광우농-3+친-입금완료
 11,01. 탑승완료,05/18(일) 만석호/삼길포,포 https://www.mscufishing.com,1,O,광우농
 12,01. 탑승완료,폭파 07/04(금) 깜보호/무창포,http://xn--h50bq35ao3c7qt.com/index.php,1,O,문어 탐사-고현기 이선영 백승원 최성건-입금완료
@@ -285,6 +283,7 @@ ID,REGION,NAME,RESERVATION_URL,URL_TYPE,SHOW,MEMO
 284,전북 부안 격포항,카이저호,https://banak24.com/,1,X,20명-
 285,전북 부안 격포항,포인트호,https://banak24.com/,1,X,11명-
 286,충남 당진 그늘미항,강태공호,https://kang.sunsang24.com/,2,X,11명-유선예약
+759,충남 당진 장고항,디스커버리호,http://www.discoveryho.net/,1,O,
 287,충남 당진 장고항,경영호,http://yongmuji.fishnet.co.kr/,1,X,19명-
 288,충남 당진 장고항,군자피싱호,https://gunja.sunsang24.com/,2,X,14명-
 289,충남 당진 장고항,그린호,http://www.ysho.kr/,1,X,11명-
@@ -612,7 +611,7 @@ ID,REGION,NAME,RESERVATION_URL,URL_TYPE,SHOW,MEMO
 613,충남 태안 대야도항,복성호,http://www.fishingi.net/,1,X,21명-
 614,충남 태안 대야도항,블랙헬리오스호,http://www.fishingi.net/,1,X,21명-
 615,충남 태안 대야도항,블루오션호,http://www.fishingi.net/,1,X,21명-
-616,충남 태안 대야도항,아일랜드호,http://www.fishingi.net/,1,O,21명-
+616,충남 태안 대야도항,아일랜드호/뉴복성호,http://www.fishingi.net/,1,O,21명-
 617,충남 태안 대야도항,은행나무호,https://tree.sunsang24.com/,2,X,10명-
 618,충남 태안 대야도항,챌린지호,http://www.fishingi.net/,1,X,19명-
 619,충남 태안 드르니항,동진호,https://gold.sunsang24.com/,2,X,20명-
@@ -659,6 +658,7 @@ ID,REGION,NAME,RESERVATION_URL,URL_TYPE,SHOW,MEMO
 660,충남 태안 백사장항,해신1호,http://www.haesin.net/,1,X,20명-
 661,충남 태안 백사장항,해신2호,http://www.haesin.net/,1,X,20명-
 662,충남 태안 백사장항,해신3호,http://www.haesin.net/,1,X,20명-
+760,충남 태안 신진항,미라클호,http://www.xn--oi2b18fs3vynf.kr/index.php,1,O,22명 / 문어
 663,충남 태안 신진항,뉴용궁호,http://www.sinjindo.kr/,1,X,20명-
 664,충남 태안 신진항,뉴해성호,http://www.그린피싱.com/,1,X,15명-
 665,충남 태안 신진항,루나호,https://manaru.com/,1,X,20명-

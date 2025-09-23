@@ -1,5 +1,4 @@
 ID,REGION,NAME,RESERVATION_URL,URL_TYPE,SHOW,MEMO
-1,층남 서산 삼길포,천마호,https://metafishingclub.sunsang24.com/,2,O,전투낚시
 5,00.예약,09/28(일) Team 지오디/영흥도 13물,https://www.teamgod.kr,1,O,9/28 갑-최백오 예약금 15입금
 6,00.예약,10/11(토) 여명호/안흥 11물,http://xn--v42bv0rcoar53c6lb.kr,1,O,갑-4고현기 이선영 백승원 최성건-입금완료
 7,00.예약,10/17(금) 만석호/삼길포 2물,https://www.mscufishing.com,1,O,쭈갑-고현기 이선영 백승원 최성건-입금완료
@@ -506,7 +505,7 @@ ID,REGION,NAME,RESERVATION_URL,URL_TYPE,SHOW,MEMO
 508,충남 서산 삼길포,골드피싱호,http://www.mscufishing.com/,1,X,20명-
 509,충남 서산 삼길포,나대세호,http://www.mscufishing.com/,1,X,20명-
 510,충남 서산 삼길포,넘버원호,https://no1.sunsang24.com/,2,O,(신)지정좌석. 평 좋음
-511,충남 서산 삼길포,뉴항구호,https://daebak.sunsang24.com/,2,O,20명-지정좌석
+511,충남 서산 삼길포,뉴항구호,https://daebak.sunsang24.com/,2,O,20명-지정좌석-10월 초 11월 예약 오픈 전투낚시
 512,충남 서산 삼길포,동성호,https://cafe.naver.com/sgpds,1,X,20명-
 513,충남 서산 삼길포,뚜기호,http://www.mscufishing.com/,1,X,11명-
 514,충남 서산 삼길포,레전드호,https://daebak.sunsang24.com/,2,X,11명-
@@ -754,3 +753,4 @@ ID,REGION,NAME,RESERVATION_URL,URL_TYPE,SHOW,MEMO
 757,충남 홍성 남당항,진영호,https://jinyoungfishing.sunsang24.com/,2,X,19명-지정좌석
 758,충남 홍성 남당항,천성호,https://csho.sunsang24.com/,2,X,19명-지정좌석
 759,충남 홍성 남당항,피크닉호,https://dongbaek.sunsang24.com/,2,X,19명-지정좌석
+1,층남 서산 삼길포,천마호,https://metafishingclub.sunsang24.com/,2,O,전투낚시

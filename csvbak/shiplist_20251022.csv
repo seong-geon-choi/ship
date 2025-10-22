@@ -1,10 +1,8 @@
 ID,REGION,NAME,RESERVATION_URL,URL_TYPE,SHOW,MEMO
-771,인천 영흥도,아라호,https://www.araho.kr/,1,O,
-770,충남 태안 구매항,아라온피싱호,https://araon.sunsang24.com/,2,O,전투낚시
 769,00.예약,11/13(목) 영스타호/삼길포/무시,https://www.mscufishing.com,1,O,쭈갑-6~10 선미
 767,00.예약,11/13(목) 미라클호/신진항 무시,http://미라클호.kr,1,O,갑문-고현기 친구 백승원 최성건
+9,00.예약,11/02(일) Team 지오디/영흥도 4물,https://www.teamgod.kr,1,O,갑-고현기 이선영 백승원 최성건
 7,01. 탑승완료,10/17(금) 만석호/삼길포 2물,https://www.mscufishing.com,1,O,쭈갑-고현기 이선영 백승원 최성건-갑오징어 조과 좋았음
-9,00.예약,11/02(일) Team 지오디/영흥도 4물,https://www.teamgod.kr,1,O,갑-고현기 이선영
 5,01. 탑승완료,09/28(일) Team 지오디/영흥도 13물,https://www.teamgod.kr,1,O,갑-최백오-조과 망
 6,01. 탑승완료,10/11(토) 여명호/안흥 11물,http://xn--v42bv0rcoar53c6lb.kr,1,O,갑-4고현기 이선영 백승원 최성건-입금완료-폭망(10-20수)
 4,01. 탑승완료,09/03(수) 어랑호/회변항 3물,-,1,O,쭈-고현기 이선영 백승원 최성건- 조과 평균
@@ -131,6 +129,7 @@ ID,REGION,NAME,RESERVATION_URL,URL_TYPE,SHOW,MEMO
 133,인천 영종도,인천365호,https://365.sunsang24.com/,2,X,15명-지정좌석. 평 나쁨
 134,인천 영종도,청마/아트/고강/제우스,https://www.chungmafishing.com,1,O,20명-주차 주의
 135,인천 영종도,청춘호,http://영종도청춘호.kr/,1,X,18명- 선장 사무장 낚시함..
+771,인천 영흥도,아라호,https://www.araho.kr/,1,O,
 136,인천 영흥도,Team 만수,https://teammansu.kr,1,O,(신)(자리 선택)
 137,인천 영흥도,Team 지오디,https://www.teamgod.kr,1,O,(신)(자리 선택)
 138,인천 영흥도,강팀호,http://www.ybada.com/,1,X,(신)(자리 선택) 20명. 배 넓고 친절
@@ -586,8 +585,10 @@ ID,REGION,NAME,RESERVATION_URL,URL_TYPE,SHOW,MEMO
 585,충남 서천 홍원항,형제피싱호,http://hhj.kr/,1,X,21명-
 586,충남 서천 홍원항,호해스타호,http://www.acefish.net/,1,X,15명-
 587,충남 서천 홍원항,힐링호,http://www.healingfish.co.kr/,1,X,20명-
+770,충남 태안 구매항,아라온피싱호,https://araon.sunsang24.com/,2,O,전투낚시
 588,충남 태안 구매항,용성호,https://yong.sunsang24.com/,2,X,17명-
 589,충남 태안 구매항,피쉬뱅크호,https://fishbank.modoo.at/,1,X,20명-
+766,충남 태안 구매항,악바리호,https://akbari.sunsang24.com/,2,O,전투낚시
 590,충남 태안 나암도항,줄리아나호,https://juliana.sunsang24.com/,2,X,17명-
 591,충남 태안 내포항,그랜드호,https://fishinggate.sunsang24.com/,2,X,11명-
 592,충남 태안 내포항,나무호,https://fishinggate.sunsang24.com/,2,X,8명-
@@ -757,4 +758,3 @@ ID,REGION,NAME,RESERVATION_URL,URL_TYPE,SHOW,MEMO
 757,충남 홍성 남당항,진영호,https://jinyoungfishing.sunsang24.com/,2,X,19명-지정좌석
 758,충남 홍성 남당항,천성호,https://csho.sunsang24.com/,2,X,19명-지정좌석
 759,충남 홍성 남당항,피크닉호,https://dongbaek.sunsang24.com/,2,X,19명-지정좌석
-766,충남 태안 구매항,악바리호,https://akbari.sunsang24.com/,2,O,전투낚시

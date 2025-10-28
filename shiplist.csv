@@ -18,26 +18,15 @@ ID,REGION,NAME,RESERVATION_URL,URL_TYPE,SHOW,MEMO
 21,경기 시흥 오이도,태평2호,https://taepyeong2.sunsang24.com/,2,X,11명-
 22,경기 시흥 오이도,한바다호,http://xn--2j1b67owufgpurea.com,1,O,20명-(신)(시간배)(자리 선택)
 23,경기 평택 평택항,경기 평택 평택항피싱호,http://www.ptfishing.net/,1,X,20명-지정좌석
-24,경기 평택 평택항,돌핀호,https://dolphinho.sunsang24.com/,2,X,10명-지정좌석
-25,경기 평택 평택항,동일호,http://빅스타호.com/,1,X,11명-
-26,경기 평택 평택항,등대호,http://www.배낚시.kr/,1,X,14명-
 27,경기 평택 평택항,베스트피싱호,http://평택항베스트피싱.com/,1,X,16명-지정좌석
-28,경기 평택 평택항,베스트호,https://평택항바다배낚시.com/,1,X,정보없음-유선예약
 29,경기 평택 평택항,빅스타호,http://빅스타호.com/,1,X,20명-지정좌석
-30,경기 평택 평택항,서해피싱호,https://평택항서해피싱.com/,1,X,14명-지정좌석
 31,경기 평택 평택항,수복호,http://수복호.com/,1,X,19명-지정좌석
-32,경기 평택 평택항,수성호,http://평택항수성호.com/,1,X,16명-지정좌석
-33,경기 평택 평택항,에이스피싱호,https://acefishing.sunsang24.com/,2,X,20명-무조건 거르는 
 34,경기 평택 평택항,오닉스호,http://대교피싱호.com/,1,X,20명-지정좌석
 35,경기 평택 평택항,자연호,http://nature.thefishing.kr/,1,X,18명-
-36,경기 평택 평택항,평택등대호,https://평택항바다배낚시.com/,1,X,-
-37,경기 화성 궁평항,블랙호,http://kungpyeong.com/,1,X,20명-
-38,경기 화성 궁평항,타이탄호,http://kungpyeong.com/,1,X,20명-지정좌석
 39,경기 화성 전곡항,골드피싱호,https://24marine.sunsang24.com/,2,O,20명-별로
 40,경기 화성 전곡항,뉴신명호/신명스카이호,http://shinmyungho.com/,1,O,20명-지정좌석
 41,경기 화성 전곡항,동백호,https://24marine.sunsang24.com/,2,X,20명-지정좌석
 42,경기 화성 전곡항,레인보우호,http://www.rainbowho.com/,1,X,20명-지정좌석
-43,경기 화성 전곡항,리틀대박호,https://jackpot.sunsang24.com/,2,X,20명-유선예약
 44,경기 화성 전곡항,빅보스호,https://24marine.sunsang24.com/,2,X,(신)-20명-지정좌석
 45,경기 화성 전곡항,스타피싱호,http://www.rainbowho.com/,1,O,20명-지정좌석
 46,경기 화성 전곡항,스타호/레인보우호,https://jstar.thefishing.kr,1,X,(자리 선택)
@@ -52,7 +41,7 @@ ID,REGION,NAME,RESERVATION_URL,URL_TYPE,SHOW,MEMO
 56,경기 화성 전곡항,제비호,https://jebi.sunsang24.com,2,O,(자리 선택)
 57,경기 화성 전곡항,태평호,https://24marine.sunsang24.com/,2,X,20명-지정좌석
 58,경기 화성 전곡항,해운호,https://haeun.sunsang24.com/,2,X,20명-
-59,성구미 포구,파란고래호,https://www.bluewhaleho.com/,1,O,21명-지정좌석
+59,충남 당진 성구미,파란고래호,https://www.bluewhaleho.com/,1,O,21명-지정좌석
 60,인천 남항,고래호,https://jnaksi.com/,1,X,49명-체험낚시
 61,인천 남항,금강스타호,https://jnaksi.com/,1,X,45명-체험낚시
 62,인천 남항,나이스호,http://www.nicefish7.com/,1,X,20명-
@@ -281,34 +270,14 @@ ID,REGION,NAME,RESERVATION_URL,URL_TYPE,SHOW,MEMO
 284,전북 부안 격포항,카이저ACE호,https://banak24.com/,1,X,20명-
 285,전북 부안 격포항,카이저호,https://banak24.com/,1,X,20명-
 286,전북 부안 격포항,포인트호,https://banak24.com/,1,X,11명-
-287,충남 당진 그늘미항,강태공호,https://kang.sunsang24.com/,2,X,11명-유선예약
 760,충남 당진 장고항,디스커버리호,http://www.discoveryho.net/,1,O,
-288,충남 당진 장고항,경영호,http://yongmuji.fishnet.co.kr/,1,X,19명-
-289,충남 당진 장고항,군자피싱호,https://gunja.sunsang24.com/,2,X,14명-
-290,충남 당진 장고항,그린호,http://www.ysho.kr/,1,X,11명-
 291,충남 당진 장고항,나르샤호,https://greenfishing.sunsang24.com/,2,X,11명-지정좌석
 292,충남 당진 장고항,뉴시아호,https://siaho.sunsang24.com/,2,X,17명-
-293,충남 당진 장고항,동산호,https://greenfishing.sunsang24.com/,2,X,8명-
-294,충남 당진 장고항,등대호,https://greenfishing.sunsang24.com/,2,X,8명-
 295,충남 당진 장고항,라이즈호,https://rise.sunsang24.com/,2,X,20명-
-296,충남 당진 장고항,부엉이호,https://greenfishing.sunsang24.com/,2,X,11명-
 297,충남 당진 장고항,블루오션2호,https://blueocean2.sunsang24.com/,2,X,16명-
-298,충남 당진 장고항,블리츠호,https://greenfishing.sunsang24.com/,2,X,8명-
-299,충남 당진 장고항,써니호,https://greenfishing.sunsang24.com/,2,X,8명-
-300,충남 당진 장고항,어촌호,https://village.sunsang24.com/,2,X,8명-
-301,충남 당진 장고항,영구피싱호,https://cafe.naver.com/dangjin4708,1,X,8명-
 302,충남 당진 장고항,영진호,https://yungjin.sunsang24.com/,2,X,16명-
 303,충남 당진 장고항,용신호,http://www.ysho.kr/,1,X,21명-지정좌석
-304,충남 당진 장고항,원당호,https://greenfishing.sunsang24.com/,2,X,9명-
-305,충남 당진 장고항,진영호,https://jinyoung.sunsang24.com/,2,X,15명-
-306,충남 당진 장고항,청룡호,http://청룡호.kr/,1,X,14명-
-307,충남 당진 장고항,청새치호,https://greenfishing.sunsang24.com/,2,X,8명-유선예약
 308,충남 당진 장고항,태풍호,https://janggofish.sunsang24.com/,2,X,21명-지정좌석
-309,충남 당진 장고항,한일호,https://hanilho.sunsang24.com/,2,X,15명-
-310,충남 당진 장고항,해안선호,https://coastline.sunsang24.com/,2,X,15명-지정좌석
-311,충남 당진 장고항,행복마린호,https://greenfishing.sunsang24.com/,2,X,8명-유선예약
-312,충남 당진 장고항,흥진1호,https://greenfishing.sunsang24.com/,2,X,11명-
-313,충남 당진 한진포구,럭키2호,https://www.lucky2ho.com/,1,X,9명-
 314,충남 보령 대천항,까칠이1호,https://까칠이호.com/,1,X,20명-
 315,충남 보령 대천항,까칠이호,https://까칠이호.com/,1,O,20명-
 316,충남 보령 대천항,깐부호,http://www.ochzeus.com/,1,O,20명-제우스 선단. 평 좋음

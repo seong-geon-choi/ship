@@ -100,7 +100,7 @@ ID,REGION,NAME,RESERVATION_URL,URL_TYPE,SHOW,MEMO
 114,인천 연안부두,보스호,http://www.bossfishing.kr/,1,X,20명-
 115,인천 연안부두,스마트1호,https://smartho.sunsang24.com/,2,X,20명-지정좌석
 116,인천 연안부두,스마트2호,https://smartho.sunsang24.com/,2,X,20명-
-117,인천 연안부두,스모키호,https://www.sharkfishing.kr/,1,X,20명-
+117,인천 연안부두,스모키호,https://www.sharkfishing.kr/,1,O,20명-
 118,인천 연안부두,시크릿호,https://khanfishing.com/,1,X,20명-지정좌석
 119,인천 연안부두,와이파이호,https://khanfishing.com/,1,X,20명-
 120,인천 연안부두,왕만두호,https://khanfishing.com/,1,X,20명-지정좌석

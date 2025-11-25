@@ -1,4 +1,6 @@
 ID,REGION,NAME,RESERVATION_URL,URL_TYPE,SHOW,MEMO
+776,00. 2026 예약 우선 순위,뉴항구호,https://daebak.sunsang24.com/,2,O,전투낚시
+775,00. 2026 예약 우선 순위,천마호,https://metafishingclub.sunsang24.com/,2,O,전투낚시
 774,00. 2026 예약 우선 순위,만석호/승주호/헤르메스 삼길포 ,https://www.mscufishing.com,1,O,
 773,경주 읍천항,블루탱호,https://bluetang.sunsang24.com/,2,O,읍천항
 772,충남 홍성 남당항,제우스피싱,https://zeusfishing.sunsang24.com/,2,O,
@@ -475,7 +477,7 @@ ID,REGION,NAME,RESERVATION_URL,URL_TYPE,SHOW,MEMO
 508,충남 서산 삼길포,골드피싱호,http://www.mscufishing.com/,1,X,20명-
 509,충남 서산 삼길포,나대세호,http://www.mscufishing.com/,1,X,20명-
 510,충남 서산 삼길포,넘버원호,https://no1.sunsang24.com/,2,O,(신)지정좌석. 평 좋음
-511,충남 서산 삼길포,뉴항구호,https://daebak.sunsang24.com/,2,O,20명-지정좌석-10월 초 11월 예약 오픈 전투낚시
+511,충남 서산 삼길포,뉴항구호,https://daebak.sunsang24.com/,2,O,20명-지정좌석
 512,충남 서산 삼길포,동성호,https://cafe.naver.com/sgpds,1,X,20명-
 513,충남 서산 삼길포,뚜기호,http://www.mscufishing.com/,1,X,11명-
 514,충남 서산 삼길포,레전드호,https://daebak.sunsang24.com/,2,X,11명-

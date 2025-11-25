@@ -1,6 +1,6 @@
 ID,REGION,NAME,RESERVATION_URL,URL_TYPE,SHOW,MEMO
 782,00. 2026 예약 우선 순위,신진도항 루나호 ,https://manaru.com/,1,O,
-781,00. 2026 예약 우선 순위,홍원항 메르세데스,페라리,팬텀,http://www.f1fishing.com/index.php?mid=index,1,O,
+781,00. 2026 예약 우선 순위,홍원항 메르세데스,페라리,팬텀,http://www.f1fishing.com/,팬텀,X,1
 780,00. 2026 예약 우선 순위,방포항 블랙스톤호,https://blackstone.sunsang24.com/,2,O,
 779,00. 2026 예약 우선 순위,방포항 안녕하세호,https://hi.sunsang24.com/,2,O,
 778,00. 2026 예약 우선 순위,신진도항 마그마호,http://badafishing.org/,1,O,
@@ -540,15 +540,13 @@ ID,REGION,NAME,RESERVATION_URL,URL_TYPE,SHOW,MEMO
 566,충남 서천 홍원항,은지피싱호,http://www.acefish.net/,1,X,21명-
 567,충남 서천 홍원항,의지호,http://uijiho.com/,1,X,15명-
 568,충남 서천 홍원항,장진호,http://yopofishing.co.kr/,1,X,15명-
-569,충남 서천 홍원항,제일피싱호,http://www.f1fishing.com/,1,X,21명-
 570,충남 서천 홍원항,조커호-해변펜션,http://www.seasidefishing.kr,1,O,(신)
 571,충남 서천 홍원항,지니호,http://hongwonfishingplaza.com/,1,X,17명-
 572,충남 서천 홍원항,카멜리아호,http://hongwonfishingplaza.com/,1,X,20명-
 573,충남 서천 홍원항,캡틴제이티호,http://www.captainjt.com/,1,X,16명-
 574,충남 서천 홍원항,타이탄호,http://hongwonfishingplaza.com/,1,O,21명-
 575,충남 서천 홍원항,파라곤호,https://paragon.sunsang24.com/,2,X,20명-
-576,충남 서천 홍원항,팬텀호,http://www.f1fishing.com/,1,X,21명-
-577,충남 서천 홍원항,페라리호,http://www.f1fishing.com/,1,X,21명-
+577,충남 서천 홍원항,메르세데스, 페라리호, 팬텀호,http://www.f1fishing.com/,1,X,21명-
 578,충남 서천 홍원항,프린스2호,http://www.wonjofishing.co.kr/,1,X,21명-
 579,충남 서천 홍원항,피닉스호,http://hongwonfishingplaza.com/,1,X,20명-
 580,충남 서천 홍원항,피싱매니아호,https://www.fishingmania.kr/,1,X,18명-지정좌석

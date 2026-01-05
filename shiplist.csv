@@ -1,8 +1,6 @@
 ID,REGION,NAME,RESERVATION_URL,URL_TYPE,SHOW,MEMO
 786,,,,1,O,
-785,0. 2026년 예약 현황,9/18(금)오천항 독한놈호 조금,https://dokhan.thefishing.kr/,1,O,3인
-784,경주 감포 장진항,썬라이즈호,https://www.ok114.co.kr/ntnw/search/searchCompanyOfMainPh.crz?phone_number=010-8332-3551#banner,1,O,
-783,경북 경주 전촌항,정도로스호,https://jeongdoros.sunsang24.com,2,O,
+785,0. 2026년 예약 현황,9/18(금)오천항 독한놈호 조금,https://dokhan.thefishing.kr/,1,O,3인. 출항 7일 전 입금
 782,00. 2026 예약 우선 순위,신진도항 루나호 ,https://manaru.com/,1,O,
 781,00. 2026 예약 우선 순위,홍원항 메르세데스/페라리/팬텀,http://www.f1fishing.com/index.php?mid=index,2,O,
 780,00. 2026 예약 우선 순위,방포항 블랙스톤호,https://blackstone.sunsang24.com/,2,O,
@@ -12,8 +10,6 @@ ID,REGION,NAME,RESERVATION_URL,URL_TYPE,SHOW,MEMO
 776,00. 2026 예약 우선 순위,삼길포 뉴항구호,https://daebak.sunsang24.com/,2,O,전투낚시
 775,00. 2026 예약 우선 순위,삼길포 천마호,https://metafishingclub.sunsang24.com/,2,O,전투낚시
 774,00. 2026 예약 우선 순위,삼길포 만석호/승주호/헤르메스,https://www.mscufishing.com,1,O,
-773,경북 경주 읍천항,블루탱호,https://bluetang.sunsang24.com/,2,O,읍천항
-772,충남 홍성 남당항,제우스피싱,https://zeusfishing.sunsang24.com/,2,O,
 769,01. 탑승완료,11/13(목) 영스타호/삼길포/무시,http://www.mscufishing.com,1,O,쭈갑-고현기 이민재 백승원 최성건 이민철 6~10 선미 망
 7,01. 탑승완료,10/17(금) 만석호/삼길포 2물,https://www.mscufishing.com,1,O,쭈갑-고현기 이선영 백승원 최성건-갑오징어 조과 좋았음
 5,01. 탑승완료,09/28(일) Team 지오디/영흥도 13물,https://www.teamgod.kr,1,O,갑-최백오-조과 망
@@ -54,7 +50,9 @@ ID,REGION,NAME,RESERVATION_URL,URL_TYPE,SHOW,MEMO
 56,경기 화성 전곡항,제비호,https://jebi.sunsang24.com,2,O,(자리 선택)
 57,경기 화성 전곡항,태평호,https://24marine.sunsang24.com/,2,X,20명-지정좌석
 58,경기 화성 전곡항,해운호,https://haeun.sunsang24.com/,2,X,20명-
-59,충남 당진 성구미,파란고래호,https://www.bluewhaleho.com/,1,O,21명-지정좌석
+773,경북 경주 읍천항,블루탱호,https://bluetang.sunsang24.com/,2,O,읍천항
+783,경북 경주 전촌항,정도로스호,https://jeongdoros.sunsang24.com,2,O,
+784,경주 감포 장진항,썬라이즈호,https://www.ok114.co.kr/ntnw/search/searchCompanyOfMainPh.crz?phone_number=010-8332-3551#banner,1,O,
 60,인천 남항,고래호,https://jnaksi.com/,1,X,49명-체험낚시
 61,인천 남항,금강스타호,https://jnaksi.com/,1,X,45명-체험낚시
 62,인천 남항,나이스호,http://www.nicefish7.com/,1,X,20명-
@@ -280,6 +278,7 @@ ID,REGION,NAME,RESERVATION_URL,URL_TYPE,SHOW,MEMO
 284,전북 부안 격포항,카이저ACE호,https://banak24.com/,1,X,20명-
 285,전북 부안 격포항,카이저호,https://banak24.com/,1,X,20명-
 286,전북 부안 격포항,포인트호,https://banak24.com/,1,X,11명-
+59,충남 당진 성구미,파란고래호,https://www.bluewhaleho.com/,1,O,21명-지정좌석
 760,충남 당진 장고항,디스커버리호,http://www.discoveryho.net/,1,O,
 291,충남 당진 장고항,나르샤호,https://greenfishing.sunsang24.com/,2,X,11명-지정좌석
 292,충남 당진 장고항,뉴시아호,https://siaho.sunsang24.com/,2,X,17명-
@@ -700,6 +699,7 @@ ID,REGION,NAME,RESERVATION_URL,URL_TYPE,SHOW,MEMO
 725,충남 태안 천리포항,글램핑1호,https://glamping.sunsang24.com/,2,X,11명-
 726,충남 태안 천리포항,레드스카이호,http://www.teamskyfishing.com/,1,X,16명-
 727,충남 태안 천리포항,팀스카이호,http://www.teamskyfishing.com/,1,X,20명-
+772,충남 홍성 남당항,제우스피싱,https://zeusfishing.sunsang24.com/,2,O,
 728,충남 홍성 남당항,거북선호,https://glory.sunsang24.com/,2,X,8명-
 729,충남 홍성 남당항,고고씽호,https://gogoxing.sunsang24.com/,2,X,21명-
 730,충남 홍성 남당항,글로리호,https://glory.sunsang24.com/,2,O,19명-

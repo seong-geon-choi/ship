@@ -279,15 +279,8 @@ ID,REGION,NAME,RESERVATION_URL,URL_TYPE,SHOW,MEMO
 284,전북 부안 격포항,카이저ACE호,https://banak24.com/,1,X,20명-
 285,전북 부안 격포항,카이저호,https://banak24.com/,1,X,20명-
 286,전북 부안 격포항,포인트호,https://banak24.com/,1,X,11명-
-59,충남 당진 성구미,파란고래호,https://www.bluewhaleho.com/,1,O,21명-지정좌석
-760,충남 당진 장고항,디스커버리호,http://www.discoveryho.net/,1,O,
-291,충남 당진 장고항,나르샤호,https://greenfishing.sunsang24.com/,2,X,11명-지정좌석
-292,충남 당진 장고항,뉴시아호,https://siaho.sunsang24.com/,2,X,17명-
-295,충남 당진 장고항,라이즈호,https://rise.sunsang24.com/,2,X,20명-
-297,충남 당진 장고항,블루오션2호,https://blueocean2.sunsang24.com/,2,X,16명-
-302,충남 당진 장고항,영진호,https://yungjin.sunsang24.com/,2,X,16명-
-303,충남 당진 장고항,용신호,http://www.ysho.kr/,1,X,21명-지정좌석
-308,충남 당진 장고항,태풍호,https://janggofish.sunsang24.com/,2,X,21명-지정좌석
+59,충남 당진,성구미 파란고래호,https://www.bluewhaleho.com/,1,O,21명-지정좌석
+760,충남 당진,장고항 디스커버리호,http://www.discoveryho.net/,1,O,
 314,충남 보령 대천항,까칠이1호,https://까칠이호.com/,1,X,20명-
 315,충남 보령 대천항,까칠이호,https://까칠이호.com/,1,O,20명-
 317,충남 보령 대천항,깔조호,http://깔조호.kr/,1,X,17명-

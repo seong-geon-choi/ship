@@ -51,9 +51,9 @@ ID,REGION,NAME,RESERVATION_URL,URL_TYPE,SHOW,MEMO
 56,경기 화성 전곡항,제비호,https://jebi.sunsang24.com,2,O,(자리 선택)
 57,경기 화성 전곡항,태평호,https://24marine.sunsang24.com/,2,X,20명-지정좌석
 58,경기 화성 전곡항,해운호,https://haeun.sunsang24.com/,2,X,20명-
-773,경북 경주 읍천항,블루탱호,https://bluetang.sunsang24.com/,2,O,읍천항
-783,경북 경주 전촌항,정도로스호,https://jeongdoros.sunsang24.com,2,O,
-784,경주 감포 장진항,썬라이즈호,https://www.ok114.co.kr/ntnw/search/searchCompanyOfMainPh.crz?phone_number=010-8332-3551#banner,1,O,
+773,경북 경주,읍천항 블루탱호,https://bluetang.sunsang24.com/,2,O,읍천항
+783,경북 경주,전촌항 정도로스호,https://jeongdoros.sunsang24.com,2,O,
+784,경북 경주,장진항 썬라이즈호,https://www.ok114.co.kr/ntnw/search/searchCompanyOfMainPh.crz?phone_number=010-8332-3551#banner,1,O,
 60,인천 남항,고래호,https://jnaksi.com/,1,X,49명-체험낚시
 61,인천 남항,금강스타호,https://jnaksi.com/,1,X,45명-체험낚시
 62,인천 남항,나이스호,http://www.nicefish7.com/,1,X,20명-

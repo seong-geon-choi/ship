@@ -162,7 +162,7 @@ ID,REGION,NAME,RESERVATION_URL,URL_TYPE,SHOW,MEMO
 166,인천 영흥도,카리스마호,https://charisma.sunsang24.com/,2,O,20명-지정좌석
 168,인천 영흥도,페라리호,http://www.페라리호.com/,1,X,20명-지정좌석. 평 나쁨
 169,인천 영흥도,해진호,http://www.haejinho.com/,1,O,14명-지정좌석
-2,전북 군산,똥까호,https://ddonggga.sunsang24.com/,2,O,
+2,전북,군산 똥까호,https://ddonggga.sunsang24.com/,2,O,
 170,전북 군산 비응항,K1호,https://k1f.sunsang24.com/,2,X,18명-
 171,전북 군산 비응항,K2호,https://k1f.sunsang24.com/,2,X,20명-
 173,전북 군산 비응항,강남호,https://kangnam.sunsang24.com/,2,X,20명-
@@ -252,7 +252,7 @@ ID,REGION,NAME,RESERVATION_URL,URL_TYPE,SHOW,MEMO
 257,전북 군산 비응항,홈런호,http://gunsannaksi.com/,1,X,20명-
 258,전북 군산 비응항,후크스타호,https://hookstar.sunsang24.com/,2,X,19명-
 259,전북 부안 가력도항,골드피싱호,https://goldfishing.sunsang24.com/,2,X,20명-
-260,전북 부안 격포항,격포블루마린호,https://waddafishing.kr/,1,O,20명-
+260,전북,격포항 블루마린호,https://waddafishing.kr/,1,O,20명-
 261,전북 부안 격포항,격포블루피싱호,https://waddafishing.kr/,1,X,16명-
 262,전북 부안 격포항,격포힐링호,https://waddafishing.kr/,1,X,19명-
 263,전북 부안 격포항,남부스타2호,http://www.nambunaksi.co.kr/,1,X,17명-

@@ -34,7 +34,7 @@ ID,REGION,NAME,RESERVATION_URL,URL_TYPE,SHOW,MEMO
 31,경기 평택 평택항,수복호,http://수복호.com/,1,X,19명-지정좌석
 34,경기 평택 평택항,오닉스호,http://대교피싱호.com/,1,X,20명-지정좌석
 35,경기 평택 평택항,자연호,http://nature.thefishing.kr/,1,X,18명-
-40,경기 화성 전곡항,뉴신명호/신명스카이호,http://shinmyungho.com/,1,O,20명-지정좌석(외수질 시 새우 1인당 2만원씩 무조건 구입 해야함) 입항 빠름
+40,경기 화성 전곡항,뉴신명호/신명스카이호,http://shinmyungho.com/,1,X,20명-지정좌석(외수질 시 새우 1인당 2만원씩 무조건 구입 해야함) 입항 빠름
 41,경기 화성 전곡항,동백호,https://24marine.sunsang24.com/,2,X,20명-지정좌석
 42,경기 화성 전곡항,레인보우호,http://www.rainbowho.com/,1,X,20명-지정좌석
 44,경기 화성 전곡항,빅보스호,https://24marine.sunsang24.com/,2,X,(신)-20명-지정좌석

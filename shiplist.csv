@@ -71,7 +71,7 @@ ID,REGION,NAME,RESERVATION_URL,URL_TYPE,SHOW,MEMO
 71,인천 남항,부킹호,https://www.kukjaenaksi.com/niabbs5/,1,X,20명-
 72,인천 남항,새시대호,https://jnaksi.com/,1,X,55명-체험낚시
 73,인천 남항,송도호,http://www.hjfish.kr/,1,X,45명-체험낚시
-74,인천 남항,슈퍼노바호,https://supernova.sunsang24.com/,2,X,20명-자리선택
+74,인천 남항,슈퍼노바호,https://supernova.sunsang24.com/,2,O,20명-자리선택-전투낚시
 75,인천 남항,신나라호,http://www.sinnara21.co.kr/niabbs5/,1,X,53명-체험낚시
 76,인천 남항,썬스타호,https://sunstarho.sunsang24.com/,2,X,20명-
 77,인천 남항,에이스호,https://ace.sunsang24.com/,2,X,20명-
@@ -112,8 +112,7 @@ ID,REGION,NAME,RESERVATION_URL,URL_TYPE,SHOW,MEMO
 112,인천 연안부두,베스트1호,https://khanfishing.com/,1,X,20명-
 113,인천 연안부두,베스트3호,https://khanfishing.com/,1,X,20명-
 114,인천 연안부두,보스호,http://www.bossfishing.kr/,1,X,20명-
-115,인천 연안부두,스마트1호,https://smartho.sunsang24.com/,2,X,20명-지정좌석
-116,인천 연안부두,스마트2호,https://smartho.sunsang24.com/,2,X,20명-
+116,인천 연안부두,스마트2호,https://smartho.sunsang24.com/,2,O,20명-전투낚시
 117,인천 연안부두,스모키호,https://www.sharkfishing.kr/,1,O,20명-
 118,인천 연안부두,시크릿호,https://khanfishing.com/,1,X,20명-지정좌석
 119,인천 연안부두,와이파이호,https://khanfishing.com/,1,X,20명-

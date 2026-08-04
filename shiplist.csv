@@ -57,41 +57,24 @@ ID,REGION,NAME,RESERVATION_URL,URL_TYPE,SHOW,MEMO
 773,경북 경주,읍천항 블루탱호,https://bluetang.sunsang24.com/,2,O,읍천항
 783,경북 경주,전촌항 정도로스호,https://jeongdoros.sunsang24.com,2,O,
 784,경북 경주,장진항 썬라이즈호,https://www.ok114.co.kr/ntnw/search/searchCompanyOfMainPh.crz?phone_number=010-8332-3551#banner,1,O,
-60,인천 남항,고래호,https://jnaksi.com/,1,X,49명-체험낚시
-61,인천 남항,금강스타호,https://jnaksi.com/,1,X,45명-체험낚시
 62,인천 남항,나이스호,http://www.nicefish7.com/,1,X,20명-
 63,인천 남항,뉴스타호,http://www.haedongstar.com/,1,X,20명-
 64,인천 남항,드래곤호,http://www.seastarho.com/,1,X,20명-
 65,인천 남항,드림피싱호,http://dreamfishing.co.kr/,1,X,20명-
-66,인천 남항,명덕5호,https://www.mdho.co.kr/niabbs5/,1,X,55명-체험낚시
 67,인천 남항,모비딕호,https://jnaksi.com/,1,X,20명-
-68,인천 남항,반가워호,https://bangawer.com/,1,X,75명-체험낚시
 69,인천 남항,백마3호,https://whitehorse.sunsang24.com/,2,X,20명-
-70,인천 남항,백호,https://www.haewonho.com/niabbs5/,1,X,58명-체험낚시
 71,인천 남항,부킹호,https://www.kukjaenaksi.com/niabbs5/,1,X,20명-
-72,인천 남항,새시대호,https://jnaksi.com/,1,X,55명-체험낚시
-73,인천 남항,송도호,http://www.hjfish.kr/,1,X,45명-체험낚시
 74,인천 남항,슈퍼노바호,https://supernova.sunsang24.com/,2,O,20명-자리선택-전투낚시
-75,인천 남항,신나라호,http://www.sinnara21.co.kr/niabbs5/,1,X,53명-체험낚시
 76,인천 남항,썬스타호,https://sunstarho.sunsang24.com/,2,X,20명-
 77,인천 남항,에이스호,https://ace.sunsang24.com/,2,X,20명-
 78,인천 남항,은아3호,https://sunstarho.sunsang24.com/,2,X,20명-
-79,인천 남항,자이언트2호,http://giantho.thefishing.kr/,1,X,50명-체험낚시
-80,인천 남항,킹콩2호,https://www.kingkongship.com/niabbs5/,1,X,47명-
 81,인천 남항,킹콩6호,https://www.kingkongship.com/niabbs5/,1,X,50명-
-82,인천 남항,킹콩8호,https://www.kingkongship.com/niabbs5/,1,X,61명-체험낚시
 83,인천 남항,파워호,http://seohaeho.kr/,1,X,20명-
-84,인천 남항,피닉스호,https://www.haewonho.com/niabbs5/,1,X,40명-
-85,인천 남항,하나호,https://www.kukjaenaksi.com/niabbs5/,1,X,49명-체험낚시
-86,인천 남항,하하호호,https://jnaksi.com/,1,X,63명-체험낚시
-87,인천 남항,해성2호,http://www.seastarho.com/,1,X,48명-체험낚시
-88,인천 남항,해피호,https://www.kukjaenaksi.com/niabbs5/,1,X,57명-체험낚시
 89,인천 남항,화인호,http://www.hjfish.kr/,1,X,20명-
 90,인천 남항,히트호,http://www.inchonnaksi.com/,1,X,20명-
 91,인천 만석부두,마린스타1호,https://www.marinestarho.com/,1,O,21명-지정좌석
 92,인천 만석부두,마린스타3호,https://www.marinestarho.com/,1,X,21명-지정좌석
 93,인천 만석부두,선호,http://www.aseafish.co.kr/,1,X,20명-
-94,인천 만석부두,순영호,https://mfish.sunsang24.com/,2,X,40명-
 95,인천 만석부두,신성호,https://mfish.sunsang24.com/,2,X,16명-
 96,인천 만석부두,장안호,http://www.aseafish.co.kr/,1,X,12명-
 97,인천 만석부두,평안호,https://mfish.sunsang24.com/,2,X,14명-
@@ -106,7 +89,6 @@ ID,REGION,NAME,RESERVATION_URL,URL_TYPE,SHOW,MEMO
 106,인천 연안부두,뉴마린스타호,https://khanfishing.com/,1,X,20명-지정좌석
 107,인천 연안부두,루키나2호,https://lukina.sunsang24.com/,2,X,20명-
 108,인천 연안부두,루키나2호/루키나호,http://lukina.sunsang24.com,2,X,(자리 선택)
-109,인천 연안부두,루키나5호,https://lukina.sunsang24.com/,2,X,54명-
 110,인천 연안부두,루키나호,https://lukina.sunsang24.com/,2,X,20명-지정좌석
 111,인천 연안부두,마루호,https://www.sharkfishing.kr/,1,X,20명-
 112,인천 연안부두,베스트1호,https://khanfishing.com/,1,X,20명-

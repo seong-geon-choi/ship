@@ -1,20 +1,15 @@
 ID,REGION,NAME,RESERVATION_URL,URL_TYPE,SHOW,MEMO
-801,충남 보령 오천항,썬가드호,http://www.ospeed.kr/index.php,1,O,일찍 나감. 배 빠름
-800,충남 서산 삼길포,헤르메스호,https://hermes.thefishing.kr/index.php,1,O,지정좌석
-799,충남 보령 오천항,도지호,https://doji.sunsang24.com/,2,O,
-798,경기 화성 전곡항,엠퍼러호,http://emperorfishing.com/index.php?mid=index,1,O,외수질 탑티어라함. 고속 레저보트
-797,충남 태안 영목항,비제이호,https://bj.sunsang24.com/,2,O,전투낚시
-795,0. 2026년 예약 현황,--09/16(수) 천마호/삼길포/12물,https://metafishingclub.sunsang24.com/,2,O,2인 예약금 입금 8월 15일 까지 잔금
+795,0. 2026년 예약 현황,--09/16(수) 천마호/삼길포/12물,https://metafishingclub.sunsang24.com/,2,O,2인 예약금 입금 8월 15일 까지 잔금.
 794,0. 2026년 예약 현황,11/08(일) 제비호/전곡항/12물,https://jebi.sunsang24.com/,2,O,13 14 15 16 고현기 이선영 백승원 최성건
 793,0. 2026년 예약 현황,10/22(목) 라마르호/남당항/3물,https://lamar.totb.kr/,1,O,고현기 이선영 백승원 최성건-입금완료
 792,0. 2026년 예약 현황,10/08(목) 천마호/삼길포/4물,https://metafishingclub.sunsang24.com/,2,O,6번 나홀로. 예약금 입금 8월 15일 까지 잔금
 791,0. 2026년 예약 현황,10/22(목)Team 만수/영흥도/3물,https://teammansu.kr,1,O,3 4 5 6 예약금 입금
 790,0. 2026년 예약 현황,09/06(일) 금땡이호/오천항/1물,http://www.friendho.com/,1,O,고현기 이선영 백승원 최성건 예약금 입금
-789,01. 2026년 탑승완료,05/25(월) 천마호/삼길포/무시,https://metafishingclub.sunsang24.com/,2,O,고현기(5광) 백승원(2광) 최성건(11광 장원) 이민철 (3광)
 788,0. 2026년 예약 현황,10/25(일) 만석호/삼길포/6물,http://www.mscufishing.com,1,O,7~11 고현기 이선영 쉐프 백승원 최성건-입금완료
 787,0. 2026년 예약 현황,10/31(토) 만석호/삼길포/12물,http://www.mscufishing.com,1,O,2~6 고현기 이선영 쉐프 백승원 최성건 8월 20일 까지 입금
 786,0. 2026년 예약 현황,10/16(금)Team 만수/영흥도 /12물,https://teammansu.kr,1,O,15 16 17 18 예약금 입금 고현기 이선영 백승원 최성건 
 785,0. 2026년 예약 현황,--09/18(금)오천항 독한놈호 조금,https://dokhan.thefishing.kr/,1,O,3인. 출항 7일 전 입금
+789,01. 2026년 탑승완료,05/25(월) 천마호/삼길포/무시,https://metafishingclub.sunsang24.com/,2,O,고현기(5광) 백승원(2광) 최성건(11광 장원) 이민철 (3광)
 769,02. 2025년 탑승완료,11/13(목) 영스타호/삼길포/무시,http://www.mscufishing.com,1,O,쭈갑-고현기 이민재 백승원 최성건 이민철 6~10 좌선미 망
 7,02. 2025년 탑승완료,10/17(금) 만석호/삼길포 2물,https://www.mscufishing.com,1,O,쭈갑-고현기 이선영 백승원 최성건-갑오징어 조과 좋았음
 5,02. 2025년 탑승완료,09/28(일) Team 지오디/영흥도 13물,https://www.teamgod.kr,1,O,갑-최백오-조과 망
@@ -37,6 +32,7 @@ ID,REGION,NAME,RESERVATION_URL,URL_TYPE,SHOW,MEMO
 31,경기 평택 평택항,수복호,http://수복호.com/,1,X,19명-지정좌석
 34,경기 평택 평택항,오닉스호,http://대교피싱호.com/,1,X,20명-지정좌석
 35,경기 평택 평택항,자연호,http://nature.thefishing.kr/,1,X,18명-
+798,경기 화성 전곡항,엠퍼러호,http://emperorfishing.com/index.php?mid=index,1,O,외수질 탑티어라함. 고속 레저보트
 40,경기 화성 전곡항,뉴신명호/신명스카이호,http://shinmyungho.com/,1,X,20명-지정좌석(외수질 시 새우 1인당 2만원씩 무조건 구입 해야함) 입항 빠름
 41,경기 화성 전곡항,동백호,https://24marine.sunsang24.com/,2,X,20명-지정좌석
 42,경기 화성 전곡항,레인보우호,http://www.rainbowho.com/,1,X,20명-지정좌석
@@ -144,6 +140,7 @@ ID,REGION,NAME,RESERVATION_URL,URL_TYPE,SHOW,MEMO
 166,인천 영흥도,카리스마호,https://charisma.sunsang24.com/,2,O,20명-지정좌석
 168,인천 영흥도,페라리호,http://www.페라리호.com/,1,X,20명-지정좌석. 평 나쁨
 169,인천 영흥도,해진호,http://www.haejinho.com/,1,O,14명-지정좌석
+260,전북,격포항 블루마린호,https://waddafishing.kr/,1,O,20명-
 170,전북 군산 비응항,K1호,https://k1f.sunsang24.com/,2,X,18명-
 171,전북 군산 비응항,K2호,https://k1f.sunsang24.com/,2,X,20명-
 173,전북 군산 비응항,강남호,https://kangnam.sunsang24.com/,2,X,20명-
@@ -233,7 +230,6 @@ ID,REGION,NAME,RESERVATION_URL,URL_TYPE,SHOW,MEMO
 257,전북 군산 비응항,홈런호,http://gunsannaksi.com/,1,X,20명-
 258,전북 군산 비응항,후크스타호,https://hookstar.sunsang24.com/,2,X,19명-
 259,전북 부안 가력도항,골드피싱호,https://goldfishing.sunsang24.com/,2,X,20명-
-260,전북,격포항 블루마린호,https://waddafishing.kr/,1,O,20명-
 261,전북 부안 격포항,격포블루피싱호,https://waddafishing.kr/,1,X,16명-
 262,전북 부안 격포항,격포힐링호,https://waddafishing.kr/,1,X,19명-
 263,전북 부안 격포항,남부스타2호,http://www.nambunaksi.co.kr/,1,X,17명-
@@ -361,6 +357,8 @@ ID,REGION,NAME,RESERVATION_URL,URL_TYPE,SHOW,MEMO
 413,충남 보령 무창포항,효성호,http://www.robinho.kr/,1,X,17명-
 414,충남 보령 무창포항,히트호,https://www.muchangpofishing.co.kr/,1,X,17명-
 415,충남 보령 무창포항,힐링호,https://www.ssfish.kr/,1,X,21명-
+801,충남 보령 오천항,썬가드호,http://www.ospeed.kr/index.php,1,O,일찍 나감. 배 빠름
+799,충남 보령 오천항,도지호,https://doji.sunsang24.com/,2,O,
 768,충남 보령 오천항,독한놈호,https://dokhan.thefishing.kr/,1,O,전투낚시 집에 안 보낸다함. 출조점 앞 번호표 선착순
 416,충남 보령 오천항,K-1호,http://k1.thefishing.kr/,1,X,20명-
 417,충남 보령 오천항,가즈아호,https://ocpro.sunsang24.com/,2,O,19명-
@@ -449,6 +447,7 @@ ID,REGION,NAME,RESERVATION_URL,URL_TYPE,SHOW,MEMO
 505,충남 보령 회변항,뉴경진호,http://www.kjho.kr/,1,X,16명-
 506,충남 보령 회변항,몽스타호,http://스타낚시.com/,1,O,17명-
 507,충남 보령 회변항,오성스타호,http://스타낚시.com/,1,O,20명-
+800,충남 서산 삼길포,헤르메스호,https://hermes.thefishing.kr/index.php,1,O,지정좌석
 762,충남 서산 삼길포,진주피싱호,https://jinju.sunsang24.com/,2,O,26년 시즌 : 5월 1일 오픈
 508,충남 서산 삼길포,골드피싱호,http://www.mscufishing.com/,1,X,20명-
 509,충남 서산 삼길포,나대세호,http://www.mscufishing.com/,1,X,20명-
@@ -655,6 +654,7 @@ ID,REGION,NAME,RESERVATION_URL,URL_TYPE,SHOW,MEMO
 709,충남 태안 안흥항,청용호,http://www.changdukho.com/,1,O,21명
 710,충남 태안 안흥항,탑피싱호,http://www.topfishingho.com/,1,O,16명 출조점 앞 탑승
 711,충남 태안 안흥항,행운호,http://www.hangwoonho.com/,1,O,침선전
+797,충남 태안 영목항,비제이호,https://bj.sunsang24.com/,2,O,전투낚시
 712,충남 태안 영목항,낚시친구들호,https://friend.sunsang24.com/,2,X,20명-유선예약
 713,충남 태안 영목항,맥가이버호,http://맥가이버피싱.com/,1,X,19명(신)
 714,충남 태안 영목항,비제이호,https://bj.sunsang24.com/,2,X,20명-
